@@ -21,11 +21,6 @@ This project fills that gap.
 - ✅ **Rime + Fcitx5 integration**
 - ✅ **Optional Google API fallback** (runtime config, OFF by default)
 
-## Demo
-
-![Demo](docs/demo.gif)
-
-*(Demo GIF coming soon — replace this line with a real demo)*
 
 ## Quick Start
 
