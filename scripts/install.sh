@@ -31,17 +31,27 @@ echo "📦 Building..."
 nim c -d:release src/compile_rime_hindi.nim
 nim c -d:release src/build_rime_dict.nim
 
-if [ "$WORDNET_FOUND" = true ]; then
-  echo "📖 Generating full dictionary (with WordNet)..."
-  ./src/compile_rime_hindi
-else
-  echo "📖 Generating base dictionary (730 curated words)..."
-  ./src/compile_rime_hindi
-fi
-
 RIME_DIR="${HINDI_IME_RIME_DIR:-$HOME/.local/share/fcitx5/rime}"
 mkdir -p "$RIME_DIR"
-cp rime/*.yaml "$RIME_DIR/" 2>/dev/null || true
+TARGET_DICT="$RIME_DIR/hindi_ai.dict.yaml"
+
+# Install schema configuration
+cp rime/hindi_ai.schema.yaml "$RIME_DIR/" 2>/dev/null || true
+cp rime/hindi_ai.custom.yaml "$RIME_DIR/" 2>/dev/null || true
+
+if [ -f "$TARGET_DICT" ]; then
+  echo "📖 Existing dictionary found. Skipping generation to prevent overwrite."
+  echo "   To regenerate, run: ./scripts/build_dict.sh"
+else
+  if [ "$WORDNET_FOUND" = true ]; then
+    echo "📖 Generating full dictionary (with WordNet)..."
+    ./src/compile_rime_hindi
+  else
+    echo "📖 Generating base dictionary (730 curated words)..."
+    ./src/compile_rime_hindi
+  fi
+  cp rime/hindi_ai.dict.yaml "$RIME_DIR/" 2>/dev/null || true
+fi
 
 echo "🔄 Restarting Fcitx5..."
 fcitx5 -r -d 2>/dev/null || true

@@ -1,4 +1,4 @@
-import std/[tables, strutils, json, streams, os, math, sequtils]
+import std/[tables, strutils, json, streams, os, math]
 
 # Combined Phonetic Mappings: ISO 15919 + User Custom Keybindings + ITRANS / IAST / Harvard-Kyoto
 const
