@@ -1,0 +1,58 @@
+schema:
+  schema_id: hindi_ai
+  name: "Hindi AI Phonetic Engine"
+  version: "6.0"
+  author: "Antigravity AI"
+  description: "Rime Engine with Single Space Commit + Space Insert Feature"
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ हिंदी, English ]
+  - name: full_shape
+    reset: 0
+    states: [ 半角, 全角 ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+  filters:
+    - uniquifier
+
+speller:
+  alphabet: zabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_.~;^,'
+  delimiter: " '"
+  auto_select: false
+
+punctuator:
+  full_shape:
+    ' ': { commit: ' ' }
+  half_shape:
+    ' ': { commit: ' ' }
+
+key_binder:
+  bindings:
+    - { accept: space, send_sequence: "1 ", when: has_menu }
+    - { accept: space, send: space, when: composing }
+
+translator:
+  dictionary: hindi_ai
+  enable_user_dict: true
+  enable_completion: true
+  enable_sentence: true

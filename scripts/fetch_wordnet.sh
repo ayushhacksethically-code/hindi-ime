@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "📚 WordNet Hindi Dictionary Setup"
+echo ""
+echo "The 6MB WordNet Hindi binary is not shipped with the repo."
+echo ""
+echo "Option A: Generate it yourself"
+echo "  Run: ./scripts/generate_wordnet.sh  (coming soon)"
+echo ""
+echo "Option B: Place an existing file manually"
+echo "  Put 'wordnet_hindi_dict.bin' in one of these locations:"
+echo "    1. ~/.local/share/hindi-ime/"
+echo "    2. Repo root directory"
+echo ""
+echo "The system will work without it (using only the 730-word dict)."

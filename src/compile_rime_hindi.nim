@@ -1,0 +1,1135 @@
+import std/[tables, strutils, json, streams, os, math, sequtils]
+
+# Combined Phonetic Mappings: ISO 15919 + User Custom Keybindings + ITRANS / IAST / Harvard-Kyoto
+const
+  customNuktaConsonants = [
+    ("NnN", "ऩ्"), ("LlL", "ऴ्"), ("DdD", "ड़्"), ("RrR", "ढ़्"), ("gG", "ग़्"), ("qh", "ख़्"),
+    ("qa", "क़"), ("q", "क़्"), ("za", "ज़"), ("z", "ज़्"), ("fa", "फ़"), ("f", "फ़्"),
+    ("Y", "य़्"), ("R", "ऱ्"), ("L", "ळ्"),
+    ("_kh", "ख़"), (".g", "ग़"), (".dha", "ढ़"), (".da", "ड़"), ("_n", "ऩ"), ("_r", "ऱ"), ("_l", "ऴ"), (".l", "ळ"), (";y", "य़"), ("^z", "झ़")
+  ]
+
+  specialSymbols = [
+    ("AOM", "ॐ"), ("||", "॥"), ("|", "।"), ("AO", "ँ"), ("aA", "ऽ"), ("M", "ं"), (".n", "ं"), (".m", "ं"), ("~m", "ँ"), ("H", "ः"), (":", "ः")
+  ]
+
+  samyuktaClusters = [
+    ("kSha", "क्ष"), ("ksha", "क्ष"), ("kSa", "क्ष"), ("xa", "क्ष"),
+    ("tra", "त्र"), ("GYa", "ज्ञ"), ("gya", "ज्ञ"), ("j~na", "ज्ञ"), ("jnya", "ज्ञ"), ("jJa", "ज्ञ"),
+    ("shra", "श्र"), ("zra", "श्र")
+  ]
+
+  englishClusters = [
+    ("gr", "ग्र्"), ("dr", "द्र्"), ("pr", "प्र्"), ("br", "ब्र्"), ("fr", "फ्र्"), ("cr", "क्र्"), ("tr", "त्र्"),
+    ("st", "स्त्"), ("sp", "स्प्"), ("sk", "स्क्"), ("sm", "स्म्"), ("sn", "स्न्"), ("sl", "स्ल्"), ("sw", "स्व्")
+  ]
+
+  consonantClusters = [
+    ("Ch", "छ्"), ("ch", "च्"), ("kh", "ख्"), ("gh", "घ्"), ("jh", "झ्"), ("nY", "ञ्"),
+    ("Th", "थ्"), ("Dh", "ध्"), ("ph", "फ्"), ("Bh", "भ्"), ("bh", "भ्"), ("B", "भ्"),
+    ("sh", "श्"), ("Sh", "ष्"), ("G", "ङ्"), ("t", "ट्"), ("T", "ठ्"), ("d", "ड्"), ("D", "ढ्"),
+    ("N", "ण्"), ("th", "त्"), ("dh", "द्"), ("n", "न्"), ("p", "प्"), ("b", "ब्"), ("m", "म्"),
+    ("y", "य्"), ("r", "र्"), ("l", "ल्"), ("v", "व्"), ("w", "व्"), ("s", "स्"), ("h", "ह्"),
+    ("k", "क्"), ("g", "ग्"), ("j", "ज्")
+  ]
+
+  independentVowels = [
+    ("AOM", "ॐ"), ("AO", "ऑ"), ("Ao", "ऑ"), ("En", "ऍ"), ("tR", "ऋ"), ("TR", "ॠ"),
+    ("aa", "आ"), ("A", "आ"), ("ee", "ई"), ("I", "ई"), ("oo", "ऊ"), ("U", "ऊ"),
+    ("ai", "ऐ"), ("au", "औ"), ("a", "अ"), ("i", "इ"), ("u", "उ"), ("e", "ए"), ("o", "ओ"),
+    ("^e", "ऍ"), ("^o", "ऑ"), (",r", "ऋ"), (",rr", "ॠ"), (",l", "ऌ"), (",ll", "ॡ")
+  ]
+
+  dependentMatras = [
+    ("Ao", "ॉ"), ("En", "ॅ"), ("aa", "ा"), ("A", "ा"), ("ee", "ी"), ("I", "ी"),
+    ("oo", "ू"), ("U", "ू"), ("tR", "ृ"), ("TR", "ॄ"), ("ai", "ै"), ("au", "ौ"),
+    ("a", ""), ("i", "ि"), ("u", "ु"), ("e", "े"), ("o", "ो"),
+    ("^e", "ॅ"), ("^o", "ॉ"), (",r", "ृ"), (",rr", "ॄ"), (",l", "ॢ"), (",ll", "ॣ")
+  ]
+
+proc loadWordNetBinaryDict(binPath: string): Table[string, seq[string]] =
+  result = initTable[string, seq[string]]()
+  if not fileExists(binPath): return
+
+  var fs = newFileStream(binPath, fmRead)
+  if fs.isNil: return
+
+  let magic = fs.readStr(4)
+  if magic != "HWNB":
+    fs.close()
+    return
+
+  let entryCount = fs.readUint32()
+  for _ in 0 ..< entryCount:
+    if fs.atEnd(): break
+    let keyLen = fs.readUint16().int
+    let key = fs.readStr(keyLen)
+    let candCount = fs.readUint16().int
+    var cands: seq[string] = @[]
+    for _ in 0 ..< candCount:
+      let candLen = fs.readUint16().int
+      cands.add(fs.readStr(candLen))
+    result[key] = cands
+
+  fs.close()
+
+proc transliterateSingleWord*(word: string): string =
+  var res = ""
+  var i = 0
+  let w = word.strip()
+  if w.len == 0: return ""
+
+  while i < w.len:
+    if i == 0:
+      var matchedIndep = false
+      for (vStr, vVal) in independentVowels:
+        if i + vStr.len <= w.len and w[i ..< i + vStr.len] == vStr:
+          res.add(vVal)
+          i += vStr.len
+          matchedIndep = true
+          break
+      if matchedIndep: continue
+
+    var matchedSymbol = false
+    for (sStr, sVal) in specialSymbols:
+      if i + sStr.len <= w.len and w[i ..< i + sStr.len] == sStr:
+        res.add(sVal)
+        i += sStr.len
+        matchedSymbol = true
+        break
+    if matchedSymbol: continue
+
+    var matchedNukta = false
+    for (nStr, nVal) in customNuktaConsonants:
+      if i + nStr.len <= w.len and w[i ..< i + nStr.len] == nStr:
+        res.add(nVal)
+        i += nStr.len
+        matchedNukta = true
+        break
+    if matchedNukta: continue
+
+    var matchedSamyukta = false
+    for (sStr, sVal) in samyuktaClusters:
+      if i + sStr.len <= w.len and w[i ..< i + sStr.len] == sStr:
+        res.add(sVal)
+        i += sStr.len
+        matchedSamyukta = true
+        break
+    if matchedSamyukta: continue
+
+    var matchedEngCluster = false
+    for (eStr, eVal) in englishClusters:
+      if i + eStr.len <= w.len and w[i ..< i + eStr.len] == eStr:
+        var hasVowelNext = false
+        if i + eStr.len < w.len:
+          for (mStr, mVal) in dependentMatras:
+            if i + eStr.len + mStr.len <= w.len and w[i + eStr.len ..< i + eStr.len + mStr.len] == mStr:
+              hasVowelNext = true
+              break
+        if hasVowelNext:
+          let cleanVal = eVal.replace("्", "")
+          res.add(cleanVal)
+        else:
+          res.add(eVal)
+
+        i += eStr.len
+        matchedEngCluster = true
+        break
+    if matchedEngCluster: continue
+
+    var matchedCons = false
+    for (cStr, cVal) in consonantClusters:
+      if i + cStr.len <= w.len and w[i ..< i + cStr.len] == cStr:
+        var hasVowelNext = false
+        if i + cStr.len < w.len:
+          for (mStr, mVal) in dependentMatras:
+            if i + cStr.len + mStr.len <= w.len and w[i + cStr.len ..< i + cStr.len + mStr.len] == mStr:
+              hasVowelNext = true
+              break
+        if hasVowelNext:
+          let cleanVal = cVal.replace("्", "")
+          res.add(cleanVal)
+        else:
+          res.add(cVal)
+
+        i += cStr.len
+        matchedCons = true
+        break
+    if matchedCons: continue
+
+    if res.len > 0:
+      var matchedMatra = false
+      for (mStr, mVal) in dependentMatras:
+        if i + mStr.len <= w.len and w[i ..< i + mStr.len] == mStr:
+          res.add(mVal)
+          i += mStr.len
+          matchedMatra = true
+          break
+      if matchedMatra: continue
+
+    let c = w[i]
+    res.add($c)
+    i += 1
+
+  return res
+
+proc loadGoogleCache(cachePath: string): Table[string, seq[string]] =
+  result = initTable[string, seq[string]]()
+  if not fileExists(cachePath): return
+  var fs = newFileStream(cachePath, fmRead)
+  if fs.isNil: return
+  let count = fs.readUint32().int
+  for _ in 0 ..< count:
+    if fs.atEnd(): break
+    let kLen = fs.readUint16().int
+    let k = fs.readStr(kLen)
+    let cCount = fs.readUint16().int
+    var cands: seq[string] = @[]
+    for _ in 0 ..< cCount:
+      let cLen = fs.readUint16().int
+      cands.add(fs.readStr(cLen))
+    result[k] = cands
+  fs.close()
+
+proc getCommonDict(): Table[string, seq[string]] =
+  result = initTable[string, seq[string]]()
+
+  # ============================================================
+  # CONSOLIDATED HINGLISH DICT
+  # Data Sources:
+  # - Common high-frequency Hinglish vocabulary (curated)
+  # - Hindi WordNet (IIT Bombay, GPL license)
+  # - Conversational corpus (anonymized, aggregated)
+  # - Academic & technical terms (geography, science, etc.)
+  # ============================================================
+
+  # ============ PRONOUNS ============
+  result["main"] = @["मैं"]
+  result["mai"] = @["मैं"]
+  result["hum"] = @["हम"]
+  result["humlog"] = @["हमलोग"]
+  result["humein"] = @["हमें"]
+  result["hume"] = @["हमें"]
+  result["mujhe"] = @["मुझे"]
+  result["muje"] = @["मुझे"]
+  result["mujhko"] = @["मुझको"]
+  result["tum"] = @["तुम"]
+  result["tumlog"] = @["तुमलोग"]
+  result["tumhe"] = @["तुम्हें"]
+  result["tumhein"] = @["तुम्हें"]
+  result["aap"] = @["आप"]
+  result["aaplog"] = @["आपलोग"]
+  result["aplog"] = @["आपलोग"]
+  result["aapko"] = @["आपको"]
+  result["aapka"] = @["आपका"]
+  result["aapki"] = @["आपकी"]
+  result["aapke"] = @["आपके"]
+  result["tera"] = @["तेरा"]
+  result["teri"] = @["तेरी"]
+  result["tere"] = @["तेरे"]
+  result["mera"] = @["मेरा"]
+  result["meri"] = @["मेरी"]
+  result["mere"] = @["मेरे"]
+  result["hamara"] = @["हमारा"]
+  result["hamari"] = @["हमारी"]
+  result["hamare"] = @["हमारे"]
+  result["uska"] = @["उसका"]
+  result["uski"] = @["उसकी"]
+  result["uske"] = @["उसके"]
+  result["iska"] = @["इसका"]
+  result["iski"] = @["इसकी"]
+  result["iske"] = @["इसके"]
+  result["kiska"] = @["किसका"]
+  result["kiski"] = @["किसकी"]
+  result["kiske"] = @["किसके"]
+  result["inka"] = @["इनका"]
+  result["inki"] = @["इनकी"]
+  result["inke"] = @["इनके"]
+  result["unka"] = @["उनका"]
+  result["unki"] = @["उनकी"]
+  result["unke"] = @["उनके"]
+  result["ye"] = @["ये"]
+  result["yeh"] = @["यह"]
+  result["wo"] = @["वो"]
+  result["woh"] = @["वह"]
+  result["ise"] = @["इसे"]
+  result["use"] = @["उसे"]
+  result["inhe"] = @["इन्हें"]
+  result["unhe"] = @["उन्हें"]
+  result["khud"] = @["खुद"]
+  result["apna"] = @["अपना"]
+  result["apni"] = @["अपनी"]
+  result["apne"] = @["अपने"]
+
+  # ============ VERBS - PRESENT/PAST/FUTURE ============
+  result["hai"] = @["है"]
+  result["h"] = @["है"]
+  result["hain"] = @["हैं"]
+  result["ho"] = @["हो"]
+  result["hun"] = @["हूँ"]
+  result["hoon"] = @["हूँ"]
+  result["tha"] = @["था"]
+  result["thi"] = @["थी"]
+  result["the"] = @["थे"]
+  result["hoga"] = @["होगा"]
+  result["hogi"] = @["होगी"]
+  result["honge"] = @["होंगे"]
+  result["hota"] = @["होता"]
+  result["hoti"] = @["होती"]
+  result["hote"] = @["होते"]
+  result["hua"] = @["हुआ"]
+  result["huw"] = @["हुआ"]
+  result["hogaya"] = @["होगया", "हो गया"]
+
+  # Future suffixes
+  result["ga"] = @["गा"]
+  result["gaa"] = @["गा"]
+  result["gi"] = @["गी"]
+  result["ge"] = @["गे"]
+
+  # Kar-
+  result["karta"] = @["करता"]
+  result["karti"] = @["करती"]
+  result["karte"] = @["करते"]
+  result["karunga"] = @["करूँगा"]
+  result["karungi"] = @["करूँगी"]
+  result["karenge"] = @["करेंगे"]
+  result["karu"] = @["करूँ"]
+  result["karun"] = @["करूँ"]
+  result["kare"] = @["करे"]
+  result["karo"] = @["करो"]
+  result["kar"] = @["कर"]
+  result["kiya"] = @["किया"]
+  result["kiye"] = @["किये"]
+  result["karke"] = @["करके"]
+  result["karna"] = @["करना"]
+  result["karni"] = @["करनी"]
+  result["karne"] = @["करने"]
+  result["kariye"] = @["कीजिए"]
+  result["koshish"] = @["कोशिश"]
+  result["kosish"] = @["कोशिश"]
+
+  # Ja-
+  result["jata"] = @["जाता"]
+  result["jati"] = @["जाती"]
+  result["jate"] = @["जाते"]
+  result["jaunga"] = @["जाऊँगा"]
+  result["jayegi"] = @["जाएगी"]
+  result["jayenge"] = @["जाएँगे"]
+  result["jaoge"] = @["जाओगे"]
+  result["gaya"] = @["गया"]
+  result["gayi"] = @["गई"]
+  result["gaye"] = @["गए"]
+  result["jana"] = @["जाना"]
+  result["jani"] = @["जानी"]
+  result["jane"] = @["जाने"]
+  result["jake"] = @["जाके"]
+  result["jaake"] = @["जाके"]
+
+  # Aa-
+  result["aata"] = @["आता"]
+  result["aati"] = @["आती"]
+  result["aate"] = @["आते"]
+  result["aaya"] = @["आया"]
+  result["aayi"] = @["आई"]
+  result["aaye"] = @["आए"]
+  result["aana"] = @["आना"]
+  result["aani"] = @["आनी"]
+  result["aane"] = @["आने"]
+
+  # De-
+  result["deta"] = @["देता"]
+  result["deti"] = @["देती"]
+  result["dete"] = @["देते"]
+  result["diya"] = @["दिया"]
+  result["diye"] = @["दिये"]
+  result["dena"] = @["देना"]
+  result["deni"] = @["देनी"]
+  result["dene"] = @["देने"]
+  result["dijiye"] = @["दीजिए"]
+  result["dijiyega"] = @["दीजिएगा"]
+  result["dijiye ga"] = @["दीजिएगा"]
+
+  # Le-
+  result["leta"] = @["लेता"]
+  result["leti"] = @["लेती"]
+  result["lete"] = @["लेते"]
+  result["liya"] = @["लिया"]
+  result["liye"] = @["लिये"]
+  result["lena"] = @["लेना"]
+  result["leni"] = @["लेनी"]
+  result["lene"] = @["लेने"]
+  result["leke"] = @["लेके"]
+
+  # Dekh-
+  result["dekha"] = @["देखा"]
+  result["dekhi"] = @["देखी"]
+  result["dekhe"] = @["देखे"]
+  result["dekhna"] = @["देखना"]
+  result["dekhta"] = @["देखता"]
+  result["dekhti"] = @["देखती"]
+  result["dekhte"] = @["देखते"]
+
+  # Bol-/Kah-
+  result["bola"] = @["बोला"]
+  result["boli"] = @["बोली"]
+  result["bole"] = @["बोले"]
+  result["bolna"] = @["बोलना"]
+  result["bolta"] = @["बोलता"]
+  result["bolti"] = @["बोलती"]
+  result["bolte"] = @["बोलते"]
+  result["kaha"] = @["कहा"]
+  result["kahi"] = @["कही"]
+  result["kahe"] = @["कहे"]
+  result["kahna"] = @["कहना"]
+  result["kahta"] = @["कहता"]
+  result["kahti"] = @["कहती"]
+  result["kahte"] = @["कहते"]
+
+  # Sun-
+  result["suna"] = @["सुना"]
+  result["suni"] = @["सुनी"]
+  result["sune"] = @["सुने"]
+  result["sunna"] = @["सुनना"]
+  result["sunta"] = @["सुनता"]
+  result["sunti"] = @["सुनती"]
+  result["sunte"] = @["सुनते"]
+
+  # Padh-
+  result["padha"] = @["पढ़ा"]
+  result["padhi"] = @["पढ़ी"]
+  result["padhe"] = @["पढ़े"]
+  result["padhna"] = @["पढ़ना"]
+  result["padhta"] = @["पढ़ता"]
+  result["padhti"] = @["पढ़ती"]
+  result["padhte"] = @["पढ़ते"]
+
+  # Likh-
+  result["likha"] = @["लिखा"]
+  result["likhi"] = @["लिखी"]
+  result["likhe"] = @["लिखे"]
+  result["likhna"] = @["लिखना"]
+  result["likhta"] = @["लिखता"]
+  result["likhti"] = @["लिखती"]
+  result["likhte"] = @["लिखते"]
+
+  # Soch-
+  result["socha"] = @["सोचा"]
+  result["sochi"] = @["सोची"]
+  result["soche"] = @["सोचे"]
+  result["sochna"] = @["सोचना"]
+  result["sochta"] = @["सोचता"]
+  result["sochti"] = @["सोचती"]
+  result["sochte"] = @["सोचते"]
+
+  # Samajh-
+  result["samjha"] = @["समझा"]
+  result["samjhi"] = @["समझी"]
+  result["samjhe"] = @["समझे"]
+  result["samajhna"] = @["समझना"]
+  result["samajhta"] = @["समझता"]
+  result["samajhti"] = @["समझती"]
+  result["samajhte"] = @["समझते"]
+
+  # Chal-
+  result["chala"] = @["चला"]
+  result["chali"] = @["चली"]
+  result["chale"] = @["चले"]
+  result["chalna"] = @["चलना"]
+  result["chalta"] = @["चलता"]
+  result["chalti"] = @["चलती"]
+  result["chalte"] = @["चलते"]
+
+  # Bhej-/Puch-/Bata-
+  result["bhejo"] = @["भेजो"]
+  result["bhej"] = @["भेज"]
+  result["bheja"] = @["भेजा"]
+  result["veje"] = @["भेजे"]
+  result["vej"] = @["भेज"]
+  result["puch"] = @["पूछ"]
+  result["pooch"] = @["पूछ"]
+  result["pucha"] = @["पूछा"]
+  result["bata"] = @["बता"]
+  result["batao"] = @["बताओ"]
+  result["banaya"] = @["बनाया"]
+  result["banaye"] = @["बनाये"]
+  result["bana"] = @["बना"]
+  result["rakh"] = @["रख"]
+  result["rakhna"] = @["रखना"]
+  result["rakhiye"] = @["रखिये"]
+  result["maang"] = @["मांग"]
+  result["mang"] = @["मांग"]
+  result["cover"] = @["कवर"]
+  result["loon"] = @["लूँ"]
+  result["lu"] = @["लूँ"]
+  result["lag"] = @["लग"]
+  result["raha"] = @["रहा"]
+  result["rahi"] = @["रही"]
+  result["rahe"] = @["रहे"]
+
+  # ============ FAMILY ============
+  result["maa"] = @["माँ"]
+  result["ma"] = @["माँ"]
+  result["mata"] = @["माता"]
+  result["papa"] = @["पापा"]
+  result["pitaji"] = @["पिताजी"]
+  result["pita"] = @["पिता"]
+  result["baap"] = @["बाप"]
+  result["bhai"] = @["भाई"]
+  result["bhaiya"] = @["भैया"]
+  result["behen"] = @["बहन"]
+  result["behan"] = @["बहन"]
+  result["bahan"] = @["बहन"]
+  result["didi"] = @["दीदी"]
+  result["bhabhi"] = @["भाभी"]
+  result["devar"] = @["देवर"]
+  result["jeth"] = @["जेठ"]
+  result["sasur"] = @["ससुर"]
+  result["saas"] = @["सास"]
+  result["sasural"] = @["ससुराल"]
+  result["beta"] = @["बेटा"]
+  result["beti"] = @["बेटी"]
+  result["bacha"] = @["बच्चा"]
+  result["bachcha"] = @["बच्चा"]
+  result["bache"] = @["बच्चे"]
+  result["bacche"] = @["बच्चे"]
+  result["bachche"] = @["बच्चे"]
+  result["pati"] = @["पति"]
+  result["patni"] = @["पत्नी"]
+  result["biwi"] = @["बीवी"]
+  result["shauhar"] = @["शौहर"]
+  result["dada"] = @["दादा"]
+  result["dadi"] = @["दादी"]
+  result["nana"] = @["नाना"]
+  result["nani"] = @["नानी"]
+  result["chacha"] = @["चाचा"]
+  result["chachi"] = @["चाची"]
+  result["mama"] = @["मामा"]
+  result["mami"] = @["मामी"]
+  result["tau"] = @["ताऊ"]
+  result["tai"] = @["ताई"]
+
+  # ============ BODY ============
+  result["sar"] = @["सिर"]
+  result["hath"] = @["हाथ"]
+  result["haath"] = @["हाथ"]
+  result["pair"] = @["पैर"]
+  result["paer"] = @["पैर"]
+  result["aankh"] = @["आँख"]
+  result["aankhen"] = @["आँखें"]
+  result["kaan"] = @["कान"]
+  result["naak"] = @["नाक"]
+  result["muh"] = @["मुँह"]
+  result["munh"] = @["मुँह"]
+  result["daant"] = @["दाँत"]
+  result["jeebh"] = @["जीभ"]
+  result["jibh"] = @["जीभ"]
+  result["pet"] = @["पेट"]
+  result["kamar"] = @["कमर"]
+  result["kandha"] = @["कंधा"]
+  result["gala"] = @["गला"]
+  result["dil"] = @["दिल"]
+
+  # ============ HOME ============
+  result["ghar"] = @["घर"]
+  result["makan"] = @["मकान"]
+  result["darwaza"] = @["दरवाजा"]
+  result["darwaja"] = @["दरवाजा"]
+  result["khidki"] = @["खिड़की"]
+  result["chhat"] = @["छत"]
+  result["chat"] = @["छत"]
+  result["farsh"] = @["फर्श"]
+  result["deewar"] = @["दीवार"]
+  result["diwar"] = @["दीवार"]
+  result["kamra"] = @["कमरा"]
+  result["rasoi"] = @["रसोई"]
+  result["bistar"] = @["बिस्तर"]
+  result["takiya"] = @["तकिया"]
+  result["chadar"] = @["चादर"]
+  result["kambal"] = @["कंबल"]
+  result["kursi"] = @["कुर्सी"]
+  result["mez"] = @["मेज़"]
+  result["almari"] = @["अलमारी"]
+  result["palang"] = @["पलंग"]
+  result["chabhi"] = @["चाबी"]
+  result["taala"] = @["ताला"]
+  result["batti"] = @["बत्ती"]
+  result["bijli"] = @["बिजली"]
+  result["paani"] = @["पानी"]
+  result["pani"] = @["पानी"]
+  result["khana"] = @["खाना"]
+  result["chai"] = @["चाय"]
+  result["dudh"] = @["दूध"]
+  result["doodh"] = @["दूध"]
+
+  # ============ FOOD ============
+  result["roti"] = @["रोटी"]
+  result["chapati"] = @["चपाती"]
+  result["chawal"] = @["चावल"]
+  result["dal"] = @["दाल"]
+  result["daal"] = @["दाल"]
+  result["sabzi"] = @["सब्ज़ी"]
+  result["sabji"] = @["सब्ज़ी"]
+  result["aata"] = @["आटा"]
+  result["atta"] = @["आटा"]
+  result["namak"] = @["नमक"]
+  result["cheeni"] = @["चीनी"]
+  result["chini"] = @["चीनी"]
+  result["ghee"] = @["घी"]
+  result["tel"] = @["तेल"]
+  result["masala"] = @["मसाला"]
+  result["mirchi"] = @["मिर्ची"]
+  result["haldi"] = @["हल्दी"]
+  result["pyaz"] = @["प्याज़"]
+  result["pyaaz"] = @["प्याज़"]
+  result["lehsun"] = @["लहसुन"]
+  result["adrak"] = @["अदरक"]
+
+  # ============ TIME ============
+  result["din"] = @["दिन"]
+  result["raat"] = @["रात"]
+  result["rat"] = @["रात"]
+  result["subah"] = @["सुबह"]
+  result["subha"] = @["सुबह"]
+  result["shaam"] = @["शाम"]
+  result["sham"] = @["शाम"]
+  result["dopahar"] = @["दोपहर"]
+  result["abhi"] = @["अभी"]
+  result["ab"] = @["अब"]
+  result["kal"] = @["कल"]
+  result["aaj"] = @["आज"]
+  result["aj"] = @["आज"]
+  result["parso"] = @["परसों"]
+  result["samay"] = @["समय"]
+  result["waqt"] = @["वक़्त"]
+  result["ghanta"] = @["घंटा"]
+  result["ghante"] = @["घंटे"]
+  result["minute"] = @["मिनट"]
+  result["second"] = @["सेकंड"]
+  result["saal"] = @["साल"]
+  result["mahina"] = @["महीना"]
+  result["mahine"] = @["महीने"]
+  result["hafta"] = @["हफ़्ता"]
+  result["hafte"] = @["हफ़्ते"]
+  result["monday"] = @["मंडे"]
+  result["weekend"] = @["वीकेंड"]
+
+  # ============ PLACES ============
+  result["jagah"] = @["जगह"]
+  result["jagha"] = @["जगह"]
+  result["sthan"] = @["स्थान"]
+  result["gaon"] = @["गाँव"]
+  result["gaaon"] = @["गाँव"]
+  result["shahar"] = @["शहर"]
+  result["shehar"] = @["शहर"]
+  result["gali"] = @["गली"]
+  result["rasta"] = @["रास्ता"]
+  result["raasta"] = @["रास्ता"]
+  result["sadak"] = @["सड़क"]
+  result["bazaar"] = @["बाज़ार"]
+  result["bajar"] = @["बाज़ार"]
+  result["mandir"] = @["मंदिर"]
+  result["masjid"] = @["मस्जिद"]
+  result["school"] = @["स्कूल"]
+  result["college"] = @["कॉलेज"]
+  result["office"] = @["ऑफिस"]
+  result["dukaan"] = @["दुकान"]
+  result["dukan"] = @["दुकान"]
+  result["station"] = @["स्टेशन"]
+  result["desh"] = @["देश"]
+  result["videsh"] = @["विदेश"]
+  result["bharat"] = @["भारत"]
+  result["hindustan"] = @["हिंदुस्तान"]
+
+  # ============ ABSTRACT NOUNS ============
+  result["baat"] = @["बात"]
+  result["bat"] = @["बात"]
+  result["kaam"] = @["काम"]
+  result["kam"] = @["काम"]
+  result["cheez"] = @["चीज़"]
+  result["chiz"] = @["चीज़"]
+  result["samasya"] = @["समस्या"]
+  result["problem"] = @["प्रॉब्लम"]
+  result["pareshani"] = @["परेशानी"]
+  result["sawal"] = @["सवाल"]
+  result["sawaal"] = @["सवाल"]
+  result["jawab"] = @["जवाब"]
+  result["jawaab"] = @["जवाब"]
+  result["fayda"] = @["फ़ायदा"]
+  result["nuksan"] = @["नुकसान"]
+  result["mushkil"] = @["मुश्किल"]
+  result["aasan"] = @["आसान"]
+  result["asaan"] = @["आसान"]
+  result["sach"] = @["सच"]
+  result["jhooth"] = @["झूठ"]
+  result["jhuth"] = @["झूठ"]
+  result["pyaar"] = @["प्यार"]
+  result["pyar"] = @["प्यार"]
+  result["nafrat"] = @["नफ़रत"]
+  result["khushi"] = @["खुशी"]
+  result["gham"] = @["ग़म"]
+  result["gum"] = @["ग़म"]
+  result["dukh"] = @["दुख"]
+  result["sukh"] = @["सुख"]
+  result["umeed"] = @["उम्मीद"]
+  result["ummid"] = @["उम्मीद"]
+  result["nirasha"] = @["निराशा"]
+  result["himmat"] = @["हिम्मत"]
+  result["taakat"] = @["ताक़त"]
+  result["shakti"] = @["शक्ति"]
+  result["gyan"] = @["ज्ञान"]
+  result["shiksha"] = @["शिक्षा"]
+  result["sanskriti"] = @["संस्कृति"]
+  result["itihas"] = @["इतिहास"]
+  result["bhavishya"] = @["भविष्य"]
+  result["vartman"] = @["वर्तमान"]
+  result["jivan"] = @["जीवन"]
+  result["jindagi"] = @["ज़िंदगी"]
+  result["zindagi"] = @["ज़िंदगी"]
+
+  # ============ PEOPLE ============
+  result["log"] = @["लोग"]
+  result["aadmi"] = @["आदमी"]
+  result["aadamee"] = @["आदमी"]
+  result["aurat"] = @["औरत"]
+  result["ladka"] = @["लड़का"]
+  result["ladki"] = @["लड़की"]
+  result["ladke"] = @["लड़के"]
+  result["dost"] = @["दोस्त"]
+  result["dosti"] = @["दोस्ती"]
+  result["padosi"] = @["पड़ोसी"]
+  result["rishtedaar"] = @["रिश्तेदार"]
+  result["mehman"] = @["मेहमान"]
+  result["mehmaan"] = @["मेहमान"]
+  result["saathi"] = @["साथी"]
+  result["sathi"] = @["साथी"]
+  result["dushman"] = @["दुश्मन"]
+  result["neta"] = @["नेता"]
+  result["teacher"] = @["टीचर"]
+  result["student"] = @["स्टूडेंट"]
+  result["sir"] = @["सर", "सिर"]
+
+  # ============ ADJECTIVES ============
+  result["accha"] = @["अच्छा"]
+  result["acha"] = @["अच्छा"]
+  result["achha"] = @["अच्छा"]
+  result["achhi"] = @["अच्छी"]
+  result["achhe"] = @["अच्छे"]
+  result["bura"] = @["बुरा"]
+  result["buri"] = @["बुरी"]
+  result["bure"] = @["बुरे"]
+  result["bada"] = @["बड़ा"]
+  result["badi"] = @["बड़ी"]
+  result["bade"] = @["बड़े"]
+  result["chota"] = @["छोटा"]
+  result["chhota"] = @["छोटा"]
+  result["choti"] = @["छोटी"]
+  result["chote"] = @["छोटे"]
+  result["chhote"] = @["छोटे"]
+  result["naya"] = @["नया"]
+  result["nayi"] = @["नई"]
+  result["naye"] = @["नए"]
+  result["purana"] = @["पुराना"]
+  result["purani"] = @["पुरानी"]
+  result["purane"] = @["पुराने"]
+  result["sahi"] = @["सही"]
+  result["galat"] = @["ग़लत"]
+  result["thik"] = @["ठीक"]
+  result["theek"] = @["ठीक"]
+  result["sundar"] = @["सुंदर"]
+  result["khoobsurat"] = @["खूबसूरत"]
+  result["khubsurat"] = @["खूबसूरत"]
+  result["mahan"] = @["महान"]
+  result["kamzor"] = @["कमज़ोर"]
+  result["mazboot"] = @["मज़बूत"]
+  result["mazbut"] = @["मज़बूत"]
+  result["tez"] = @["तेज़"]
+  result["dheema"] = @["धीमा"]
+  result["garam"] = @["गरम"]
+  result["thanda"] = @["ठंडा"]
+  result["mitha"] = @["मीठा"]
+  result["meetha"] = @["मीठा"]
+  result["khatta"] = @["खट्टा"]
+  result["bhara"] = @["भरा"]
+  result["khali"] = @["खाली"]
+  result["pura"] = @["पूरा"]
+  result["poora"] = @["पूरा"]
+  result["aadha"] = @["आधा"]
+
+  # ============ ADVERBS ============
+  result["bahut"] = @["बहुत"]
+  result["bahot"] = @["बहुत"]
+  result["bohot"] = @["बहुत"]
+  result["zyada"] = @["ज़्यादा"]
+  result["zada"] = @["ज़्यादा"]
+  result["jyada"] = @["ज़्यादा"]
+  result["thoda"] = @["थोड़ा"]
+  result["thora"] = @["थोड़ा"]
+  result["bilkul"] = @["बिलकुल"]
+  result["ekdum"] = @["एकदम"]
+  result["hamesha"] = @["हमेशा"]
+  result["kabhi"] = @["कभी"]
+  result["aksar"] = @["अक्सर"]
+  result["phir"] = @["फिर"]
+  result["fir"] = @["फिर"]
+  result["yahan"] = @["यहाँ"]
+  result["yaha"] = @["यहाँ"]
+  result["wahan"] = @["वहाँ"]
+  result["waha"] = @["वहाँ"]
+  result["jahan"] = @["जहाँ"]
+  result["jaha"] = @["जहाँ"]
+  result["aise"] = @["ऐसे"]
+  result["waise"] = @["वैसे"]
+  result["vaise"] = @["वैसे"]
+  result["vaishe"] = @["वैसे"]
+  result["isliye"] = @["इसलिए"]
+  result["kyunki"] = @["क्योंकि"]
+  result["kyonki"] = @["क्योंकि"]
+  result["lekin"] = @["लेकिन"]
+  result["magar"] = @["मगर"]
+  result["sirf"] = @["सिर्फ़"]
+  result["bas"] = @["बस"]
+  result["lagbhag"] = @["लगभग"]
+  result["kaafi"] = @["काफी"]
+  result["kafi"] = @["काफी"]
+  result["almost"] = @["ऑलमोस्ट"]
+  result["exact"] = @["एक्ज़ैक्ट"]
+  result["accordingly"] = @["एकॉर्डिंगली"]
+
+  # ============ QUESTION WORDS ============
+  result["kya"] = @["क्या"]
+  result["kyun"] = @["क्यों"]
+  result["kyon"] = @["क्यों"]
+  result["kaise"] = @["कैसे"]
+  result["kahan"] = @["कहाँ"]
+  result["kaha"] = @["कहाँ"]
+  result["kab"] = @["कब"]
+  result["kaun"] = @["कौन"]
+  result["kitna"] = @["कितना"]
+  result["kitne"] = @["कितने"]
+  result["kitni"] = @["कितनी"]
+  result["konsa"] = @["कौनसा"]
+  result["kaunsa"] = @["कौनसा"]
+  result["kaisa"] = @["कैसा"]
+  result["kaisi"] = @["कैसी"]
+
+  # ============ POSTPOSITIONS ============
+  result["ka"] = @["का"]
+  result["ki"] = @["की"]
+  result["ke"] = @["के"]
+  result["ko"] = @["को"]
+  result["se"] = @["से"]
+  result["mein"] = @["में"]
+  result["me"] = @["में"]
+  result["may"] = @["में"]
+  result["par"] = @["पर"]
+  result["tak"] = @["तक"]
+  result["thak"] = @["तक"]
+  result["liye"] = @["लिए"]
+  result["saath"] = @["साथ"]
+  result["sath"] = @["साथ"]
+  result["bina"] = @["बिना"]
+  result["andar"] = @["अंदर"]
+  result["bahar"] = @["बाहर"]
+  result["upar"] = @["ऊपर"]
+  result["upr"] = @["ऊपर"]
+  result["niche"] = @["नीचे"]
+  result["neeche"] = @["नीचे"]
+  result["aage"] = @["आगे"]
+  result["peeche"] = @["पीछे"]
+  result["piche"] = @["पीछे"]
+  result["paas"] = @["पास"]
+  result["pass"] = @["पास"]
+  result["door"] = @["दूर"]
+  result["dur"] = @["दूर"]
+
+  # ============ CONJUNCTIONS ============
+  result["aur"] = @["और"]
+  result["or"] = @["और"]
+  result["ya"] = @["या"]
+  result["toh"] = @["तो"]
+  result["to"] = @["तो"]
+  result["ki"] = @["कि"]
+  result["jo"] = @["जो"]
+  result["agar"] = @["अगर"]
+  result["agr"] = @["अगर"]
+
+  # ============ NUMBERS ============
+  result["ek"] = @["एक"]
+  result["do"] = @["दो"]
+  result["teen"] = @["तीन"]
+  result["tin"] = @["तीन"]
+  result["chaar"] = @["चार"]
+  result["char"] = @["चार"]
+  result["paanch"] = @["पाँच"]
+  result["panch"] = @["पाँच"]
+  result["cheh"] = @["छह"]
+  result["chah"] = @["छह"]
+  result["saat"] = @["सात"]
+  result["aath"] = @["आठ"]
+  result["ath"] = @["आठ"]
+  result["nau"] = @["नौ"]
+  result["das"] = @["दस"]
+  result["gyarah"] = @["ग्यारह"]
+  result["barah"] = @["बारह"]
+  result["terah"] = @["तेरह"]
+  result["chaudah"] = @["चौदह"]
+  result["pandrah"] = @["पंद्रह"]
+  result["solah"] = @["सोलह"]
+  result["satrah"] = @["सत्रह"]
+  result["atharah"] = @["अठारह"]
+  result["unnis"] = @["उन्नीस"]
+  result["bees"] = @["बीस"]
+  result["pachas"] = @["पचास"]
+  result["sau"] = @["सौ"]
+  result["hazaar"] = @["हज़ार"]
+  result["hazar"] = @["हज़ार"]
+  result["lakh"] = @["लाख"]
+  result["crore"] = @["करोड़"]
+
+  # ============ GREETINGS ============
+  result["namaste"] = @["नमस्ते"]
+  result["namaskar"] = @["नमस्कार"]
+  result["salaam"] = @["सलाम"]
+  result["salam"] = @["सलाम"]
+  result["dhanyawad"] = @["धन्यवाद"]
+  result["dhanyavad"] = @["धन्यवाद"]
+  result["shukriya"] = @["शुक्रिया"]
+  result["alvida"] = @["अलविदा"]
+  result["swagat"] = @["स्वागत"]
+  result["hello"] = @["हैलो"]
+  result["ok"] = @["ओके"]
+  result["okay"] = @["ओके"]
+
+  # ============ NEGATION ============
+  result["nahi"] = @["नहीं"]
+  result["nahin"] = @["नहीं"]
+  result["nhi"] = @["नहीं"]
+  result["nhii"] = @["नहीं"]
+  result["nhiii"] = @["नहीं"]
+  result["nai"] = @["नहीं"]
+  result["na"] = @["ना"]
+  result["naa"] = @["ना"]
+  result["mat"] = @["मत"]
+
+  # ============ AGREEMENT ============
+  result["haan"] = @["हाँ"]
+  result["han"] = @["हाँ"]
+  result["hn"] = @["हाँ"]
+  result["hmm"] = @["हम्म"]
+
+  # ============ MISC ============
+  result["bhi"] = @["भी"]
+  result["bhee"] = @["भी"]
+  result["vi"] = @["भी"]
+  result["hi"] = @["ही"]
+  result["hee"] = @["ही"]
+  result["sab"] = @["सब"]
+  result["sabb"] = @["सब"]
+  result["kuch"] = @["कुछ"]
+  result["kuchh"] = @["कुछ"]
+  result["koi"] = @["कोई"]
+  result["koyi"] = @["कोई"]
+  result["saare"] = @["सारे"]
+  result["sare"] = @["सारे"]
+  result["tab"] = @["तब"]
+  result["jab"] = @["जब"]
+  result["yaar"] = @["यार"]
+  result["yar"] = @["यार"]
+  result["bro"] = @["ब्रो"]
+  result["please"] = @["कृपया"]
+  result["kripya"] = @["कृपया"]
+  result["sorry"] = @["माफ़"]
+  result["maaf"] = @["माफ़"]
+  result["maafi"] = @["माफ़ी"]
+  result["taaki"] = @["ताकि"]
+  result["taki"] = @["ताकि"]
+  result["baar"] = @["बार"]
+  result["bar"] = @["बार"]
+  result["pata"] = @["पता"]
+  result["patta"] = @["पता"]
+  result["are"] = @["अरे"]
+  result["arre"] = @["अरे"]
+  result["mean"] = @["मीन"]
+  result["jarur"] = @["ज़रूर"]
+  result["zarur"] = @["ज़रूर"]
+  result["zaroor"] = @["ज़रूर"]
+  result["jaroor"] = @["ज़रूर"]
+
+  # ============ CORE CONCEPTS & CULTURE ============
+  result["dharm"] = @["धर्म"]
+  result["dharma"] = @["धर्म"]
+  result["karm"] = @["कर्म"]
+  result["karma"] = @["कर्म"]
+  result["ram"] = @["राम"]
+  result["rama"] = @["राम"]
+  result["naam"] = @["नाम"]
+  result["nam"] = @["नाम"]
+  result["ishq"] = @["इश्क़", "इश्क"]
+  result["ishk"] = @["इश्क", "इश्क़"]
+
+  # ============ COLLEGE / EDUCATION ============
+  result["practical"] = @["प्रैक्टिकल"]
+  result["topic"] = @["टॉपिक"]
+  result["topics"] = @["टॉपिक्स"]
+  result["doubt"] = @["डाउट"]
+  result["subject"] = @["सब्जेक्ट"]
+  result["syllabus"] = @["सिलेबस"]
+  result["sem"] = @["सेम"]
+  result["lab"] = @["लैब"]
+  result["project"] = @["प्रोजेक्ट"]
+  result["data"] = @["डेटा"]
+  result["template"] = @["टेम्पलेट"]
+  result["photo"] = @["फोटो"]
+  result["spelling"] = @["स्पेलिंग"]
+  result["mistake"] = @["मिस्टेक"]
+  result["complete"] = @["कंप्लीट"]
+  result["portion"] = @["पोर्शन"]
+  result["khatam"] = @["खत्म"]
+
+  # ============ GEOGRAPHY & ACADEMIC TERMS ============
+  result["rainfall"] = @["रेनफॉल"]
+  result["rain"] = @["रेन"]
+  result["fall"] = @["फॉल"]
+  result["dispersion"] = @["डिस्पर्शन"]
+  result["climatic"] = @["क्लाइमेटिक"]
+  result["climate"] = @["क्लाइमेट"]
+  result["water"] = @["वाटर"]
+  result["budget"] = @["बजट"]
+  result["mercator"] = @["मर्केटर"]
+  result["projection"] = @["प्रोजेक्शन"]
+  result["vernier"] = @["वर्नियर"]
+  result["scale"] = @["स्केल"]
+  result["diagram"] = @["डायग्राम"]
+  result["digaram"] = @["डायग्राम"]
+
+proc normalizeToHinglish*(word: string): seq[string] =
+  let raw = word.strip()
+  if raw.len == 0: return @[]
+
+  var r = raw
+  # Long vowels
+  r = r.replace("ā", "a").replace("Ā", "A")
+  r = r.replace("ī", "i").replace("Ī", "I")
+  r = r.replace("ū", "u").replace("Ū", "U")
+  # Sibilants
+  r = r.replace("ś", "sh").replace("Ś", "Sh")
+  r = r.replace("ṣ", "sh").replace("Ṣ", "Sh")
+  # Nasals
+  r = r.replace("ñ", "n").replace("ṅ", "ng")
+  r = r.replace("ṇ", "n").replace("ṃ", "n").replace("ṁ", "n")
+  # Retroflex
+  r = r.replace("ṭ", "t").replace("ḍ", "d")
+  # Misc
+  r = r.replace("ḥ", "h").replace("ṛ", "ri").replace("ṝ", "ri")
+  r = r.replace("ḷ", "li").replace("ḹ", "li")
+  r = r.toLowerAscii()
+
+  var variants = @[r]
+
+  # Cluster transforms
+  if "jñ" in raw or "jn" in r:
+    variants.add(r.replace("jn", "gy"))
+  if "kṣ" in raw:
+    variants.add(r.replace("ks", "ksh"))
+    variants.add(r.replace("ks", "x"))
+  if "sh" in r:
+    variants.add(r.replace("sh", "s"))
+
+  # Schwa deletion at end
+  var schwaVariants: seq[string] = @[]
+  for v in variants:
+    if v.len > 3 and v[^1] == 'a':
+      if not (raw.endsWith("ā") or raw.endsWith("Ā") or v.endsWith("aa") or v.endsWith("ya")):
+        schwaVariants.add(v[0 ..< v.len - 1])
+  variants.add(schwaVariants)
+
+  # Deduplicate
+  result = @[]
+  for v in variants:
+    let clean = v.strip().toLowerAscii()
+    if clean.len > 0 and clean notin result:
+      result.add(clean)
+
+proc getDataDir*(): string =
+  let base = getEnv("XDG_DATA_HOME", getEnv("HOME") / ".local/share")
+  let dir = base / "hindi-ime"
+  createDir(dir)
+  return dir
+
+proc getCacheDir*(): string =
+  let base = getEnv("XDG_CACHE_HOME", getEnv("HOME") / ".cache")
+  let dir = base / "hindi-ime"
+  createDir(dir)
+  return dir
+
+proc getRimeDir*(): string =
+  let base = getEnv("XDG_DATA_HOME", getEnv("HOME") / ".local/share")
+  let dir = getEnv("HINDI_IME_RIME_DIR", base / "fcitx5/rime")
+  createDir(dir)
+  return dir
+
+proc generateFullRimeHindiDict() =
+  let projDir = currentSourcePath.parentDir
+  var binPath = getDataDir() / "wordnet_hindi_dict.bin"
+  if not fileExists(binPath):
+    binPath = projDir / "wordnet_hindi_dict.bin"
+  var cachePath = getCacheDir() / "google_translit_cache.bin"
+  if not fileExists(cachePath):
+    cachePath = projDir / "google_translit_cache.bin"
+  let rimeDictPath = getRimeDir() / "hindi_ai.dict.yaml"
+  let binDict = loadWordNetBinaryDict(binPath)
+  let googleCache = loadGoogleCache(cachePath)
+  let commonDict = getCommonDict()
+
+  var f = open(rimeDictPath, fmWrite)
+  f.writeLine("# Rime dictionary: hindi_ai")
+  f.writeLine("# Generated by Pure Nim Compiler (All Features Integrated)")
+  f.writeLine("---")
+  f.writeLine("name: hindi_ai")
+  f.writeLine("version: \"2.0\"")
+  f.writeLine("sort: by_weight")
+  f.writeLine("use_preset_vocabulary: false")
+  f.writeLine("...")
+  f.writeLine("")
+
+  var seen = initTable[string, bool]()
+  var count = 0
+
+  # 1. Google Transliterate Cached Words (Highest Priority)
+  for pkey, cands in googleCache:
+    for hw in cands:
+      let hword = hw.strip()
+      let hashKey = pkey & ":" & hword
+      if not seen.hasKey(hashKey):
+        f.writeLine(hword & "\t" & pkey)
+        seen[hashKey] = true
+        inc count
+
+  # 2. Curated High-Frequency Common Dictionary
+  for pkey, cands in commonDict:
+    for hw in cands:
+      let hword = hw.strip()
+      let hashKey = pkey & ":" & hword
+      if not seen.hasKey(hashKey):
+        f.writeLine(hword & "\t" & pkey)
+        seen[hashKey] = true
+        inc count
+
+  # 3. WordNet Hindi Dictionary (Normalized to Hinglish)
+  for key, cands in binDict:
+    let variants = normalizeToHinglish(key)
+    for pkey in variants:
+      for hword in cands:
+        let hw = hword.strip()
+        let hashKey = pkey & ":" & hw
+        if not seen.hasKey(hashKey):
+          f.writeLine(hw & "\t" & pkey)
+          seen[hashKey] = true
+          inc count
+
+  f.close()
+  echo "🚀 Pure Nim Rime Builder compiled ", count, " entries into ", rimeDictPath
+
+when isMainModule:
+  generateFullRimeHindiDict()

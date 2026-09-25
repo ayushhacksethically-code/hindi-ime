@@ -1,0 +1,39 @@
+# Build artifacts
+nimcache/
+*.exe
+*.o
+*.out
+
+# Personal data (CRITICAL)
+whatsapp_chats/
+*.chat.txt
+chat_*.txt
+personal_dict.nim
+my_words.*
+
+# Cache
+*.cache
+google_translit_cache.bin
+
+# Large binaries (CRITICAL — WordNet is 6MB+)
+wordnet_hindi_dict.bin
+*.bin
+!data/sample_*.bin
+
+# Rime user data (learned entries)
+*.userdb/
+userdb/
+*.userdb.txt
+
+# OS / Editor
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+*~
+
+# Secrets
+.env
+*.key
+secrets/

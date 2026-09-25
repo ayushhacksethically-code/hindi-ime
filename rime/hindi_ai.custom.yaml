@@ -1,0 +1,6 @@
+# Custom patch configuration for hindi_ai Rime schema
+# Any personal customizations should go here.
+
+patch:
+  # Example: customize page size (number of candidates)
+  # "menu/page_size": 5
