@@ -161,7 +161,9 @@ hindi-ime/
 
 ## License
 
-MIT — see [LICENSE](LICENSE)
+GPL-3.0 — see [LICENSE](LICENSE)
+
+Licensed under GPL-3.0 because dictionary data is derived from Hindi WordNet (IIT Bombay, GPL).
 
 ## Contributing
 
