@@ -1,4 +1,5 @@
-import std/[tables, strutils, json, streams, os, math, sequtils, sets, algorithm]
+import std/[tables, strutils, json, streams, os, math, sequtils, sets, algorithm, unicode]
+import ../data/common_dict
 
 type
   PredictCandidate* = object
@@ -267,27 +268,28 @@ proc loadWordNetBinaryDict*(binPath: string): Table[string, seq[string]] =
 
   fs.close()
 
-proc getCommonDict(): Table[string, seq[string]] =
-  result = initTable[string, seq[string]]()
-  result["upgrade"] = @["अपग्रेड", "अपग्रैड"]
-  result["lagega"] = @["लगेगा", "लगैगा"]
-  result["namaste"] = @["नमस्ते", "नमस्कार"]
-  result["namste"] = @["नमस्ते", "नमस्कार"]
-  result["kaha"] = @["कहा", "कहाँ", "कहां"]
-  result["kahan"] = @["कहाँ", "कहां", "कहा"]
-  result["duniya"] = @["दुनिया", "दुनीया"]
-  result["ye"] = @["ये", "यह"]
-  result["yeh"] = @["यह", "ये"]
-  result["ho"] = @["हो", "हौ"]
-  result["raha"] = @["रहा", "रहे", "रही"]
-  result["rahi"] = @["रही", "रहा", "रहे"]
-  result["rahe"] = @["रहे", "रहा", "रही"]
-  result["hai"] = @["है", "हैं"]
-  result["hain"] = @["हैं", "है"]
-  result["aap"] = @["आप", "अप"]
-  result["main"] = @["मैं", "मै"]
-  result["mai"] = @["मैं", "मै"]
-  result["kya"] = @["क्या"]
+proc isSuspiciousOutput(input, output: string): bool =
+  # 1. Output is too long compared to input
+  if output.runeLen > input.len * 2:
+    return true
+  # 2. Too many matras (vowel signs) in output
+  const matras = ["ा", "ि", "ी", "ु", "ू", "े", "ै", "ो", "ौ", "ं", "ँ", "ृ", "ॄ"]
+  var matraCount = 0
+  for m in matras:
+    matraCount += output.count(m)
+  if matraCount > input.len:
+    return true
+  # 3. Input is a common English word (list from Step 2)
+  const englishWords = ["office","school","college","whatsapp","instagram","facebook",
+    "google","youtube","mobile","laptop","computer","internet","email","password","login",
+    "logout","file","folder","photo","video","audio","music","movie","game","time","date",
+    "year","month","week","day","hour","minute","second","number","address","phone","name",
+    "city","country","india","delhi","mumbai","bangalore","chennai","kolkata","hyderabad",
+    "pune","ahmedabad","jaipur","lucknow","patna","bhopal","indore","kanpur","nagpur","surat",
+    "vadodara","rajkot","noida","gurgaon","ghaziabad","faridabad"]
+  if input.toLowerAscii() in englishWords:
+    return true
+  return false
 
 # Complete Comprehensive Algorithmic Transliteration Engine
 proc transliterateSingleWord*(word: string): string =
@@ -394,6 +396,9 @@ proc transliterateSingleWord*(word: string): string =
     let c = w[i]
     res.add($c)
     i += 1
+
+  if isSuspiciousOutput(word, res):
+    return word # return original English
 
   return res
 

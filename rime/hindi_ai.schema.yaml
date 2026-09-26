@@ -32,6 +32,7 @@ engine:
   translators:
     - punct_translator
     - script_translator
+    - echo_translator
   filters:
     - uniquifier
 
