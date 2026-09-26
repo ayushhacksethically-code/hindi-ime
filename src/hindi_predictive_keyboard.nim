@@ -1,4 +1,6 @@
-import std/[tables, strutils, sequtils, osproc, json, streams, os, terminal]
+import std/[tables, strutils, osproc, json, streams, os, terminal]
+import std/unicode except splitWhitespace
+import ../data/common_dict
 
 type
   PredictCandidate* = object
@@ -89,35 +91,28 @@ proc loadWordNetBinaryDict*(binPath: string): Table[string, seq[string]] =
 
   fs.close()
 
-# Common Base Conversational Dictionary
-proc getCommonDict(): Table[string, seq[string]] =
-  result = initTable[string, seq[string]]()
-  result["namaste"] = @["नमस्ते", "नमस्कार"]
-  result["namaskar"] = @["नमस्कार", "नमस्कर"]
-  result["ishwar"] = @["ईश्वर", "ईष्वर"]
-  result["gyan"] = @["ज्ञान", "ज्ञन"]
-  result["kshamata"] = @["क्षमता", "क्षमत"]
-  result["patra"] = @["पत्र", "पत्रा"]
-  result["shweta"] = @["श्वेता", "श्वेत"]
-  result["shree"] = @["श्री", "श्रीमान"]
-  result["kaise"] = @["कैसे", "कैसा", "कैसी"]
-  result["kaisa"] = @["कैसा", "कैसे"]
-  result["ho"] = @["हो", "हौ"]
-  result["hai"] = @["है", "हैं"]
-  result["hain"] = @["हैं", "है"]
-  result["aap"] = @["आप", "अप"]
-  result["main"] = @["मैं", "मै"]
-  result["mai"] = @["मैं", "मै"]
-  result["mera"] = @["मेरा", "मेरे", "मेरी"]
-  result["kya"] = @["क्या", "क्या?"]
-  result["ghar"] = @["घर", "घरा"]
-  result["paani"] = @["पानी", "पानि"]
-  result["khana"] = @["खाना", "खाने"]
-  result["dost"] = @["दोस्त", "दोस्ती"]
-  result["pyaar"] = @["प्यार", "प्यारा"]
-  result["shukriya"] = @["शुक्रिया", "धन्यवाद"]
-  result["bharat"] = @["भारत", "भारतीय"]
-  result["hindi"] = @["हिंदी", "हिन्दी"]
+proc isSuspiciousOutput(input, output: string): bool =
+  # 1. Output is too long compared to input
+  if output.runeLen > input.len * 2:
+    return true
+  # 2. Too many matras (vowel signs) in output
+  const matras = ["ा", "ि", "ी", "ु", "ू", "े", "ै", "ो", "ौ", "ं", "ँ", "ृ", "ॄ"]
+  var matraCount = 0
+  for m in matras:
+    matraCount += output.count(m)
+  if matraCount > input.len:
+    return true
+  # 3. Input is a common English word (list from Step 2)
+  const englishWords = ["office","school","college","whatsapp","instagram","facebook",
+    "google","youtube","mobile","laptop","computer","internet","email","password","login",
+    "logout","file","folder","photo","video","audio","music","movie","game","time","date",
+    "year","month","week","day","hour","minute","second","number","address","phone","name",
+    "city","country","india","delhi","mumbai","bangalore","chennai","kolkata","hyderabad",
+    "pune","ahmedabad","jaipur","lucknow","patna","bhopal","indore","kanpur","nagpur","surat",
+    "vadodara","rajkot","noida","gurgaon","ghaziabad","faridabad"]
+  if input.toLowerAscii() in englishWords:
+    return true
+  return false
 
 # Upgraded Pure Nim Rule Transliteration Engine
 proc transliterateSingleWord*(word: string): string =
@@ -181,6 +176,9 @@ proc transliterateSingleWord*(word: string): string =
       res.add($c)
       i += 1
   
+  if isSuspiciousOutput(word, res):
+    return word
+
   return res
 
 proc getDataDir*(): string =
