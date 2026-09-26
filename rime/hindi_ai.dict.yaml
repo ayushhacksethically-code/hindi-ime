@@ -36,6 +36,9 @@ use_preset_vocabulary: false
 देखता	dekhta
 छियानवेवीं	chhiyaanve_vi
 उनतीसवाँ	unnatiswa
+सच्चे	sache
+बाबू	babu
+मौसी	mausi
 बोलते	bolte
 क्यों	kyun
 देखे	dekhe
@@ -53,6 +56,7 @@ use_preset_vocabulary: false
 इक्यासीवीं	ikyaasivi
 सैंतीसवाँ	sainntiswan
 बत्तीसवाँ	battisva
+परंतु	parantu
 वर्नियर	vernier
 बोलना	bolna
 पैंतीसवाँ	paintiswan
@@ -63,6 +67,8 @@ youtube	youtube
 ताकि	taaki
 ताकि	taki
 सत्ताईसवाँ	sattaiswan
+नदियाँ	naadiyan
+नदियां	naadiyan
 पढ़ते	padhte
 सत्तासीवीं	sattaasivi
 उनकी	unki
@@ -75,10 +81,14 @@ youtube	youtube
 कितना	kitna
 सतहत्तरवाँ	satahattarwan
 आठवाँ	aathwa
+रानी	rani
+हुए	hue
 उनासीवाँ	unasiva
+बुआ	bua
 इकसठवाँ	iksathwa
 मामी	mami
 मुँह	muh
+प्यारी	pyari
 तिरानवेवाँ	tiranveva
 चीनी	cheeni
 दग्ध-देहाय	dagdha-dehay
@@ -153,9 +163,12 @@ address	address
 नमोऽस्तुते	namostute
 निन्यानवेवीं	ninyaanvevi
 हमें	hume
+चिड़िया	chidiya
 साठवीं	saathvi
 तकिया	takiya
 हल्दी	haldi
+गाड़ियाँ	gaadiyan
+गाड़ियां	gaadiyan
 चौहत्तरवीं	chauhattarvi
 उनहत्तरवाँ	unhattarwa
 चौथा	chautha
@@ -184,9 +197,11 @@ indore	indore
 minute	minute
 ज़रूर	jarur
 नमः	namaha
+नदी	nadi
 सुबह	subha
 उनहत्तरवाँ	unhattarva
 सोचना	sochna
+मीठे	meethe
 बच्चा	bacha
 मर्केटर	mercator
 सत्तासीवाँ	sattaasi
@@ -219,14 +234,17 @@ mobile	mobile
 चौहत्तरवाँ	chauhattarva
 लेकिन	lekin
 आपलोग	aplog
+सच्ची	sacchi
 भेज	vej
 कैसे	kaise
 थोड़ा	thoda
+आलू	aalu
 अट्ठावनवाँ	atthavanwan
 ब्रो	bro
 पैंतीसवीं	paintisvi
 आठवाँ	athwan
 सौवाँ	sauwa
+सच्चे	sacche
 बानवेवीं	baanve_vi
 बोली	boli
 छठे	chhathe
@@ -302,6 +320,7 @@ phone	phone
 सोचा	socha
 करूँ	karu
 उनसठवाँ	unsathwan
+आयु	aayu
 करना	karna
 ये	ye
 टॉपिक्स	topics
@@ -332,6 +351,8 @@ office	office
 छत्तीसवाँ	chhattisva
 सूर्यपुत्र	suryaputra
 पैंसठवाँ	painsath
+सच्चा	sacha
+मम्मी	mummy
 date	date
 लैब	lab
 नाम	nam
@@ -354,6 +375,7 @@ date	date
 लेनी	leni
 जाएगी	jayegi
 सोलह	solah
+चाहिए	chahiye
 फिर	phir
 नवासीवाँ	nawasi
 पाँचवाँ	panchwan
@@ -364,7 +386,9 @@ date	date
 दस	das
 करती	karti
 हुआ	huw
+रोटली	rotli
 इकसठवाँ	iksathva
+गुरु	guru
 पढ़ी	padhi
 नुकसान	nuksan
 ऐसे	aise
@@ -450,6 +474,7 @@ computer	computer
 बासठवाँ	baasath
 छियानवेवाँ	chhiyaanvewa
 छियासठवाँ	chhiyasath
+भालू	bhalu
 second	second
 छप्पनवीं	chhappanvi
 नित्यं	nityam
@@ -501,6 +526,7 @@ school	school
 पैंतालीसवाँ	painntalisva
 तत्क्षणात्	tatkshanat
 पचासवाँ	pachasva
+चंपू	champu
 हज़ार	hazaar
 सुनते	sunte
 शुष्काय	shushkaya
@@ -549,6 +575,7 @@ school	school
 गली	gali
 चौंतीसवाँ	chauntiswan
 पड़ोसी	padosi
+हुए	huye
 समझे	samjhe
 मीठा	mitha
 login	login
@@ -567,6 +594,7 @@ vadodara	vadodara
 बानवेवाँ	baanveva
 सातवाँ	satva
 आज	aj
+राजा	raja
 इसकी	iski
 बारहवाँ	barahwan
 आठवाँ	aathva
@@ -602,15 +630,21 @@ vadodara	vadodara
 अट्ठासीवाँ	atthaasiva
 kolkata	kolkata
 जाके	jake
+गाड़ियाँ	gadiyan
+गाड़ियां	gadiyan
 एकदम	ekdum
 वो	wo
+बिल्ली	billi
 अच्छा	acha
+झाड़ू	jhadu
 पचास	pachas
 दसवें	daswe
 सातवाँ	saatwa
 सत्तावनवाँ	sattavan
 अट्ठावनवीं	atthavanvi
 बड़े	bade
+तराज़ू	tarazu
+तराजू	tarazu
 सातवाँ	saatva
 आप	aap
 क्षेत्र	kshetra
@@ -636,6 +670,7 @@ kolkata	kolkata
 अड़तीसवीं	adhtisvi
 गा	gaa
 बीसवीं	beesvi
+सच्चा	saccha
 हम्म	hmm
 पचासीवीं	pachaasi_vi
 समझना	samajhna
@@ -694,6 +729,7 @@ video	video
 इक्यासीवीं	ikyaasi_vi
 है	h
 रुष्टो	rushto
+कड़वी	kadwi
 ऊपर	upar
 इक्कीसवाँ	ikkeeswan
 इकतालीसवीं	iktalisvi
@@ -703,6 +739,7 @@ video	video
 एक्ज़ैक्ट	exact
 audio	audio
 जगह	jagah
+सखी	sakhi
 दाँत	daant
 सातवाँ	satwan
 छिहत्तरवाँ	chhihattarwa
@@ -722,6 +759,7 @@ audio	audio
 hyderabad	hyderabad
 कहता	kahta
 पर	par
+रहती	rahti
 निस्त्रिंशाय	nistrimshay
 सब	sabb
 जाऊँगा	jaunga
@@ -812,6 +850,7 @@ noida	noida
 सिलेबस	syllabus
 यह	yeh
 तिरासीवीं	tiraasi_vi
+जैसे	jaise
 टॉपिक	topic
 विशालनेत्राय	vishalnetraya
 उनके	unke
@@ -835,6 +874,7 @@ instagram	instagram
 चौरानवेवीं	chauranvevi
 आठवें	athwe
 अट्ठानवेवीं	atthaanvevi
+दुनिया	duniya
 अठहत्तरवाँ	athhattarwa
 खाना	khana
 बयासीवाँ	bayaasiva
@@ -844,6 +884,7 @@ instagram	instagram
 भव	bhav
 जाते	jate
 सोलहवाँ	solahwa
+किंतु	kintu
 अट्ठानवेवाँ	atthaanvewa
 पैर	paer
 खुद	khud
@@ -875,6 +916,7 @@ instagram	instagram
 तेरा	tera
 अड़सठवाँ	adsath
 नाशं	nasham
+आलू	alu
 नवासीवाँ	nawasiva
 देवासुरमनुष्याश्च	devasuramanyashcha
 तीसवाँ	teeswan
@@ -916,6 +958,8 @@ month	month
 पूरा	pura
 उसकी	uski
 सड़सठवीं	sarsathvi
+नदियाँ	nadiyan
+नदियां	nadiyan
 जीवन	jivan
 सैंतीसवाँ	saintiswa
 day	day
@@ -933,7 +977,9 @@ day	day
 कौन	kaun
 क्लाइमेट	climate
 उन्नीसवाँ	unnisva
+कचालू	kachalu
 देखी	dekhi
+कहानी	kahani
 चौवनवाँ	chauvanva
 इकतालीसवाँ	iktaliswan
 स्तुतस्तदा	stutastada
@@ -955,6 +1001,7 @@ day	day
 पढ़ती	padhti
 बावनवाँ	bavanva
 क्लाइमेटिक	climatic
+रहता	rahta
 पुरानी	purani
 मज़बूत	mazbut
 अट्ठानवेवाँ	atthaanve
@@ -988,6 +1035,7 @@ pune	pune
 देहाय	dehaya
 दसवाँ	daswan
 सुंदर	sundar
+सुन्दर	sundar
 चौरासीवाँ	chauraasiva
 आँखें	aankhen
 gurgaon	gurgaon
@@ -995,6 +1043,7 @@ gurgaon	gurgaon
 बोलता	bolta
 आसान	aasan
 घंटे	ghante
+प्यारे	pyare
 चौहत्तरवाँ	chauhattarwan
 सोचता	sochta
 मेरी	meri
@@ -1010,6 +1059,7 @@ music	music
 chennai	chennai
 तिरसठवाँ	tirsathwan
 अठहत्तरवीं	athhattarvi
+नदी	naadi
 अतृप्ताय	atriptaya
 बार	bar
 तेरहवाँ	terahwa
@@ -1027,6 +1077,7 @@ chennai	chennai
 चौदहवाँ	chaudahva
 करोड़	crore
 इकसठवीं	iksathvi
+प्यारा	pyara
 समझता	samajhta
 एकॉर्डिंगली	accordingly
 तिरसठवाँ	tirsathva
@@ -1040,13 +1091,16 @@ chennai	chennai
 week	week
 उनसठवाँ	unsath
 तीन	tin
+सच्ची	sachi
 ahmedabad	ahmedabad
 देवासुरमनुष्याश्च	devasuramanushyashcha
 उसे	use
 चौहत्तरवाँ	chauhattar
 आए	aaye
+चल	chal
 दीवार	deewar
 निन्यानवेवाँ	ninyaanveva
+दिल्ली	dilli
 तैंतालीसवीं	taintalisvi
 सैंतालीसवाँ	saintaliswa
 छत्तीसवाँ	chhattiswa
@@ -1068,8 +1122,11 @@ year	year
 rajkot	rajkot
 पैंसठवाँ	painsathwan
 सत्तासीवाँ	sattaasiva
+तराज़ू	taraju
+तराजू	taraju
 किया	kiya
 शिक्षा	shiksha
+सामने	saamne
 अड़तीसवाँ	adhtiswan
 परसों	parso
 घोराय	ghoray
@@ -1088,6 +1145,7 @@ internet	internet
 नमोऽस्तु	namostu
 अरे	are
 आया	aaya
+बालू	baalu
 पानी	paani
 धर्म	dharma
 चली	chali
@@ -1121,6 +1179,7 @@ game	game
 तब	tab
 फर्श	farsh
 कमज़ोर	kamzor
+मीठी	meethi
 पैंतालीसवाँ	painntaliswa
 पाँचवाँ	paanchwan
 इकतीसवाँ	ikattisva
@@ -1143,8 +1202,9 @@ nagpur	nagpur
 ग्यारहवाँ	gyarahva
 बिस्तर	bistar
 रसोई	rasoi
+अच्छी	acchi
 माता	mata
-आटा	aata
+आता	aata
 नाक	naak
 बहुत	bahot
 रिश्तेदार	rishtedaar
@@ -1162,10 +1222,13 @@ kanpur	kanpur
 पाँचवें	panchwe
 छप्पनवाँ	chhappan
 लेते	lete
+सुंदरी	sundari
+सुन्दरी	sundari
 देश	desh
 सत्तरवीं	sattarvi
 इकतालीसवाँ	iktaliswa
 घोराय	ghoraya
+छोटी	chhoti
 लिया	liya
 हैलो	hello
 करूँ	karun
@@ -1180,6 +1243,7 @@ kanpur	kanpur
 उन्नीस	unnis
 चौरानवेवीं	chauranve_vi
 मिस्टेक	mistake
+सामने	samne
 बुरा	bura
 जगह	jagha
 सत्तासीवाँ	sattaasiwa
@@ -1209,6 +1273,7 @@ kanpur	kanpur
 लोग	log
 छियालीसवीं	chhiyalisvi
 तेईसवाँ	teiswa
+बेटे	bete
 बच्चा	bachcha
 साठवाँ	saathwa
 तीसरा	teesra
@@ -1217,8 +1282,10 @@ kanpur	kanpur
 पिता	pita
 तिरानवेवीं	tiranvevi
 आते	aate
+गाड़ी	gaadi
 चौवनवाँ	chauvanwa
 पढ़ना	padhna
+लड्डू	laddu
 दोपहर	dopahar
 ते	te
 रात	raat
@@ -1231,12 +1298,14 @@ kanpur	kanpur
 उनतालीसवीं	untalisvi
 उसका	uska
 अट्ठावनवाँ	atthavan
+सखा	sakha
 राम	ram
 सत्तरवाँ	sattarwan
 अधोदृष्टे:	adhodrishte
 तक	thak
 सैंतीसवाँ	sainntisva
 तिरसठवीं	tirsathvi
+शुरू	shuru
 शौहर	shauhar
 सिद्ध-विद्याधरोरगा:	siddha-vidyadharoragah
 ताई	tai
@@ -1287,6 +1356,7 @@ movie	movie
 नवासीवीं	nawasivi
 बाईसवाँ	baeeswa
 सत्तानवेवीं	sattaanvevi
+साधु	sadhu
 पढ़ा	padha
 त्वया	tvaya
 भी	bhi
@@ -1311,6 +1381,7 @@ lucknow	lucknow
 कर्म	karma
 नमो	namo
 प्रैक्टिकल	practical
+कड़वा	kadwa
 पचानवेवाँ	pachaanvewa
 अस्सीवीं	assi_vi
 पचासवाँ	pachaswa
@@ -1327,15 +1398,18 @@ lucknow	lucknow
 तिरपनवाँ	tirpan
 छियासीवाँ	chhiyaasi
 हो	ho
+ठंडी	thandi
 होगा	hoga
 अगर	agr
 jaipur	jaipur
+मधु	madhu
 मंदिर	mandir
 देते	dete
 एवं	evam
 mumbai	mumbai
 पीछे	peeche
 स्थूलरोम्णे	sthoolaromne
+गाड़ी	gadi
 इकहत्तरवीं	ikhattarvi
 बहत्तरवाँ	bahattar
 नीलाय	neelaya
@@ -1345,6 +1419,7 @@ mumbai	mumbai
 अरे	arre
 हूँ	hun
 बहन	bahan
+गुड़िया	gudiya
 छत्तीसवीं	chhattisvi
 दूर	dur
 देखा	dekha
@@ -1357,6 +1432,7 @@ mumbai	mumbai
 रौद्राय	raudraya
 password	password
 करते	karte
+रहते	rahte
 आपका	aapka
 चौबीसवाँ	chaubiswa
 लेता	leta
@@ -1369,11 +1445,13 @@ password	password
 दसवाँ	daswa
 तीसरी	tisri
 ज्ञान	gyan
+बापू	bapu
 तुष्टो	tushto
 सत्तासीवीं	sattaasi_vi
 समय	samay
 सातवें	satwe
 निस्त्रिंशाय	nistrimshaya
+चाकू	chaku
 अट्ठासीवाँ	atthaasi
 प्याज़	pyaaz
 तेरह	terah
@@ -1384,6 +1462,7 @@ password	password
 हमलोग	humlog
 होंगे	honge
 ग्यारहवाँ	gyarahwan
+उल्लू	ullu
 लेती	leti
 छब्बीसवाँ	chhabbisva
 इक्कीसवाँ	ikkeesva
@@ -1399,6 +1478,7 @@ password	password
 कोई	koyi
 time	time
 बच्चे	bache
+अच्छे	acche
 किसका	kiska
 इकहत्तरवाँ	ikhattarva
 चलता	chalta
@@ -7252,7 +7332,6 @@ www	www
 अनुधावन	anudhavana
 अनुधावन	anudhavan
 बूढ़ा	bua
-बुआ	bua
 बूआ	bua
 प्रतीक	pratika
 प्रतीक	pratik
@@ -11000,7 +11079,6 @@ www	www
 विश्वनाथन	visvanathana
 विश्वनाथन	vishvanathan
 विश्वनाथन	visvanathan
-दिल्ली	dilli
 आपके	apake
 तप्तकुंभ	taptakumbha
 तप्तकुंभ	taptakumbh
@@ -16396,7 +16474,6 @@ www	www
 कारतूस	karatusa
 कारतूस	karatus
 प्यार	pyara
-प्यारा	pyara
 प्यारा	pyar
 मुखोपाध्याय	mukhopadhyaya
 कास्त्रो	kastro
@@ -19090,7 +19167,6 @@ www	www
 नायक	nayak
 प्रीतम	pritama
 प्रीतम	pritam
-गुरु	guru
 गुरू	guru
 विध्वन्स	vidhvansa
 विध्वन्स	vidhvans
@@ -23065,7 +23141,6 @@ www	www
 शक्तिकुंठन	saktikumthana
 शक्तिकुंठन	shaktikumthan
 शक्तिकुंठन	saktikumthan
-मौसी	mausi
 लतिहल	latihala
 लतिहल	latihal
 जवाबदेह	javabadeha
@@ -25564,7 +25639,6 @@ www	www
 गुल्फ	gulph
 भूटान	bhutana
 भूटान	bhutan
-सखी	sakhi
 हिमजन	himajana
 हिमजन	himajan
 अनाकांक्षा	anakamksha
@@ -26760,7 +26834,6 @@ www	www
 चिंपाजी	chimpaji
 बकवासी	bakavasi
 जिनकी	jinaki
-तराजू	taraju
 दुःखी	duhkhi
 आश्वासी	ashvasi
 आश्वासी	asvasi
@@ -37069,7 +37142,6 @@ www	www
 वनौषधि	vanaushadhi
 वनौषधि	vanausadhi
 रॉयल्टी	roayalti
-कचालू	kachalu
 यथाशक्ति	yathashakti
 यथाशक्ति	yathasakti
 नाबालिग़	nabaliga
@@ -38731,7 +38803,6 @@ www	www
 गरुड़	garuda
 गरुड़	garud
 गरुड़	garud
-चाकू	chaku
 द्रवचालित	dravachalita
 द्रवचालित	dravachalit
 डायरी	dayari
@@ -40621,7 +40692,6 @@ www	www
 झकझक	jhakajhak
 झकाझक	jhakajhak
 अग्रणी	agrani
-भालू	bhalu
 भल्ल	bhalla
 भल्ल	bhall
 शयनरत	shayanarata
@@ -42055,7 +42125,6 @@ www	www
 खजुवा	khajuv
 जलदाता	jaladata
 जलदाता	jaladat
-जैसे	jaise
 परिभव	paribhava
 परीभाव	paribhava
 परिभाव	paribhava
@@ -44081,7 +44150,6 @@ www	www
 बडाघराना	badagharan
 उमाकट	umakata
 उमाकट	umakat
-गुड़िया	gudiya
 गुड़िया	gudiya
 ऋषीकेश	rshikesha
 ऋषीकेश	rsikesa
@@ -44664,7 +44732,6 @@ www	www
 यथेष्ट	yathesta
 यथेष्ट	yathesht
 यथेष्ट	yathest
-रानी	rani
 अस्तु	astu
 खस्ताहाल	khastahala
 खस्ताहाल	khastahal
@@ -46707,7 +46774,6 @@ www	www
 राज	raja
 रजा	raja
 रज	raja
-राजा	raja
 राज	raj
 रजा	raj
 रज	raj
@@ -46861,7 +46927,6 @@ www	www
 तिक्की	tikki
 भ्राता	bhrata
 भ्राता	bhrat
-बिल्ली	billi
 गोचर	gochara
 गोचर	gochar
 फेरफार	pheraphara
@@ -49283,7 +49348,6 @@ www	www
 रक्म	rakma
 रक्म	rakm
 शुरु	shuru
-शुरू	shuru
 शुरु	suru
 शुरू	suru
 तितिक्षा	titiksha
@@ -54517,7 +54581,6 @@ com	com
 लोकगीत	lokagit
 अरुणलोचन	arunalochana
 अरुणलोचन	arunalochan
-सखा	sakha
 साख	sakha
 सखा	sakh
 साख	sakh
@@ -58372,7 +58435,6 @@ com	com
 अक्र्‍पा	akrpa
 अकृपा	akrp
 अक्र्‍पा	akrp
-आलू	alu
 पीठ	pitha
 पीठ	pith
 जैक	jaika
@@ -59960,7 +60022,6 @@ com	com
 बन्नी	banni
 विजयासत्पमी	vijayasatpami
 साधू	sadhu
-साधु	sadhu
 साढू	sadhu
 सेनापरिधान	senaparidhana
 सेनापरिधान	senaparidhan
@@ -63654,7 +63715,6 @@ vatican	vatican
 उद्योगशाला	udyogashal
 उद्योगशाला	udyogasal
 गोआ	goa
-दुनिया	duniya
 मुहैया	muhaiya
 ज़ुबैदा	zubaida
 ज़ुबैदा	zubaid
@@ -65163,7 +65223,6 @@ vatican	vatican
 ग़ायब	gayaba
 गायब	gayab
 ग़ायब	gayab
-लड्डू	laddu
 क्षयरोगी	kshayarogi
 क्षयरोगी	ksayarogi
 एरविज़ो	eravizo
@@ -65619,7 +65678,6 @@ vatican	vatican
 वज़न	vazana
 वज़न	vazan
 वज़न	vazan
-मधु	madhu
 बटाटा	batata
 बटाटा	batat
 कोष	kosha
@@ -65817,7 +65875,6 @@ vatican	vatican
 गेंदुक	gemduk
 अघोर	aghora
 अघोर	aghor
-उल्लू	ullu
 लटापटी	latapati
 रूकावट	rukavata
 रुकावट	rukavata
@@ -67739,7 +67796,6 @@ vatican	vatican
 लोढ़ा	lodh
 धरित्री	dharitri
 सुन्दर	sundara
-सुन्दर	sundar
 याद	yada
 याद	yad
 क़हवा	qahava
@@ -71945,7 +72001,6 @@ vatican	vatican
 कहनानुसार	kahananusar
 अनर्हीकरण	anarhikarana
 अनर्हीकरण	anarhikaran
-चिड़िया	chidiya
 चिड़िया	chidiya
 पचगुना	pachaguna
 पचगुना	pachagun
@@ -75560,7 +75615,6 @@ vatican	vatican
 चाल	chal
 ऑचल	chal
 छाला	chal
-चल	chal
 चला	chal
 छाल	chal
 छल	chal
@@ -77570,7 +77624,6 @@ vatican	vatican
 कन्याकुमारी	kanyakumari
 नाड़ी	nadi
 नाड़ी	nadi
-नदी	nadi
 ब्रह्मकन्या	brahmakanya
 शराबी	sharabi
 शराबी	sarabi
@@ -80461,7 +80514,6 @@ vatican	vatican
 अन्वेष्टा	anvest
 ज़नख़ापन	zanakapana
 ज़नख़ापन	zanakapan
-कहानी	kahani
 अनी	ani
 गंगोदक	gamgodaka
 गंगोदक	gamgodak
@@ -82061,7 +82113,6 @@ vatican	vatican
 सेक्रेटेरिएट	sekreterieta
 सेक्रेटेरिएट	sekreteriet
 गाड़ी	gadi
-गाड़ी	gadi
 शांतिप्रक्रिया	shamtiprakriya
 शांतिप्रक्रिया	samtiprakriya
 कालिका	kalika
@@ -82465,7 +82516,6 @@ vatican	vatican
 धैर्यहीन	dhairyahina
 धैर्यहीन	dhairyahin
 व्यापारी	vyapari
-बाबू	babu
 ताप्ती	tapti
 वीरान	virana
 वीरान	viran
@@ -87511,7 +87561,6 @@ verb	verb
 काउड्री	kaudri
 ख़ाकी	khaki
 खाकी	khaki
-बापू	bapu
 लाड़ली	ladali
 हॉट	hoata
 हॉट	hoat
