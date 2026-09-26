@@ -17,6 +17,11 @@ const
     ("gy", "ज्ञ"),
     ("tr", "त्र"),
     ("shr", "श्र"),
+    ("pya", "प्या"),
+    ("kya", "क्या"),
+    ("dhya", "ध्या"),
+    ("tya", "त्या"),
+    ("nya", "न्या"),
     ("chh", "छ"),
     ("kh", "ख"),
     ("gh", "घ"),
@@ -114,6 +119,17 @@ proc isSuspiciousOutput(input, output: string): bool =
     return true
   return false
 
+proc getLastRune(s: string): Rune =
+  if s.len == 0: return Rune(0)
+  var pos = s.len - 1
+  while pos > 0 and (s[pos].ord and 0xC0) == 0x80:
+    dec pos
+  return s.runeAt(pos)
+
+proc isDevanagariConsonant(r: Rune): bool =
+  let code = r.int
+  return (code >= 0x0915 and code <= 0x0939) or (code >= 0x0958 and code <= 0x095F)
+
 # Upgraded Pure Nim Rule Transliteration Engine
 proc transliterateSingleWord*(word: string): string =
   var res = ""
@@ -143,16 +159,32 @@ proc transliterateSingleWord*(word: string): string =
         break
     if matchedCluster: continue
 
-    # Check Dependent Matras if preceded by a consonant
-    if res.len > 0:
-      var matchedMatra = false
-      for (mStr, mVal) in dependentMatras:
-        if i + mStr.len <= w.len and w[i ..< i + mStr.len] == mStr:
-          res.add(mVal)
-          i += mStr.len
-          matchedMatra = true
-          break
-      if matchedMatra: continue
+    # Dependent Matras & Vowels
+    var matchedMatra = false
+    for (mStr, mVal) in dependentMatras:
+      if i + mStr.len <= w.len and w[i ..< i + mStr.len] == mStr:
+        let prevIsCons = res.len > 0 and isDevanagariConsonant(getLastRune(res))
+        if prevIsCons:
+          var actualMatra = mVal
+          if mStr == "i" and i + mStr.len == w.len:
+            actualMatra = "ी"
+          elif mStr == "a" and i + mStr.len == w.len and w.len > 2:
+            actualMatra = "ा"
+          res.add(actualMatra)
+        else:
+          var indepVal = ""
+          for (vStr, vVal) in independentVowels:
+            if vStr == mStr:
+              indepVal = vVal
+              break
+          if indepVal.len == 0: indepVal = mVal
+          if mStr == "i" and res.len > 0:
+            indepVal = "ई"
+          res.add(indepVal)
+        i += mStr.len
+        matchedMatra = true
+        break
+    if matchedMatra: continue
 
     # Single Consonants & Standard Fallback
     let c = w[i]
