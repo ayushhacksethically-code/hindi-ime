@@ -1732,6 +1732,11 @@ proc getCommonDict*(): Table[string, seq[string]] =
   result["chah"] = @["चाह"]
   result["chahiye"] = @["चाहिए"]
   result["chahiya"] = @["चाहिए"]
+  result["chahiyega"] = @["चाहिएगा"]
+
+  # ============ CHHAH (SIX) ============
+  result["chhah"] = @["छह"]
+  result["chhe"] = @["छे"]
 
   # ============ LAG- (APPEAR/COST) ============
   result["lagat"] = @["लागत"]
