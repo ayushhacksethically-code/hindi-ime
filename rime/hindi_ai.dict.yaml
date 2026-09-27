@@ -28,7 +28,6 @@ use_preset_vocabulary: false
 चाचा	chacha
 तेईसवीं	teisvi
 इनका	inka
-अथ	ath
 आठ	ath
 पोर्शन	portion
 छोटी	choti
@@ -41,22 +40,32 @@ use_preset_vocabulary: false
 मौसी	mausi
 बोलते	bolte
 क्यों	kyun
+टोपी	topi
 देखे	dekhe
 नमः	namah
+रुकते	rukte
 दीजिएगा	dijiye ga
 हमारी	hamari
 महान	mahan
 समूलत:	samulatah
 ग़लत	galat
+खाओ	khao
 सत्तरवाँ	sattar
 नौवीं	nauvi
+नाचता	nachta
+सुनो	suno
+सस्ता	sasta
 नहीं	nahi
+बनाओ	banao
+जन्म	janam
+तुम्हारा	tumhara
 नवासीवाँ	nawasiwa
 सड़क	sadak
 इक्यासीवीं	ikyaasivi
 सैंतीसवाँ	sainntiswan
 बत्तीसवाँ	battisva
 परंतु	parantu
+उठते	uthte
 वर्नियर	vernier
 बोलना	bolna
 पैंतीसवाँ	paintiswan
@@ -74,15 +83,18 @@ youtube	youtube
 उनकी	unki
 तेरे	tere
 सही	sahi
+खेलते	khelte
 होते	hote
 तैंतीसवीं	taintisvi
 नौवाँ	nauwan
 ससुर	sasur
 कितना	kitna
+राजमा	rajma
 सतहत्तरवाँ	satahattarwan
 आठवाँ	aathwa
 रानी	rani
 हुए	hue
+जूता	joota
 उनासीवाँ	unasiva
 बुआ	bua
 इकसठवाँ	iksathwa
@@ -93,6 +105,7 @@ youtube	youtube
 चीनी	cheeni
 दग्ध-देहाय	dagdha-dehay
 अठारहवाँ	atharahwa
+सोता	sota
 को	ko
 अठारहवाँ	atharahva
 नौवाँ	nauwa
@@ -108,8 +121,10 @@ surat	surat
 तिरपनवाँ	tirpanwa
 कश्यपात्मज-सूनवे	kashyapatmaj-soonave
 हमारे	hamare
+सिखाना	sikhana
 शितिकण्ठ	shitikanth
 बयासीवाँ	bayaasiwan
+हॉस्पिटल	hospital
 डेटा	data
 बाज़ार	bajar
 अड़तीसवाँ	adhtisva
@@ -124,8 +139,10 @@ number	number
 आपको	aapko
 धन्यवाद	dhanyawad
 उनसठवाँ	unsathwa
+लिख	likh
 सैंतालीसवीं	saintalisvi
 ससुराल	sasural
+मांगता	mangta
 शुष्काय	shushkay
 स्टेशन	station
 कोटराक्षाय	kotarakshaya
@@ -135,6 +152,7 @@ number	number
 city	city
 चौदहवाँ	chaudahwan
 कब	kab
+अचार	achar
 सौ	sau
 तिहत्तरवीं	tihattarvi
 दीर्घाय	dirghaya
@@ -143,10 +161,10 @@ city	city
 कंप्लीट	complete
 माफ़	maaf
 तिरासीवाँ	tiraasiwan
+सीखा	sikha
 सातवीं	satvi
 आती	aati
 में	me
-मे	me
 address	address
 खुशी	khushi
 भैया	bhaiya
@@ -156,25 +174,31 @@ address	address
 छप्पनवाँ	chhappanwa
 भीषणाय	bhishanay
 उनसठवाँ	unsathva
-काफी	kaafi
+काफ़ी	kaafi
 हज़ार	hazar
+बताया	bataya
 बड़ी	badi
 इक्यानवेवाँ	ikyaanveva
 नमोऽस्तुते	namostute
+पतला	patla
 निन्यानवेवीं	ninyaanvevi
 हमें	hume
+रुक	ruk
 चिड़िया	chidiya
 साठवीं	saathvi
 तकिया	takiya
 अष्टधातु	ashtadhatu
 हल्दी	haldi
+पुलाव	pulao
 गाड़ियाँ	gaadiyan
 गाड़ियां	gaadiyan
+पूछना	puchna
 चौहत्तरवीं	chauhattarvi
 उनहत्तरवाँ	unhattarwa
 चौथा	chautha
 पचपनवीं	pachpanvi
 सारे	saare
+बाज़ार	bazar
 चाबी	chabhi
 और	or
 सोलहवाँ	solahwan
@@ -192,10 +216,11 @@ indore	indore
 चौथी	chothi
 पैंतालीसवाँ	paintalisva
 चौसठवाँ	chausath
+भेजना	bhejna
 अड़तालीसवाँ	adhtaliswa
 छियानवेवाँ	chhiyaanve
 सत्रहवीं	satrahvi
-minute	minute
+मिनट	minute
 ज़रूर	jarur
 नमः	namaha
 नदी	nadi
@@ -204,6 +229,7 @@ minute	minute
 सोचना	sochna
 मीठे	meethe
 बच्चा	bacha
+हड्डी	hadh
 मर्केटर	mercator
 सत्तासीवाँ	sattaasi
 सास	saas
@@ -212,6 +238,7 @@ mobile	mobile
 नमस्तेऽस्तु	namastestu
 पैंतालीसवाँ	paintaliswa
 पता	pata
+नीला	neela
 जवाब	jawaab
 पचानवेवीं	pachaanvevi
 मकान	makan
@@ -220,12 +247,16 @@ mobile	mobile
 चौबीसवीं	chaubisvi
 छियानवेवीं	chhiyaanvevi
 बच्चे	bachche
+सीखता	sikhta
 मगर	magar
 सत्तानवेवीं	sattaanve_vi
 बाप	baap
+आलू	aloo
 नेता	neta
+सीखती	sikhti
 दोस्त	dost
 बासठवाँ	baasathwa
+हँसा	hasa
 नब्बेवीं	nabbe_vi
 अट्ठावनवाँ	atthavanva
 चलना	chalna
@@ -239,12 +270,15 @@ mobile	mobile
 भेज	vej
 कैसे	kaise
 थोड़ा	thoda
+रुमाल	rumal
 आलू	aalu
 अट्ठावनवाँ	atthavanwan
 ब्रो	bro
 पैंतीसवीं	paintisvi
+तुम्हारे	tumhare
 आठवाँ	athwan
 सौवाँ	sauwa
+बैठता	baithta
 सच्चे	sacche
 बानवेवीं	baanve_vi
 बोली	boli
@@ -256,16 +290,19 @@ mobile	mobile
 सोलहवाँ	solahva
 तिहत्तरवाँ	tihattar
 जब	jab
+मौत	maut
 सिद्ध-विद्याधरोरगा:	siddhavidyadharoragah
 सत्ताईसवाँ	sattaiswa
 सत्तरवाँ	sattarwa
 जाके	jaake
+सिखाओ	sikhao
 डायग्राम	diagram
 उम्मीद	ummid
 हैं	hain
 सब	sab
 तिरानवेवाँ	tiranve
 ठंडा	thanda
+बैठ	baith
 इतिहास	itihas
 पचासीवाँ	pachaasiwa
 पूरा	poora
@@ -282,10 +319,12 @@ whatsapp	whatsapp
 बत्तीसवाँ	battiswa
 पाँचवाँ	paanchva
 औरत	aurat
+खा	kha
 तेरहवाँ	terahwan
 छियासठवाँ	chhiyasathwan
 अठारहवीं	atharahvi
 logout	logout
+सोमवार	somvar
 उनतालीसवाँ	untalisva
 रखिये	rakhiye
 कैसा	kaisa
@@ -302,6 +341,7 @@ country	country
 उसके	uske
 india	india
 मंडे	monday
+नाचते	nachte
 सात	saat
 चौरासीवीं	chauraasi_vi
 कालाग्निरूपाय	kalagniropaya
@@ -315,13 +355,16 @@ india	india
 पुराना	purana
 वैसे	waise
 पैंतीसवाँ	painntiswan
+बिरयानी	biryani
 उनचासवाँ	unchasva
 प्रॉब्लम	problem
 पुष्कलगात्राय	pushkalagatraya
 इन्हें	inhe
 लिखे	likhe
 phone	phone
+बोल	bol
 छब्बीसवाँ	chhabbiswan
+लंबा	lamba
 सलाम	salaam
 सोचा	socha
 करूँ	karu
@@ -338,6 +381,7 @@ phone	phone
 हुआ	hua
 मुझको	mujhko
 बत्तीसवाँ	battiswan
+साबुन	sabun
 चीज़	cheez
 चौसठवाँ	chausathwa
 बोले	bole
@@ -352,8 +396,10 @@ office	office
 पति	pati
 सत्तावनवाँ	sattavanwa
 चाह	chah
+जा	ja
 बाईसवाँ	baeeswan
 अठहत्तरवाँ	athhattarva
+चलो	chalo
 छत्तीसवाँ	chhattisva
 सूर्यपुत्र	suryaputra
 पैंसठवाँ	painsath
@@ -368,24 +414,33 @@ date	date
 बत्तीसवीं	battisvi
 सौवीं	sauvi
 ऑलमोस्ट	almost
+मांगा	manga
+परिवार	parivar
 गे	ge
 चौहत्तरवाँ	chauhattarwa
+समझ	samajh
 किसकी	kiski
 वर्तमान	vartman
 पच्चीसवाँ	pachchiswan
 घंटा	ghanta
 पचहत्तरवाँ	pachattar
 दशरथ	dasharath
+चमड़ी	chamdi
 पैंसठवीं	painsathvi
 नाना	nana
+हल्का	halka
 लेनी	leni
 जाएगी	jayegi
+भेजी	bheji
 सोलह	solah
 चाहिए	chahiye
 फिर	phir
 नवासीवाँ	nawasi
+हँसो	haso
 पाँचवाँ	panchwan
+गोभी	gobhi
 अठहत्तरवाँ	athhattar
+खून	khun
 गी	gi
 प्रसाद	prasad
 पहली	pahli
@@ -401,6 +456,7 @@ date	date
 इश्क	ishk
 इश्क़	ishk
 अभयदाय	abhayadaya
+नीला	nila
 जवाब	jawab
 वहाँ	waha
 बोला	bola
@@ -408,29 +464,34 @@ date	date
 पच्चीसवाँ	pachchiswa
 लेना	lena
 कल	kal
+लड्डू	laddoo
 दुख	dukh
-bangalore	bangalore
+बैंगलोर	bangalore
 सुनी	suni
 bhopal	bhopal
 चौवनवीं	chauvanvi
 पचपनवाँ	pachpan
 छे	chhe
+सो	soo
 विदेश	videsh
 आपके	aapke
 द्वारका	dwarka
+मंगलवार	mangalvar
 पच्चीसवाँ	pachchisva
 ghaziabad	ghaziabad
 सतहत्तरवाँ	satahattar
 मामा	mama
 संस्कृत	sanskrit
 email	email
+गाता	gata
 तिरसठवाँ	tirsath
 नब्बेवीं	nabbevi
+रोया	roya
 सैंतालीसवाँ	sainntaliswan
 भाई	bhai
 तैंतीसवाँ	taintiswa
 पत्नी	patni
-सर	sir
+देख	dekh
 सिर	sir
 ग्यारहवाँ	gyarahwa
 देता	deta
@@ -444,8 +505,10 @@ email	email
 इनके	inke
 देवर	devar
 सड़सठवाँ	sarsathva
+खाता	khata
 सत्ताईसवीं	sattaisvi
 छोटे	chote
+सोया	soya
 अपना	apna
 हूँ	hoon
 कर्म	karm
@@ -462,6 +525,7 @@ computer	computer
 दग्धदेहाय	dagdhadehaya
 गाड़ियों	gadiyo
 सोचे	soche
+देखो	dekho
 नमक	namak
 बाज़ार	bazaar
 तिरानवेवाँ	tiranvewa
@@ -469,11 +533,14 @@ computer	computer
 दीवार	diwar
 अट्ठासीवाँ	atthaasiwan
 तिरानवेवाँ	tiranvewan
+खून	khoon
 उन्नीसवीं	unnisvi
 पाँचवें	paanchwe
+सोते	sote
 इक्यासीवाँ	ikyaasiwa
 बहत्तरवीं	bahattarvi
 सोलहवीं	solahvi
+खाती	khati
 सर्वे	sarve
 उनसठवीं	unsathvi
 होती	hoti
@@ -488,7 +555,7 @@ computer	computer
 छियानवेवाँ	chhiyaanvewa
 छियासठवाँ	chhiyasath
 भालू	bhalu
-second	second
+सेकंड	second
 छप्पनवीं	chhappanvi
 नित्यं	nityam
 लेके	leke
@@ -504,6 +571,8 @@ google	google
 चौदहवाँ	chaudahwa
 करे	kare
 उनतीसवाँ	unnatiswan
+कह	kah
+बीच	beech
 पुराने	purane
 सत्तानवेवाँ	sattaanvewa
 क्योंकि	kyunki
@@ -512,6 +581,7 @@ google	google
 अब	ab
 ना	naa
 लड़कियाँ	ladkiyan
+काला	kala
 कौनसा	konsa
 सत्ताईसवाँ	sattaisva
 बीस	bees
@@ -519,8 +589,10 @@ google	google
 भेजे	veje
 मीठा	meetha
 सुबह	subah
+चप्पल	chappal
 पचहत्तरवीं	pachattarvi
 faridabad	faridabad
+सीखो	sikho
 बिजली	bijli
 दरवाजा	darwaza
 कालदंष्ट्र	kaladanshtra
@@ -541,49 +613,64 @@ school	school
 तत्क्षणात्	tatkshanat
 रातों	raato
 पचासवाँ	pachasva
+नाचो	nacho
 चंपू	champu
 हज़ार	hazaar
 सुनते	sunte
 शुष्काय	shushkaya
+गाते	gate
+रुकना	rukna
+कपड़े	kapde
 लड़कियों	ladkiyon
-काफी	kafi
+बैठो	baitho
+काफ़ी	kafi
 चौसठवीं	chausathvi
 पच्चीसवीं	pachchisvi
 प्यार	pyaar
 छोटा	chhota
 बानवेवाँ	baanve
+काला	kaala
 करके	karke
 कालाग्निरूपाय	kalagnirupaya
 मसाला	masala
 बहत्तरवाँ	bahattarwa
 पैंतालीसवाँ	paintaliswan
 नौ	nau
+रुkti	rukti
 साथ	sath
 दोस्ती	dosti
 कोटराक्षाय	kotrakshay
 उनासीवीं	unasivi
 डिस्पर्शन	dispersion
+पियो	piyo
+पढ़	padh
 दूध	doodh
 पढ़े	padhe
 मज़बूत	mazboot
 ऊपर	upr
 वारदो	varado
+रखते	rakhte
 लगते	lagte
 कपालिने	kapaline
 कुछ	kuch
+रो	ro
+सीख	sikh
 समस्याओं	samasyaon
 सच	sach
 उन्हें	unhe
 कोटराक्षाय	kotrakshaya
 वीकेंड	weekend
+पराठा	paratha
 दो	do
 पूछ	puch
 लड़का	ladka
 देनी	deni
+खेलना	khelna
 उनतालीसवाँ	untaliswa
 अड़तीसवाँ	adhtiswa
 तीसवीं	teesvi
 प्रोजेक्ट	project
+बनना	banna
 लिखते	likhte
 चलते	chalte
 सैंतालीसवाँ	saintaliswan
@@ -604,6 +691,7 @@ login	login
 पूछा	pucha
 दशरथकृत	dashrathkrit
 vadodara	vadodara
+पढ़ो	padho
 ताक़त	taakat
 बयालीसवाँ	bayaliswan
 अलविदा	alvida
@@ -613,6 +701,8 @@ vadodara	vadodara
 बानवेवाँ	baanveva
 सातवाँ	satva
 आज	aj
+पी	pi
+उठती	uthti
 राजा	raja
 इसकी	iski
 बारहवाँ	barahwan
@@ -647,10 +737,11 @@ vadodara	vadodara
 अठहत्तरवाँ	athhattarwan
 तीसरे	teesre
 अट्ठासीवाँ	atthaasiva
-kolkata	kolkata
+कोलकाता	kolkata
 जाके	jake
 गाड़ियाँ	gadiyan
 गाड़ियां	gadiyan
+करेला	karela
 एकदम	ekdum
 वो	wo
 बिल्ली	billi
@@ -669,6 +760,7 @@ kolkata	kolkata
 क्षेत्र	kshetra
 पैर	pair
 गाँव	gaaon
+इडली	idli
 नहीं	nhii
 नीचे	niche
 थोड़ा	thora
@@ -677,6 +769,7 @@ kolkata	kolkata
 सत्रहवाँ	satrahwan
 हफ़्ते	hafte
 दशरथ	dasharatha
+पीना	pina
 छिहत्तरवाँ	chhihattarva
 तिरासीवीं	tiraasivi
 शितिकण्ठ	shitikantha
@@ -684,17 +777,23 @@ kolkata	kolkata
 मस्जिद	masjid
 करनी	karni
 तिहत्तरवाँ	tihattarwan
+पूछता	puchta
 सौवाँ	sauwan
 था	tha
 अड़तीसवीं	adhtisvi
+लिखो	likho
+सीखते	sikhte
 गा	gaa
 बीसवीं	beesvi
 सच्चा	saccha
+सीखना	sikhna
 हम्म	hmm
 पचासीवीं	pachaasi_vi
 समझना	samajhna
+खेलती	khelti
 धर्म	dharm
 महीने	mahine
+बैठती	baithti
 सड़सठवाँ	sarsathwa
 लूँ	lu
 नमस्कार	namaskar
@@ -712,9 +811,13 @@ kolkata	kolkata
 क्षुधार्ताय	kshudhartay
 facebook	facebook
 चौंतीसवाँ	chauntiswa
+बैठते	baithte
+बर्फी	barfi
 बहन	behen
 पाँचवाँ	paanchwa
 इकतीसवाँ	ikattiswan
+लंबी	lambi
+पूछो	pucho
 खाली	khali
 जाता	jata
 जानी	jani
@@ -743,6 +846,7 @@ facebook	facebook
 सौरिर्ग्रहराजो	saurirgraharajo
 तेल	tel
 video	video
+मटर	matar
 बात	baat
 छप्पनवाँ	chhappanva
 इक्यासीवीं	ikyaasi_vi
@@ -752,8 +856,10 @@ video	video
 ऊपर	upar
 इक्कीसवाँ	ikkeeswan
 इकतालीसवीं	iktalisvi
+उठ	uth
 रात	rat
 नदियों	nadiyon
+हड्डी	hadhdi
 प्यार	pyar
 शहर	shehar
 एक्ज़ैक्ट	exact
@@ -765,11 +871,15 @@ audio	audio
 छिहत्तरवाँ	chhihattarwa
 उवाच	uvacha
 पूछ	pooch
+पूरी	puri
 अट्ठाईसवाँ	atthaiswan
 तिरासीवाँ	tiraasiva
+लाल	laal
+आओ	aao
 नए	naye
 सुना	suna
 रख	rakh
+इतवार	itvar
 यहाँ	yaha
 कर	kar
 सुनना	sunna
@@ -779,6 +889,7 @@ audio	audio
 माँ	ma
 hyderabad	hyderabad
 कहता	kahta
+पार्क	park
 पर	par
 रहती	rahti
 निस्त्रिंशाय	nistrimshay
@@ -789,6 +900,7 @@ hyderabad	hyderabad
 बनाये	banaye
 दीदी	didi
 नया	naya
+सिखाती	sikhati
 बना	bana
 रहा	raha
 पचपनवाँ	pachpanva
@@ -803,6 +915,7 @@ hyderabad	hyderabad
 कहाँ	kaha
 कहा	kaha
 फिर	fir
+घरवाले	gharwale
 रातों	raaton
 छप्पनवाँ	chhappanwan
 बासठवाँ	baasathwan
@@ -818,8 +931,10 @@ hyderabad	hyderabad
 कंबल	kambal
 नीचे	neeche
 सारे	sare
+पीला	pila
 पैंतालीसवीं	paintalisvi
 कवर	cover
+रोते	rote
 होगया	hogaya
 हो गया	hogaya
 कृष्णाय	krishnaya
@@ -827,18 +942,28 @@ hyderabad	hyderabad
 कही	kahi
 पलंग	palang
 noida	noida
+रखो	rakho
+हँसते	haste
 नब्बेवाँ	nabbewan
 पचानवेवाँ	pachaanve
 इक्यानवेवीं	ikyaanve_vi
+फूफा	phupha
 इकतीसवाँ	ikattiswa
 सोचती	sochti
+शनिवार	shanivar
 चलती	chalti
 साठवाँ	saathwan
+चौड़ा	chauda
+सोचो	socho
 गाँव	gaon
 भव	bhava
+नाचा	nacha
+हुई	hui
 कंधा	kandha
 कहती	kahti
 चार	chaar
+पीती	piti
+बीच	bich
 तो	to
 आठवें	aathwe
 सातवाँ	satwa
@@ -849,17 +974,20 @@ noida	noida
 समझते	samajhte
 उनासीवाँ	unasiwa
 कुछ	kuchh
+सभी	sabhi
 शाम	shaam
 अट्ठासीवीं	atthaasivi
 यार	yaar
 बड़ा	bada
 इक्यानवेवाँ	ikyaanvewan
 तिरासीवाँ	tiraasi
+कमरे	kamre
 ददासि	dadasi
 आपकी	aapki
 उनचासवाँ	unchaswan
 हिंदुस्तान	hindustan
 क्यों	kyon
+हरा	hara
 रही	rahi
 इसके	iske
 कान	kaan
@@ -870,13 +998,16 @@ noida	noida
 छब्बीसवाँ	chhabbiswa
 इक्यावनवीं	ikyaavanvi
 तैंतालीसवाँ	taintalisva
+सोच	soch
 शक्ति	shakti
 सिलेबस	syllabus
 यह	yeh
 तिरासीवीं	tiraasi_vi
 जैसे	jaise
+हँसता	hasta
 टॉपिक	topic
 विशालनेत्राय	vishalnetraya
+होटल	hotel
 उनके	unke
 पचासीवीं	pachaasivi
 ही	hee
@@ -889,10 +1020,12 @@ noida	noida
 instagram	instagram
 स्टूडेंट	student
 अधोदृष्टे:	adhodrishteh
+बैठना	baithna
 सतहत्तरवीं	satahattarvi
 कश्यपात्मज-सूनवे	kashyapatmajsunave
 इनकी	inki
 बानवेवाँ	baanvewa
+नाच	nach
 सैंतीसवाँ	saintiswan
 छठा	chhatha
 हाँ	han
@@ -917,13 +1050,18 @@ instagram	instagram
 क्योंकि	kyonki
 बयालीसवीं	bayalisvi
 आदमी	aadmi
+मांगती	mangti
 पचहत्तरवाँ	pachattarva
 पचासवीं	pachasvi
 बावनवाँ	bavan
 तिरानवेवीं	tiranve_vi
+गुरुवार	guruvar
 बताओ	batao
+शुक्रवार	shukravar
 नौवाँ	nawaan
 छियालीसवाँ	chhiyaliswa
+समोसा	samosa
+छोले	chole
 है	hai
 नवासीवीं	nawasi_vi
 तीसवाँ	teeswa
@@ -943,6 +1081,7 @@ instagram	instagram
 अड़सठवाँ	adsath
 नाशं	nasham
 आलू	alu
+हँसती	hasti
 नवासीवाँ	nawasiva
 देवासुरमनुष्याश्च	devasuramanyashcha
 तीसवाँ	teeswan
@@ -951,6 +1090,7 @@ instagram	instagram
 यहाँ	yahan
 छियासीवाँ	chhiyaasiwan
 नहीं	nai
+उठता	uthta
 गरम	garam
 बेटी	beti
 सवाल	sawal
@@ -975,7 +1115,9 @@ folder	folder
 पचपनवाँ	pachpanwan
 सत्रह	satrah
 वाटर	water
+पीला	peela
 चालीसवाँ	chaliswan
+रविवार	ravivar
 चालीसवाँ	chaliswa
 बिना	bina
 आठ	aath
@@ -989,6 +1131,7 @@ month	month
 जीवन	jivan
 सैंतीसवाँ	saintiswa
 day	day
+गाती	gati
 मेहमान	mehman
 बयासीवीं	bayaasivi
 चले	chale
@@ -1002,6 +1145,7 @@ day	day
 पैंतालीसवीं	painntalisvi
 कौन	kaun
 क्लाइमेट	climate
+उठा	utha
 उन्नीसवाँ	unnisva
 कचालू	kachalu
 देखी	dekhi
@@ -1021,6 +1165,7 @@ day	day
 सुनता	sunta
 चौसठवाँ	chausathva
 पचहत्तरवाँ	pachattarwan
+पकौड़ा	pakora
 उन्नीसवाँ	unniswan
 गा	ga
 रेन	rain
@@ -1032,10 +1177,12 @@ day	day
 मज़बूत	mazbut
 अट्ठानवेवाँ	atthaanve
 योगरताय	yogarataya
+बताना	batana
 बोलती	bolti
 अट्ठाईसवीं	atthaisvi
 कैसी	kaisi
 चाहता	chahta
+सफ़ेद	safed
 अपनी	apni
 pune	pune
 ना	na
@@ -1043,18 +1190,23 @@ pune	pune
 छिहत्तरवाँ	chhihattar
 सैंतालीसवाँ	sainntaliswa
 भरा	bhara
+लो	lo
 पाँचवाँ	panchva
+ले	le
 अच्छा	achha
 पचहत्तरवाँ	pachattarwa
 भीषणाय	bhishanaya
 अपने	apne
+मांगना	mangna
 एक	ek
 का	ka
 तिहत्तरवाँ	tihattarwa
+लौकी	lauki
 पहला	pehla
 पता	patta
 देखती	dekhti
 मन्दगते	mandagate
+गाओ	gao
 कृपया	please
 प्याज़	pyaz
 समस्या	samasya
@@ -1063,11 +1215,12 @@ pune	pune
 दसवाँ	daswan
 घरों	gharo
 सुंदर	sundar
-सुन्दर	sundar
 चौरासीवाँ	chauraasiva
 आँखें	aankhen
+तुम्हारी	tumhari
 gurgaon	gurgaon
 सतहत्तरवाँ	satahattarva
+रुकता	rukta
 बोलता	bolta
 आसान	aasan
 घंटे	ghante
@@ -1077,17 +1230,20 @@ gurgaon	gurgaon
 मेरी	meri
 पाँचवीं	paanchvi
 पाँचवीं	panchvi
+बाग	bag
 मत	mat
 music	music
 छह	cheh
 चौथे	chothe
 बयासीवाँ	bayaasi
 तुम्हें	tumhe
+बुधवार	budhvar
 किसके	kiske
-chennai	chennai
+चेन्नई	chennai
 तिरसठवाँ	tirsathwan
 अठहत्तरवीं	athhattarvi
 नदी	naadi
+रो	roo
 अतृप्ताय	atriptaya
 बार	bar
 तेरहवाँ	terahwa
@@ -1102,6 +1258,7 @@ chennai	chennai
 छियालीसवाँ	chhiyalisva
 अच्छी	achhi
 लगता	lagta
+बाग	bagh
 जहाँ	jaha
 चौदहवाँ	chaudahva
 करोड़	crore
@@ -1116,6 +1273,7 @@ chennai	chennai
 पीछे	piche
 जीभ	jeebh
 इकहत्तरवाँ	ikhattarwa
+सिखाता	sikhata
 पचासीवाँ	pachaasiva
 week	week
 उनसठवाँ	unsath
@@ -1124,18 +1282,22 @@ week	week
 ahmedabad	ahmedabad
 देवासुरमनुष्याश्च	devasuramanushyashcha
 उसे	use
+मोटा	mota
 समस्याओं	samasyao
 चौहत्तरवाँ	chauhattar
 आए	aaye
+बनता	banta
 चल	chal
 दीवार	deewar
 निन्यानवेवाँ	ninyaanveva
+बनती	banti
 दिल्ली	dilli
 तैंतालीसवीं	taintalisvi
 सैंतालीसवाँ	saintaliswa
 छत्तीसवाँ	chhattiswa
 हाथ	hath
 नब्बेवाँ	nabbe
+टमाटर	tamatar
 year	year
 चाहा	chaha
 राज्यं	rajyam
@@ -1143,10 +1305,12 @@ year	year
 पंद्रहवीं	pandrahvi
 आना	aana
 भेज	bhej
+सो	so
 अक्सर	aksar
 यान्ति	yanti
-साठवाँ	saath
+साथ	saath
 हम	hum
+पूछती	puchti
 बयासीवीं	bayaasi_vi
 छत	chat
 नवरत्न	navratna
@@ -1163,6 +1327,7 @@ rajkot	rajkot
 परसों	parso
 घोराय	ghoray
 अड़सठवाँ	adsathva
+भिंडी	bhindi
 छियासठवाँ	chhiyasathwa
 ज्ञानचक्षुर्नमस्तेऽस्तु	gyanachakshurnamastestu
 देहाय	dehay
@@ -1175,14 +1340,17 @@ internet	internet
 सत्रहवाँ	satrahwa
 इसका	iska
 नमोऽस्तु	namostu
+उठो	utho
 अरे	are
 आया	aaya
 बालू	baalu
 पानी	paani
 धर्म	dharma
 चली	chali
+भेजता	bhejta
 छत्तीसवाँ	chhattiswan
 पहली	pehli
+रुका	ruka
 इकतीसवीं	ikattisvi
 हरसि	harsi
 सिर्फ़	sirf
@@ -1204,6 +1372,8 @@ game	game
 बुरी	buri
 आधा	aadha
 पैंतीसवाँ	paintiswa
+खेलता	khelta
+खेलो	khelo
 आपलोग	aaplog
 अट्ठासीवाँ	atthaasiwa
 नब्बेवाँ	nabbewa
@@ -1213,9 +1383,11 @@ game	game
 चतुर्भुज	chaturbhuj
 कमज़ोर	kamzor
 मीठी	meethi
+जाएँगे	jaenge
 पैंतालीसवाँ	painntaliswa
 पाँचवाँ	paanchwan
 इकतीसवाँ	ikattisva
+खाया	khaya
 nagpur	nagpur
 सत्तावनवीं	sattavanvi
 घी	ghee
@@ -1226,6 +1398,7 @@ nagpur	nagpur
 कमर	kamar
 निन्यानवेवाँ	ninyaanve
 लिखना	likhna
+दे	de
 बारह	barah
 तेईसवाँ	teiswan
 निर्मांस	nirmans
@@ -1237,26 +1410,33 @@ nagpur	nagpur
 रसोई	rasoi
 अच्छी	acchi
 माता	mata
-आता	aata
+आटा	aata
 नाक	naak
+नाचती	nachti
+खेला	khela
 बहुत	bahot
 रिश्तेदार	rishtedaar
 अड़तालीसवाँ	adhtalisva
+सांभर	sambar
+कहो	kaho
 तपसा	tapasa
 kanpur	kanpur
+चना	chana
+आ	aa
 दादा	dada
 बाहर	bahar
 पैंसठवाँ	painsathva
 बच्चे	bacche
 तीसरा	tisra
+लाल	lal
 आनी	aani
 सर्वभक्षाय	sarvabhakshaya
 करने	karne
 पाँचवें	panchwe
 छप्पनवाँ	chhappan
 लेते	lete
+बैंक	bank
 सुंदरी	sundari
-सुन्दरी	sundari
 देश	desh
 सत्तरवीं	sattarvi
 इकतालीसवाँ	iktaliswa
@@ -1264,6 +1444,7 @@ kanpur	kanpur
 छोटी	chhoti
 लिया	liya
 हैलो	hello
+खेल	khel
 करूँ	karun
 दाल	daal
 काम	kaam
@@ -1278,7 +1459,11 @@ kanpur	kanpur
 मिस्टेक	mistake
 सामने	samne
 बुरा	bura
+बैठा	baitha
 जगह	jagha
+गुरुद्वारा	gurudwara
+मौत	mout
+जूते	joote
 सत्तासीवाँ	sattaasiwa
 तीसवाँ	teesva
 तुभ्यं	tubhyam
@@ -1294,13 +1479,18 @@ kanpur	kanpur
 आठवीं	aathvi
 ठीक	thik
 भारत	bharat
+हलवा	halwa
 बयालीसवाँ	bayalisva
+मौसा	mausa
 रास्ता	raasta
+रोता	rota
 चौसठवाँ	chausathwan
 साठवाँ	saathva
 तिरपनवीं	tirpanvi
 हफ़्ता	hafta
 हाँ	hn
+गिरजा	girja
+भेजती	bhejti
 इक्यावनवाँ	ikyaavanwa
 चौथी	chauthi
 कालदंष्ट्र	kaldanshtra
@@ -1321,8 +1511,11 @@ kanpur	kanpur
 गाड़ी	gaadi
 चौवनवाँ	chauvanwa
 पढ़ना	padhna
+बोलो	bolo
 लड्डू	laddu
 दोपहर	dopahar
+जाएगी	jaegi
+कपड़ा	kapda
 ते	te
 रात	raat
 चाहिए	chahiya
@@ -1337,17 +1530,22 @@ kanpur	kanpur
 अट्ठावनवाँ	atthavan
 सखा	sakha
 राम	ram
+उठना	uthna
 सत्तरवाँ	sattarwan
 अधोदृष्टे:	adhodrishte
 तक	thak
 सैंतीसवाँ	sainntisva
 तिरसठवीं	tirsathvi
+खेत	khet
 शुरू	shuru
 शौहर	shauhar
+सोना	sona
 सिद्ध-विद्याधरोरगा:	siddha-vidyadharoragah
 ताई	tai
+पापड़	papad
 माँ	maa
 लिखती	likhti
+तरफ़	taraf
 आठवाँ	athwa
 इसलिए	isliye
 पहले	pahle
@@ -1355,6 +1553,7 @@ kanpur	kanpur
 इश्क़	ishq
 इश्क	ishq
 विलोकिता:	vilokitah
+सिखाया	sikhaya
 यार	yar
 तैंतालीसवाँ	taintaliswa
 होता	hota
@@ -1369,10 +1568,13 @@ kanpur	kanpur
 दशरथकृत	dasharathkrit
 बलीमुख	balimukh
 योगरताय	yogratay
+रखती	rakhti
 चौदहवीं	chaudahvi
+हँस	has
 ताऊ	tau
 इक्यानवेवाँ	ikyaanvewa
 पहला	pahla
+जाओ	jao
 लागत	lagat
 बहुत	bahut
 साल	saal
@@ -1382,12 +1584,14 @@ kanpur	kanpur
 बारहवाँ	barahwa
 उन्नीसवाँ	unniswa
 समूलत:	samoolatah
+भारी	bhari
 चवालीसवाँ	chavalisva
 movie	movie
 चौथे	chauthe
 सब्ज़ी	sabzi
 दूसरी	doosri
 डायग्राम	digaram
+समझो	samjho
 दसवाँ	dasva
 छत	chhat
 बावनवाँ	bavanwa
@@ -1397,8 +1601,10 @@ movie	movie
 साधु	sadhu
 पढ़ा	padha
 त्वया	tvaya
+सुन	sun
 भी	bhi
 बाईसवीं	baeesvi
+पीते	pite
 कि	ki
 कृपया	kripya
 चौरासीवाँ	chauraasiwan
@@ -1412,7 +1618,10 @@ photo	photo
 चौवनवाँ	chauvanwan
 महाबल:	mahabala
 अस्सीवीं	assivi
+खाते	khate
+नाचना	nachna
 delhi	delhi
+पिया	piya
 lucknow	lucknow
 घरों	gharon
 छोटा	chota
@@ -1427,9 +1636,12 @@ lucknow	lucknow
 पचासवाँ	pachaswa
 सत्तानवेवाँ	sattaanveva
 कितनी	kitni
+हँसना	hasna
+खेती	kheti
 खट्टा	khatta
 इकसठवाँ	iksathwan
 करूँगी	karungi
+गाना	gana
 अस्सीवाँ	assi
 अड़तालीसवीं	adhtalisvi
 ताला	taala
@@ -1438,6 +1650,8 @@ lucknow	lucknow
 तिरपनवाँ	tirpan
 छियासीवाँ	chhiyaasi
 हो	ho
+बनते	bante
+जन्म	janm
 ठंडी	thandi
 होगा	hoga
 अगर	agr
@@ -1446,10 +1660,11 @@ jaipur	jaipur
 मंदिर	mandir
 देते	dete
 एवं	evam
-mumbai	mumbai
+मुंबई	mumbai
 पीछे	peeche
 स्थूलरोम्णे	sthoolaromne
 गाड़ी	gadi
+रखता	rakhta
 इकहत्तरवीं	ikhattarvi
 बहत्तरवाँ	bahattar
 नीलाय	neelaya
@@ -1460,12 +1675,14 @@ mumbai	mumbai
 हूँ	hun
 बहन	bahan
 गुड़िया	gudiya
+सोती	soti
 छत्तीसवीं	chhattisvi
 दूर	dur
 देखा	dekha
 सौरे	saure
 सोचते	sochte
 समझी	samjhi
+महँगी	mehngi
 उनचासवीं	unchasvi
 भयाकृते	bhayakrite
 वहाँ	wahan
@@ -1491,9 +1708,11 @@ password	password
 सत्तासीवीं	sattaasi_vi
 समय	samay
 सातवें	satwe
+रोना	rona
 निस्त्रिंशाय	nistrimshaya
 चाकू	chaku
 अट्ठासीवाँ	atthaasi
+खीर	kheer
 प्याज़	pyaaz
 तेरह	terah
 शहर	shahar
@@ -1516,11 +1735,13 @@ password	password
 अट्ठावनवाँ	atthavanwa
 छिहत्तरवाँ	chhihattarwan
 अस्सीवाँ	assiwa
+रुको	ruko
 कोई	koyi
 time	time
 बच्चे	bache
 अच्छे	acche
 किसका	kiska
+डोसा	dosa
 इकहत्तरवाँ	ikhattarva
 चलता	chalta
 तेज़	tez
@@ -1548,6 +1769,7 @@ hour	hour
 बलीमुख	balimukha
 काम	kam
 पास	pass
+महँगा	mehnga
 उनहत्तरवीं	unhattarvi
 छियालीसवाँ	chhiyaliswan
 दुश्मन	dushman
@@ -1685,7 +1907,6 @@ hour	hour
 खीॅचातानी	khicchatani
 नजला	najala
 नजला	najal
-तुम्हारा	tumhara
 तुम्हारा	tumhar
 कुविधिपूर्वक	kuvidhipurvaka
 कुविधिपूर्वक	kuvidhipurvak
@@ -2644,7 +2865,6 @@ www	www
 रोनहा	ronaha
 रोनहा	ronah
 लम्ब	lamba
-लंबा	lamba
 लम्बा	lamba
 लंब	lamba
 लम्ब	lamb
@@ -2797,7 +3017,6 @@ www	www
 बीच	bicha
 बिछ	bicha
 बिछा	bicha
-बीच	bich
 बिछ	bich
 बिछा	bich
 रिपोर्ट	riporta
@@ -3858,7 +4077,6 @@ www	www
 शक्तिवर्धक	shaktivardhak
 शक्तिवर्धक	saktivardhak
 रविवार	ravivara
-रविवार	ravivar
 आभूषित	abhushita
 आभूषित	abhusita
 आभूषित	abhushit
@@ -4876,7 +5094,6 @@ www	www
 यज्ञपशु	yajnapashu
 यज्ञपशु	yagyapashu
 यज्ञपशु	yajnapasu
-समोसा	samosa
 समोसा	samos
 दिवसमुख	divasamukha
 दिवसमुख	divasamukh
@@ -6159,7 +6376,6 @@ www	www
 वापिका	vapika
 वापिका	vapik
 परिवार	parivara
-परिवार	parivar
 पेलेटियर	peletiyara
 पेलेटियर	peletiyar
 उल्लास	ullasa
@@ -9344,7 +9560,6 @@ www	www
 दरियाई	dariyai
 नगरआयोजन	nagaraayojana
 नगरआयोजन	nagaraayojan
-पी	pi
 स्पर्धा	spardha
 स्पर्धा	spardh
 संतोषशील	samtoshashila
@@ -10549,7 +10764,6 @@ www	www
 आँकड़ो	ankado
 प्रभु	prabhu
 खेत	kheta
-खेत	khet
 लटकन	latakana
 लटकन	latakan
 पयोधर	payodhara
@@ -10824,7 +11038,6 @@ www	www
 परिपाटी	paripati
 शीतलहरी	shitalahari
 शीतलहरी	sitalahari
-लो	lo
 चिल्हर	chilhara
 चिल्हर	chilhar
 कापाली	kapali
@@ -12586,7 +12799,6 @@ www	www
 बैक्टीरिया	baiktiriya
 म्र्‍गदाव	mrgadava
 म्र्‍गदाव	mrgadav
-डोसा	dosa
 डोसा	dos
 मायामोह	mayamoha
 मायामोह	mayamoh
@@ -14059,7 +14271,6 @@ www	www
 अद्रोह	adroha
 अद्रोह	adroh
 बोल	bola
-बोल	bol
 कौम	kauma
 कौम	kaum
 मुर्रा	murra
@@ -14187,7 +14398,6 @@ www	www
 महज	mahaj
 ख़ता	khata
 खाट	khata
-खाता	khata
 खत	khata
 ख़ता	khata
 खट	khata
@@ -15434,7 +15644,6 @@ www	www
 सुन	suna
 सूना	suna
 सुना	sun
-सुन	sun
 सूना	sun
 मित्तल	mittala
 मित्तल	mittal
@@ -16986,7 +17195,6 @@ www	www
 खून	khuna
 ख़ून	khuna
 ख़ून	khun
-खून	khun
 ख़ून	khun
 चौकडी	chaukadi
 चौकड़ी	chaukadi
@@ -20642,7 +20850,6 @@ www	www
 जीवाश्म	jivashm
 जीवाश्म	jivasm
 पील	pila
-पीला	pila
 पिल	pila
 पील	pil
 पीला	pil
@@ -21817,13 +22024,11 @@ www	www
 किन्नरी	kinnari
 रुख़	ruka
 रूका	ruka
-रुका	ruka
 रुक	ruka
 रुख़	ruka
 रुख़	ruk
 रूका	ruk
 रुका	ruk
-रुक	ruk
 रुख़	ruk
 मज़ार	mazara
 मज़ार	mazar
@@ -22421,7 +22626,6 @@ www	www
 रोहू	rohu
 पीलपव	pilapava
 पीलपव	pilapav
-सोना	sona
 सोना	son
 नेतृत्ववाली	netrtvavali
 दंडनीति	damdaniti
@@ -23207,7 +23411,6 @@ www	www
 रियाल	riyala
 रियल	riyal
 रियाल	riyal
-सस्ता	sasta
 सस्ता	sast
 विक्टरी	viktari
 पश्चात्	pashchat
@@ -24254,7 +24457,6 @@ www	www
 दुग्धयुक्त	dugdhayukta
 दुग्धयुक्त	dugdhayukt
 परिस्थिति	paristhiti
-जा	ja
 पेंशन	pemshana
 पेंशन	pemsana
 पेंशन	pemshan
@@ -24547,7 +24749,6 @@ www	www
 मुझसे	mujhase
 उकसावा	ukasava
 उकसावा	ukasav
-सोया	soya
 शूटिंग	shutimga
 शूटिंग	sutimga
 शूटिंग	shutimg
@@ -24939,7 +25140,6 @@ www	www
 वाक्यविश्लेषण	vakyavishleshan
 वाक्यविश्लेषण	vakyavislesan
 काफ़ी	kafi
-काफ़ी	kafi
 न्यूये	nyuye
 हथियाया	hathiyaya
 अतिविपिन	ativipina
@@ -28769,7 +28969,6 @@ www	www
 सीख	sikha
 सिख	sikha
 सिखा	sikh
-सीख	sikh
 सिख	sikh
 राक्षसीय	raxasiya
 देलही	delahi
@@ -29201,7 +29400,6 @@ www	www
 लाला	lala
 लाल	lala
 लाला	lal
-लाल	lal
 ऑफिस	phisa
 फीस	phisa
 ऑफिस	phis
@@ -30803,7 +31001,6 @@ www	www
 जगदीश्वर	jagadisvar
 शनिवार	shanivara
 शनिवार	sanivara
-शनिवार	shanivar
 शनिवार	sanivar
 परिस्राव	parisrava
 परिस्राव	parisrav
@@ -31232,7 +31429,6 @@ www	www
 प्रधानांग	pradhanamg
 ओढ़ावन	oavana
 ओढ़ावन	oavan
-फूफा	phupha
 फूफा	phuph
 सौंदर्यबोध	saumdaryabodha
 सौंदर्यबोध	saumdaryabodh
@@ -31338,7 +31534,6 @@ www	www
 लदंन	ladamna
 लदंन	ladamn
 पुराविद्या	puravidya
-सभी	sabhi
 लघुत्व	laghutva
 लघुत्व	laghutv
 किरकिरा	kirakira
@@ -31944,7 +32139,6 @@ www	www
 शेव	seva
 शेव	shev
 शेव	sev
-ले	le
 तलाशी	talashi
 तलाशी	talasi
 आएँगी	aengi
@@ -32591,7 +32785,6 @@ www	www
 छना	chana
 छान	chana
 चान	chana
-चना	chana
 छन	chana
 छना	chan
 छान	chan
@@ -32801,7 +32994,6 @@ www	www
 जड़ता	jadat
 मटर	matara
 मतारा	matara
-मटर	matar
 मतारा	matar
 खत्म	khatma
 ख़त्म	khatma
@@ -35380,7 +35572,6 @@ www	www
 उपसमिति	upasamiti
 कला	kala
 कॉल	kala
-काला	kala
 ख़ाला	kala
 कल	kala
 काल	kala
@@ -37706,7 +37897,6 @@ www	www
 बाग	baga
 बाग़	baga
 बग	baga
-बाग	bag
 बाग़	bag
 बग	bag
 निष्काम	nishkama
@@ -38535,7 +38725,6 @@ www	www
 सद्भाव	sadbhava
 सद्भाव	sadbhav
 पढ़	padha
-पढ़	padh
 पढ़ा	padh
 देशवासी	deshavasi
 देशवासी	desavasi
@@ -39106,7 +39295,6 @@ www	www
 गरममसाला	garamamasal
 पार्लियामेंट	parliyamemta
 पार्लियामेंट	parliyamemt
-टोपी	topi
 लगातार	lagatara
 लगातार	lagatar
 उत्थान	utthana
@@ -41033,7 +41221,6 @@ www	www
 ठसाठस	thasathas
 पुपांग	pupamga
 पुपांग	pupamg
-रो	ro
 अधिककोण	adhikakona
 अधिककोण	adhikakon
 हरिहर	harihara
@@ -41898,7 +42085,6 @@ www	www
 सफ़ेद	safeda
 सफ़ेदा	safeda
 सफ़ेदा	safed
-सफ़ेद	safed
 सफ़ेदा	safed
 तंतुसार	tamtusara
 तंतुसार	tamtusar
@@ -42108,7 +42294,6 @@ www	www
 अशोकपूर्णिमा	asokapurnim
 अनुनय	anunaya
 हर	hara
-हरा	hara
 हार	hara
 हर	har
 हरा	har
@@ -42546,8 +42731,6 @@ www	www
 दुर्भावना	durbhavana
 दुर्भावना	durbhavan
 उठ	utha
-उठा	utha
-उठ	uth
 उठा	uth
 बरज़ोरी	barazori
 पेचदार	pechadara
@@ -46958,7 +47141,6 @@ www	www
 टी	ti
 नलमीन	nalamina
 नलमीन	nalamin
-करेला	karela
 करेला	karel
 पपैया	papaiya
 खोह	khoha
@@ -49581,7 +49763,6 @@ www	www
 झाँसा	jhans
 अनादरण	anadarana
 अनादरण	anadaran
-भारी	bhari
 स्मर्णार्थ	smarnartha
 स्मर्णार्थ	smarnarth
 जरबाफी	jarabaphi
@@ -49618,7 +49799,6 @@ www	www
 निशाना	nisan
 निशान	nisan
 चप्पल	chappala
-चप्पल	chappal
 क्षतिग्रस्त	kshatigrasta
 क्षतिग्रस्त	ksatigrasta
 क्षतिग्रस्त	kshatigrast
@@ -49697,7 +49877,6 @@ www	www
 दावौस	davaus
 सहनायक	sahanayaka
 सहनायक	sahanayak
-खेती	kheti
 मुखमंडल	mukhamamdala
 मुखमंडल	mukhamamdal
 प्रधानाध्यापक	pradhanadhyapaka
@@ -49786,7 +49965,6 @@ www	www
 रूमाल	rumala
 रुमाल	rumala
 रूमाल	rumal
-रुमाल	rumal
 केशपाश	keshapasha
 केशपाश	kesapasa
 केशपाश	keshapash
@@ -50988,7 +51166,6 @@ www	www
 सिरजनहार	sirajanahara
 सिरजनहार	sirajanahar
 ऑख	kha
-खा	kha
 झाँवाँ	jhanvan
 दुलाई	dulai
 निस्तेजता	nistejata
@@ -51341,7 +51518,6 @@ www	www
 असूयक	asuyak
 तत्काल	tatkala
 तत्काल	tatkal
-गोभी	gobhi
 हांका	hamka
 हांका	hamk
 शब्दकोश	shabdakosha
@@ -52925,7 +53101,6 @@ www	www
 नचा	nacha
 नाच	nacha
 नचा	nach
-नाच	nach
 चटाखेदार	chatakhedara
 चटाखेदार	chatakhedar
 चबेनी	chabeni
@@ -53706,7 +53881,6 @@ www	www
 ददोरा	dadora
 ददोरा	dador
 उल	ula
-लौकी	lauki
 नटराज	nataraja
 नटराज	nataraj
 रबाबिया	rababiya
@@ -53813,7 +53987,6 @@ www	www
 झाँखर	jhankhar
 जलजीव	jalajiva
 जलजीव	jalajiv
-चेन्नई	chennai
 किचपिच	kichapicha
 किचपिच	kichapich
 जलोदर	jalodara
@@ -56593,7 +56766,6 @@ com	com
 औषधालय	aushadhalaya
 औषधालय	ausadhalaya
 नील	nila
-नीला	nila
 नील	nil
 नीला	nil
 फुक्सिन	phuksina
@@ -57057,7 +57229,6 @@ com	com
 शेयरहोल्डर	sheyaraholdar
 शेयरहोल्डर	seyaraholdar
 तरफ़	tarafa
-तरफ़	taraf
 राजाभिषेक	rajabhisheka
 राजाभिषेक	rajabhiseka
 राजाभिषेक	rajabhishek
@@ -59536,7 +59707,6 @@ com	com
 गृहमोचिका	grrihamochika
 गृहमोचिका	grrihamochik
 खेल	khela
-खेल	khel
 जलशोधन	jalashodhana
 जलशोधन	jalasodhana
 जलशोधन	jalashodhan
@@ -60131,7 +60301,6 @@ com	com
 क्षीर	ksira
 क्षीर	kshir
 क्षीर	ksir
-पिया	piya
 क्षत्रपति	xatrapati
 छबीला	chabila
 छबीला	chabil
@@ -60416,7 +60585,6 @@ com	com
 आशोषण	ashoshan
 आशोषण	asosan
 अपनाएंगें	apanaemgem
-रुको	ruko
 बेदाना	bedana
 बेदना	bedana
 बेदाना	bedan
@@ -61424,7 +61592,6 @@ com	com
 लोकजनशक्ति	lokajanashakti
 लोकजनशक्ति	lokajanasakti
 सापत्न्य	sapatnya
-तुम्हारे	tumhare
 रुह	ruha
 रूह	ruha
 रुह	ruh
@@ -62121,7 +62288,6 @@ pronounindefpnindef	pronounindefpnindef
 नजर	najara
 नजारा	najar
 नजर	najar
-देखो	dekho
 क्षत्रकर्म	xatrakarma
 क्षत्रकर्म	xatrakarm
 मुरझा	murajha
@@ -64284,7 +64450,6 @@ vatican	vatican
 गोलीकांड	golikamd
 वारि	vari
 पार्क	parka
-पार्क	park
 कमाच्ह	kamachha
 कमाच्ह	kamachh
 निर्वाह	nirvaha
@@ -64477,7 +64642,6 @@ vatican	vatican
 परगना	paragana
 परगना	paragan
 तीसमारख़ाँ	tisamarakan
-मोटा	mota
 मोट	mota
 मोटा	mot
 मोट	mot
@@ -65690,7 +65854,6 @@ vatican	vatican
 गन	gana
 ऑगन	gana
 गण	gana
-गाना	gana
 गान	gana
 गन	gan
 ऑगन	gan
@@ -65787,7 +65950,6 @@ vatican	vatican
 अनाज	anaj
 देख	dekha
 देखा	dekh
-देख	dekh
 प्रियता	priyata
 प्रियता	priyat
 पितविहीन	pitavihina
@@ -65892,7 +66054,6 @@ vatican	vatican
 आस्तीन	astin
 दैवयोग	daivayoga
 दैवयोग	daivayog
-रोना	rona
 रोना	ron
 टॉम	tama
 तम	tama
@@ -67433,7 +67594,6 @@ vatican	vatican
 मंगवा	mamgav
 अजैव	ajaiva
 अजैव	ajaiv
-हल्का	halka
 हल्का	halk
 ऑपरेटर	paretara
 ऑपरेटर	paretar
@@ -67835,6 +67995,7 @@ vatican	vatican
 लोढ़ा	lodh
 धरित्री	dharitri
 सुन्दर	sundara
+सुन्दर	sundar
 याद	yada
 याद	yad
 क़हवा	qahava
@@ -68110,7 +68271,6 @@ vatican	vatican
 प्रयोजक	prayojaka
 प्रयोजक	prayojak
 ग़ुसलख़ाने	gusalakane
-पराठा	paratha
 परठा	paratha
 पराठा	parath
 परठा	parath
@@ -68866,7 +69026,6 @@ vatican	vatican
 मोइन	moin
 कह	kaha
 कहा	kah
-कह	kah
 पोंटिंग	pomtimga
 पोंटिंग	pomtimg
 क्रमानुसार	kramanusara
@@ -69213,7 +69372,6 @@ vatican	vatican
 बयाबान	bayaban
 अचार	achara
 आचार	achara
-अचार	achar
 आचार	achar
 चपरास	chaparasa
 चपरास	chaparas
@@ -74142,7 +74300,6 @@ vatican	vatican
 समझा	samajha
 समझ	samajha
 समझा	samajh
-समझ	samajh
 क्रीम	krima
 क्रीम	krim
 विक्षिप्तता	vikshiptata
@@ -75257,7 +75414,6 @@ vatican	vatican
 सहनशक्ति	sahanashakti
 सहनशक्ति	sahanasakti
 वाले	vale
-तुम्हारी	tumhari
 हैती	haiti
 हवाईपट्टी	havaipatti
 अतिशीघ्र	atishighra
@@ -75470,7 +75626,6 @@ vatican	vatican
 महायात्रा	mahayatr
 अपगुण	apaguna
 अपगुण	apagun
-सो	so
 तपनी	tapani
 महाप्रज्वलन	mahaprajvalana
 महाप्रज्वलन	mahaprajvalan
@@ -75967,7 +76122,6 @@ vatican	vatican
 पिरामिड	piramida
 पिरामिड	piramid
 अस्वीकरणीय	asvikaraniya
-मौसा	mausa
 मौसा	maus
 ख़ातमी	khatami
 करतूत	karatuta
@@ -76465,7 +76619,6 @@ vatican	vatican
 गुंडई	gumdai
 पापड़	papada
 पापड़	papada
-पापड़	papad
 पापड़	papad
 गांव	gamva
 गंवा	gamva
@@ -77514,6 +77667,7 @@ vatican	vatican
 बादशाहत	badasahata
 बादशाहत	badashahat
 बादशाहत	badasahat
+मे	me
 थैला	thaila
 थैला	thail
 संवीक्षा	samvixa
@@ -78132,7 +78286,6 @@ vatican	vatican
 पॉपुलेशन	papuleshan
 पॉपुलेशन	papulesan
 सोच	socha
-सोच	soch
 तुड़ाई	tudai
 संस्तिथि	samstithi
 सलहज	salahaja
@@ -79718,7 +79871,6 @@ vatican	vatican
 शिवनिर्माल्य	shivanirmalya
 शिवनिर्माल्य	sivanirmalya
 नामधारी	namadhari
-पूरी	puri
 पुरी	puri
 शीतलता	shitalata
 शीतलता	sitalata
@@ -79817,7 +79969,6 @@ vatican	vatican
 जन्मा	janma
 जन्म	janma
 जन्मा	janm
-जन्म	janm
 समाचार	samachara
 समाचार	samachar
 विचार	vichara
@@ -82291,7 +82442,6 @@ vatican	vatican
 कूॅची	kueachi
 शुक्रवार	shukravara
 शुक्रवार	sukravara
-शुक्रवार	shukravar
 शुक्रवार	sukravar
 बर्फ़	barfa
 बर्फ़	barfa
@@ -82744,7 +82894,6 @@ vatican	vatican
 युनस	yunasa
 यूनस	yunas
 युनस	yunas
-सोता	sota
 सोता	sot
 बीजेपी	bijepi
 विवेचक	vivechaka
@@ -83346,7 +83495,6 @@ vatican	vatican
 बद्ध	baddha
 बद्ध	baddh
 मौत	mauta
-मौत	maut
 उजाड़कर	ujadakara
 उजाड़कर	ujadakar
 सूखापन	sukhapana
@@ -83567,7 +83715,6 @@ vatican	vatican
 नागफल	nagaphal
 गुरुवार	guruvara
 गुरूवार	guruvara
-गुरुवार	guruvar
 गुरूवार	guruvar
 वंशीय	vamshiya
 वंशीय	vamsiya
@@ -85026,7 +85173,6 @@ vatican	vatican
 बिकाऊ	bikau
 अघन	aghana
 अघन	aghan
-लंबी	lambi
 लम्बी	lambi
 आग़ाज़ादेह	agazadeha
 आग़ाज़ादेह	agazadeh
@@ -85050,7 +85196,6 @@ vatican	vatican
 कुएन्सेल	kuensela
 कुएन्सेल	kuensel
 लिख	likha
-लिख	likh
 लिखा	likh
 भवांबुधि	bhavambudhi
 लेबुल	lebula
@@ -85412,7 +85557,6 @@ vatican	vatican
 वराह	varaha
 वाराह	varah
 वराह	varah
-चौड़ा	chauda
 चौदा	chauda
 चौड़ा	chaud
 चौदा	chaud
@@ -86074,7 +86218,6 @@ verb	verb
 समालोचना	samalochana
 समालोचना	samalochan
 साबुन	sabuna
-साबुन	sabun
 प्राणावरोध	pranavarodha
 प्राणावरोध	pranavarodh
 निकटवर्ती	nikatavarti
@@ -86647,7 +86790,6 @@ verb	verb
 एल्टन	eltana
 एल्टन	eltan
 डे	de
-दे	de
 अनावश्यक	anavashyaka
 अनावश्यक	anavasyaka
 अनावश्यक	anavashyak
@@ -86780,10 +86922,8 @@ verb	verb
 अनसुनी	anasuni
 मूलव्याधि	mulavyadhi
 मास्टरी	mastari
-बैठा	baitha
 बैठ	baitha
 बैठा	baith
-बैठ	baith
 अख़्तियार	aktiyara
 अख़्तियार	aktiyar
 एलवी	elavi
@@ -87436,7 +87576,6 @@ verb	verb
 समुपवेशन	samupaveshan
 समुपवेशन	samupavesan
 मुम्बई	mumbai
-मुंबई	mumbai
 श्रीचक्र	shrichakra
 श्रीचक्र	srichakra
 श्रीचक्र	shrichakr
@@ -87753,7 +87892,6 @@ verb	verb
 सलामत	salamata
 सलामत	salamat
 टमाटर	tamatara
-टमाटर	tamatar
 ग्र्‍हकलह	grhakalaha
 ग्र्‍हकलह	grhakalah
 धवलग्र्‍ह	dhavalagrha
@@ -87820,8 +87958,6 @@ verb	verb
 चाचे	chache	50
 चाचों	chachon	50
 चाचों	chacho	50
-अथों	athon	50
-अथों	atho	50
 आठों	athon	50
 आठों	atho	50
 पोर्शनों	portionon	50
@@ -87838,6 +87974,10 @@ verb	verb
 मौसियाँ	mausiyaan	50
 मौसियों	mausiyon	50
 मौसियों	mausiyo	50
+टोपियाँ	topiyan	50
+टोपियाँ	topiyaan	50
+टोपियों	topiyon	50
+टोपियों	topiyo	50
 दीजिएगे	dijiye ge	50
 दीजिएगों	dijiye gon	50
 दीजिएगों	dijiye go	50
@@ -87845,6 +87985,16 @@ verb	verb
 महानों	mahano	50
 ग़लतों	galaton	50
 ग़लतों	galato	50
+नाचताएँ	nachtaen	50
+नाचताएँ	nachtaein	50
+नाचताओं	nachtaon	50
+नाचताओं	nachtao	50
+सस्ताएँ	sastaen	50
+सस्ताएँ	sastaein	50
+सस्ताओं	sastaon	50
+सस्ताओं	sastao	50
+जन्मों	janamon	50
+जन्मों	janamo	50
 सड़कें	sadaken	50
 सड़कें	sadakein	50
 सड़कों	sadakon	50
@@ -87853,6 +88003,13 @@ verb	verb
 वर्नियरों	verniero	50
 ससुरों	sasuron	50
 ससुरों	sasuro	50
+राजमे	rajme	50
+राजमों	rajmon	50
+राजमों	rajmo	50
+जूताएँ	jootaen	50
+जूताएँ	jootaein	50
+जूताओं	jootaon	50
+जूताओं	jootao	50
 मामियाँ	mamiyan	50
 मामियाँ	mamiyaan	50
 मामियों	mamiyon	50
@@ -87865,6 +88022,10 @@ verb	verb
 प्यारियों	pyariyo	50
 दग्ध-देहायों	dagdha-dehayon	50
 दग्ध-देहायों	dagdha-dehayo	50
+सोताएँ	sotaen	50
+सोताएँ	sotaein	50
+सोताओं	sotaon	50
+सोताओं	sotao	50
 सब्जेक्टों	subjecton	50
 सब्जेक्टों	subjecto	50
 ज़्यादे	zade	50
@@ -87872,6 +88033,8 @@ verb	verb
 ज़्यादों	zado	50
 शितिकण्ठों	shitikanthon	50
 शितिकण्ठों	shitikantho	50
+हॉस्पिटलों	hospitalon	50
+हॉस्पिटलों	hospitalo	50
 डेटे	date	50
 डेटों	daton	50
 डेटों	dato	50
@@ -87891,8 +88054,14 @@ verb	verb
 दियों	diiyo	50
 धन्यवादों	dhanyawadon	50
 धन्यवादों	dhanyawado	50
+लिखों	likhon	50
+लिखों	likho	50
 ससुरालों	sasuralon	50
 ससुरालों	sasuralo	50
+मांगताएँ	mangtaen	50
+मांगताएँ	mangtaein	50
+मांगताओं	mangtaon	50
+मांगताओं	mangtao	50
 शुष्कायों	shushkayon	50
 शुष्कायों	shushkayo	50
 स्टेशनों	stationon	50
@@ -87903,10 +88072,15 @@ verb	verb
 तुमों	tumo	50
 कबों	kabon	50
 कबों	kabo	50
+अचारों	acharon	50
+अचारों	acharo	50
 दीर्घायों	dirghayon	50
 दीर्घायों	dirghayo	50
 कंप्लीटों	completeon	50
 कंप्लीटों	completeo	50
+सीखे	sikhe	50
+सीखों	sikhon	50
+सीखों	sikho	50
 खुशियाँ	khushiyan	50
 खुशियाँ	khushiyaan	50
 खुशियों	khushiyon	50
@@ -87918,12 +88092,24 @@ verb	verb
 रामों	ramo	50
 भीषणायों	bhishanayon	50
 भीषणायों	bhishanayo	50
+काफ़ियाँ	kaafiyan	50
+काफ़ियाँ	kaafiyaan	50
+काफ़ियों	kaafiyon	50
+काफ़ियों	kaafiyo	50
 हज़ारों	hazaron	50
 हज़ारों	hazaro	50
+बताये	bataye	50
+बतायों	batayon	50
+बतायों	batayo	50
 बड़ियाँ	badiyan	50
 बड़ियाँ	badiyaan	50
 बड़ियों	badiyon	50
 बड़ियों	badiyo	50
+पतले	patle	50
+पतलों	patlon	50
+पतलों	patlo	50
+रुकों	rukon	50
+रुकों	ruko	50
 चिड़ियाँ	chidiyan	50
 चिड़ियाँ	chidiiyan	50
 चिड़ियों	chidiyon	50
@@ -87936,6 +88122,10 @@ verb	verb
 हल्दियाँ	haldiyaan	50
 हल्दियों	haldiyon	50
 हल्दियों	haldiyo	50
+पुलावों	pulaoon	50
+पुलावों	pulaoo	50
+बाज़ारों	bazaron	50
+बाज़ारों	bazaro	50
 चाबियाँ	chabhiyan	50
 चाबियाँ	chabhiyaan	50
 चाबियों	chabhiyon	50
@@ -87950,6 +88140,8 @@ verb	verb
 चौथियाँ	chothiyaan	50
 चौथियों	chothiyon	50
 चौथियों	chothiyo	50
+मिनटों	minuteon	50
+मिनटों	minuteo	50
 ज़रूरों	jaruron	50
 ज़रूरों	jaruro	50
 नदियाँ	nadiyaan	50
@@ -87959,6 +88151,10 @@ verb	verb
 सुबहों	subho	50
 बच्चों	bachon	50
 बच्चों	bacho	50
+हड्डियाँ	hadhiyan	50
+हड्डियाँ	hadhiyaan	50
+हड्डियों	hadhiyon	50
+हड्डियों	hadhiyo	50
 मर्केटरों	mercatoron	50
 मर्केटरों	mercatoro	50
 सासों	saason	50
@@ -87968,10 +88164,17 @@ verb	verb
 पते	pate	50
 पतों	paton	50
 पतों	pato	50
+नीले	neele	50
+नीलों	neelon	50
+नीलों	neelo	50
 जवाबों	jawaabon	50
 जवाबों	jawaabo	50
 मकानों	makanon	50
 मकानों	makano	50
+सीखताएँ	sikhtaen	50
+सीखताएँ	sikhtaein	50
+सीखताओं	sikhtaon	50
+सीखताओं	sikhtao	50
 मगरों	magaron	50
 मगरों	magaro	50
 बापों	baapon	50
@@ -87982,6 +88185,9 @@ verb	verb
 नेताओं	netao	50
 दोस्तों	doston	50
 दोस्तों	dosto	50
+हँसे	hase	50
+हँसों	hason	50
+हँसों	haso	50
 लेकिनों	lekinon	50
 लेकिनों	lekino	50
 आपलोगों	aplogon	50
@@ -87994,10 +88200,20 @@ verb	verb
 भेजों	vejo	50
 थोड़ों	thodon	50
 थोड़ों	thodo	50
+रुमालों	rumalon	50
+रुमालों	rumalo	50
+बैठताएँ	baithtaen	50
+बैठताएँ	baithtaein	50
+बैठताओं	baithtaon	50
+बैठताओं	baithtao	50
 झूठों	jhuthon	50
 झूठों	jhutho	50
 जबों	jabon	50
 जबों	jabo	50
+मौतें	mauten	50
+मौतें	mautein	50
+मौतों	mauton	50
+मौतों	mauto	50
 डायग्रामों	diagramon	50
 डायग्रामों	diagramo	50
 उम्मीदें	ummiden	50
@@ -88009,6 +88225,8 @@ verb	verb
 ठंडे	thande	50
 ठंडों	thandon	50
 ठंडों	thando	50
+बैठों	baithon	50
+बैठों	baitho	50
 इतिहासों	itihason	50
 इतिहासों	itihaso	50
 पूरे	poore	50
@@ -88037,6 +88255,10 @@ verb	verb
 औरतें	auratein	50
 औरतों	auraton	50
 औरतों	aurato	50
+खों	khon	50
+खों	kho	50
+सोमवारों	somvaron	50
+सोमवारों	somvaro	50
 कैसों	kaison	50
 कैसों	kaiso	50
 बारों	baaron	50
@@ -88059,6 +88281,11 @@ verb	verb
 प्रॉब्लमों	problemo	50
 पुष्कलगात्रायों	pushkalagatrayon	50
 पुष्कलगात्रायों	pushkalagatrayo	50
+बोलों	bolon	50
+बोलों	bolo	50
+लंबे	lambe	50
+लंबों	lambon	50
+लंबों	lambo	50
 सलामों	salaamon	50
 सलामों	salaamo	50
 सोचों	sochon	50
@@ -88070,6 +88297,8 @@ verb	verb
 हमेशों	hamesho	50
 तुमलोगों	tumlogon	50
 तुमलोगों	tumlogo	50
+साबुनों	sabunon	50
+साबुनों	sabuno	50
 चीज़ें	cheezen	50
 चीज़ें	cheezein	50
 चीज़ों	cheezon	50
@@ -88087,6 +88316,9 @@ verb	verb
 साथियों	saathiyo	50
 चाहों	chahon	50
 चाहों	chaho	50
+जे	je	50
+जों	jon	50
+जों	jo	50
 सूर्यपुत्रों	suryaputron	50
 सूर्यपुत्रों	suryaputro	50
 सच्चों	sachon	50
@@ -88101,16 +88333,39 @@ verb	verb
 नामों	namo	50
 ऑलमोस्टों	almoston	50
 ऑलमोस्टों	almosto	50
+मांगे	mange	50
+मांगों	mangon	50
+मांगों	mango	50
+परिवारों	parivaron	50
+परिवारों	parivaro	50
+समझों	samajhon	50
+समझों	samajho	50
 वर्तमानों	vartmanon	50
 वर्तमानों	vartmano	50
 घंटों	ghanton	50
 घंटों	ghanto	50
 दशरथों	dasharathon	50
 दशरथों	dasharatho	50
+चमड़ियाँ	chamdiyan	50
+चमड़ियाँ	chamdiyaan	50
+चमड़ियों	chamdiyon	50
+चमड़ियों	chamdiyo	50
+हल्कों	halkon	50
+हल्कों	halko	50
+भेजियाँ	bhejiyan	50
+भेजियाँ	bhejiyaan	50
+भेजियों	bhejiyon	50
+भेजियों	bhejiyo	50
 सोलहों	solahon	50
 सोलहों	solaho	50
 फिरों	phiron	50
 फिरों	phiro	50
+गोभियाँ	gobhiyan	50
+गोभियाँ	gobhiyaan	50
+गोभियों	gobhiyon	50
+गोभियों	gobhiyo	50
+खूनों	khunon	50
+खूनों	khuno	50
 प्रसादों	prasadon	50
 प्रसादों	prasado	50
 पहलियाँ	pahliyan	50
@@ -88129,23 +88384,35 @@ verb	verb
 इश्कों	ishko	50
 अभयदायों	abhayadayon	50
 अभयदायों	abhayadayo	50
+नीले	nile	50
+नीलों	nilon	50
+नीलों	nilo	50
 जवाबों	jawabon	50
 जवाबों	jawabo	50
-बोलों	bolon	50
-बोलों	bolo	50
 कलों	kalon	50
 कलों	kalo	50
 दुखों	dukhon	50
 दुखों	dukho	50
+बैंगलोरों	bangaloreon	50
+बैंगलोरों	bangaloreo	50
 विदेशों	videshon	50
 विदेशों	videsho	50
+मंगलवारों	mangalvaron	50
+मंगलवारों	mangalvaro	50
 मामे	mame	50
 मामों	mamon	50
 मामों	mamo	50
 संस्कृतों	sanskriton	50
 संस्कृतों	sanskrito	50
-सरों	siron	50
-सरों	siro	50
+गाताएँ	gataen	50
+गाताएँ	gataein	50
+गाताओं	gataon	50
+गाताओं	gatao	50
+रोये	roye	50
+रोयों	royon	50
+रोयों	royo	50
+देखों	dekhon	50
+देखों	dekho	50
 सिरों	siron	50
 सिरों	siro	50
 देताएँ	detaen	50
@@ -88160,6 +88427,13 @@ verb	verb
 पासों	paaso	50
 देवरों	devaron	50
 देवरों	devaro	50
+खाताएँ	khataen	50
+खाताएँ	khataein	50
+खाताओं	khataon	50
+खाताओं	khatao	50
+सोये	soye	50
+सोयों	soyon	50
+सोयों	soyo	50
 कर्मों	karmon	50
 कर्मों	karmo	50
 पेटों	peton	50
@@ -88168,6 +88442,8 @@ verb	verb
 दुकानें	dukaanein	50
 दुकानों	dukaanon	50
 दुकानों	dukaano	50
+अथों	athon	50
+अथों	atho	50
 दग्ध-देहायों	dagdhadehayon	50
 दग्ध-देहायों	dagdhadehayo	50
 दग्धदेहायों	dagdhadehayon	50
@@ -88180,6 +88456,8 @@ verb	verb
 दीवारें	diwarein	50
 दीवारों	diwaron	50
 दीवारों	diwaro	50
+खूनों	khoonon	50
+खूनों	khoono	50
 योगरतायों	yogratayon	50
 योगरतायों	yogratayo	50
 समझों	samjhon	50
@@ -88188,17 +88466,25 @@ verb	verb
 जीभों	jibho	50
 मुश्किलों	mushkilon	50
 मुश्किलों	mushkilo	50
+सेकंडों	secondon	50
+सेकंडों	secondo	50
 सलामों	salamon	50
 सलामों	salamo	50
 स्तोत्रों	stotron	50
 स्तोत्रों	stotro	50
 टेम्पलेटों	templateon	50
 टेम्पलेटों	templateo	50
+कहों	kahon	50
+कहों	kaho	50
+बीचों	beechon	50
+बीचों	beecho	50
 अबों	abon	50
 अबों	abo	50
 ने	nae	50
 नों	naon	50
 नों	nao	50
+कालों	kalon	50
+कालों	kalo	50
 कौनसे	konse	50
 कौनसों	konson	50
 कौनसों	konso	50
@@ -88212,6 +88498,8 @@ verb	verb
 सुबहें	subahein	50
 सुबहों	subahon	50
 सुबहों	subaho	50
+चप्पलों	chappalon	50
+चप्पलों	chappalo	50
 बिजलियाँ	bijliyan	50
 बिजलियाँ	bijliyaan	50
 बिजलियों	bijliyon	50
@@ -88237,10 +88525,17 @@ verb	verb
 पिताजियों	pitajiyo	50
 हज़ारों	hazaaron	50
 हज़ारों	hazaaro	50
+काफ़ियाँ	kafiyan	50
+काफ़ियाँ	kafiyaan	50
+काफ़ियों	kafiyon	50
+काफ़ियों	kafiyo	50
 प्यारों	pyaaron	50
 प्यारों	pyaaro	50
 छोटों	chhoton	50
 छोटों	chhoto	50
+काले	kaale	50
+कालों	kaalon	50
+कालों	kaalo	50
 कालाग्निरूपायों	kalagnirupayon	50
 कालाग्निरूपायों	kalagnirupayo	50
 मसाले	masale	50
@@ -88264,6 +88559,9 @@ verb	verb
 सचों	sacho	50
 वीकेंडों	weekendon	50
 वीकेंडों	weekendo	50
+पराठे	parathe	50
+पराठों	parathon	50
+पराठों	paratho	50
 पूछों	puchon	50
 पूछों	pucho	50
 लड़कों	ladkon	50
@@ -88331,6 +88629,13 @@ verb	verb
 दरवाजे	darwaje	50
 दरवाजों	darwajon	50
 दरवाजों	darwajo	50
+कोलकाताएँ	kolkataen	50
+कोलकाताएँ	kolkataein	50
+कोलकाताओं	kolkataon	50
+कोलकाताओं	kolkatao	50
+करेले	karele	50
+करेलों	karelon	50
+करेलों	karelo	50
 एकदमों	ekdumon	50
 एकदमों	ekdumo	50
 बिल्लियाँ	billiyan	50
@@ -88350,6 +88655,10 @@ verb	verb
 पैरों	pairo	50
 गाँवों	gaaonon	50
 गाँवों	gaaono	50
+इडलियाँ	idliyan	50
+इडलियाँ	idliyaan	50
+इडलियों	idliyon	50
+इडलियों	idliyo	50
 थोड़े	thore	50
 थोड़ों	thoron	50
 थोड़ों	thoro	50
@@ -88358,6 +88667,10 @@ verb	verb
 निराशों	nirasho	50
 मस्जिदों	masjidon	50
 मस्जिदों	masjido	50
+पूछताएँ	puchtaen	50
+पूछताएँ	puchtaein	50
+पूछताओं	puchtaon	50
+पूछताओं	puchtao	50
 थों	thon	50
 थों	tho	50
 गे	gae	50
@@ -88387,10 +88700,18 @@ verb	verb
 सब्ज़ियों	sabjiyo	50
 क्षुधार्तायों	kshudhartayon	50
 क्षुधार्तायों	kshudhartayo	50
+बर्फियाँ	barfiyan	50
+बर्फियाँ	barfiyaan	50
+बर्फियों	barfiyon	50
+बर्फियों	barfiyo	50
 बहनें	behenen	50
 बहनें	behenein	50
 बहनों	behenon	50
 बहनों	beheno	50
+लंबियाँ	lambiyan	50
+लंबियाँ	lambiyaan	50
+लंबियों	lambiyon	50
+लंबियों	lambiyo	50
 खालियाँ	khaliyan	50
 खालियाँ	khaliyaan	50
 खालियों	khaliyon	50
@@ -88406,8 +88727,6 @@ verb	verb
 खिड़कियाँ	khidkiyaan	50
 खिड़कियों	khidkiyon	50
 खिड़कियों	khidkiyo	50
-लिखों	likhon	50
-लिखों	likho	50
 चादरें	chadaren	50
 चादरें	chadarein	50
 चादरों	chadaron	50
@@ -88426,6 +88745,8 @@ verb	verb
 रौद्रायों	raudrayo	50
 तेलों	telon	50
 तेलों	telo	50
+मटरों	mataron	50
+मटरों	mataro	50
 बातें	baatein	50
 कड़वियाँ	kadwiyan	50
 कड़वियाँ	kadwiyaan	50
@@ -88433,11 +88754,17 @@ verb	verb
 कड़वियों	kadwiyo	50
 ऊपरों	uparon	50
 ऊपरों	uparo	50
+उठों	uthon	50
+उठों	utho	50
 रातें	raaten	50
 रातें	raten	50
 रातें	ratein	50
 रातों	raton	50
 रातों	rato	50
+हड्डियाँ	hadhdiyan	50
+हड्डियाँ	hadhdiyaan	50
+हड्डियों	hadhdiyon	50
+हड्डियों	hadhdiyo	50
 प्यारों	pyaron	50
 प्यारों	pyaro	50
 शहरों	sheharon	50
@@ -88458,8 +88785,16 @@ verb	verb
 उवाचों	uvacho	50
 पूछों	poochon	50
 पूछों	poocho	50
+पूरियाँ	puriyan	50
+पूरियाँ	puriyaan	50
+पूरियों	puriyon	50
+पूरियों	puriyo	50
+लालों	laalon	50
+लालों	laalo	50
 रखों	rakhon	50
 रखों	rakho	50
+इतवारों	itvaron	50
+इतवारों	itvaro	50
 करों	karon	50
 करों	karo	50
 सेमों	semon	50
@@ -88468,6 +88803,8 @@ verb	verb
 कहताएँ	kahtaein	50
 कहताओं	kahtaon	50
 कहताओं	kahtao	50
+पार्कों	parkon	50
+पार्कों	parko	50
 परों	paron	50
 परों	paro	50
 निस्त्रिंशायों	nistrimshayon	50
@@ -88493,19 +88830,18 @@ verb	verb
 रहों	raho	50
 चावलों	chawalon	50
 चावलों	chawalo	50
-कहों	kahon	50
-कहों	kaho	50
 फिरों	firon	50
 फिरों	firo	50
 नीलायों	nilayon	50
 नीलायों	nilayo	50
-कमरे	kamre	50
 कमरों	kamron	50
 कमरों	kamro	50
 लगभगों	lagbhagon	50
 लगभगों	lagbhago	50
 कंबलों	kambalon	50
 कंबलों	kambalo	50
+पीलों	pilon	50
+पीलों	pilo	50
 कवरों	coveron	50
 कवरों	covero	50
 होगये	hogaye	50
@@ -88522,19 +88858,36 @@ verb	verb
 शुक्रियों	shukriiyo	50
 पलंगों	palangon	50
 पलंगों	palango	50
+फूफे	phuphe	50
+फूफों	phuphon	50
+फूफों	phupho	50
+शनिवारों	shanivaron	50
+शनिवारों	shanivaro	50
+चौड़े	chaude	50
+चौड़ों	chaudon	50
+चौड़ों	chaudo	50
 गाँवों	gaonon	50
 गाँवों	gaono	50
 भवों	bhavon	50
 भवों	bhavo	50
+नाचे	nache	50
+नाचों	nachon	50
+नाचों	nacho	50
 कंधे	kandhe	50
 कंधों	kandhon	50
 कंधों	kandho	50
 चारों	chaaron	50
 चारों	chaaro	50
+बीचों	bichon	50
+बीचों	bicho	50
 सुखों	sukhon	50
 सुखों	sukho	50
 कुछों	kuchhon	50
 कुछों	kuchho	50
+सभियाँ	sabhiyan	50
+सभियाँ	sabhiyaan	50
+सभियों	sabhiyon	50
+सभियों	sabhiyo	50
 शामें	shaamen	50
 शामें	shaamein	50
 शामों	shaamon	50
@@ -88545,6 +88898,9 @@ verb	verb
 बड़ों	bado	50
 हिंदुस्तानों	hindustanon	50
 हिंदुस्तानों	hindustano	50
+हरे	hare	50
+हरों	haron	50
+हरों	haro	50
 कानों	kaanon	50
 कानों	kaano	50
 छहों	chhahon	50
@@ -88555,10 +88911,16 @@ verb	verb
 सिलेबसों	syllabuso	50
 यहों	yehon	50
 यहों	yeho	50
+हँसताएँ	hastaen	50
+हँसताएँ	hastaein	50
+हँसताओं	hastaon	50
+हँसताओं	hastao	50
 टॉपिकों	topicon	50
 टॉपिकों	topico	50
 विशालनेत्रायों	vishalnetrayon	50
 विशालनेत्रायों	vishalnetrayo	50
+होटलों	hotelon	50
+होटलों	hotelo	50
 सिरों	saron	50
 सिरों	saro	50
 स्टूडेंटों	studenton	50
@@ -88585,8 +88947,13 @@ verb	verb
 आदमियाँ	aadmiyaan	50
 आदमियों	aadmiyon	50
 आदमियों	aadmiyo	50
-मांगों	mangon	50
-मांगों	mango	50
+गुरुवारों	guruvaron	50
+गुरुवारों	guruvaro	50
+शुक्रवारों	shukravaron	50
+शुक्रवारों	shukravaro	50
+समोसे	samose	50
+समोसों	samoson	50
+समोसों	samoso	50
 माफ़ियाँ	maafiyan	50
 माफ़ियाँ	maafiyaan	50
 माफ़ियों	maafiyon	50
@@ -88613,6 +88980,10 @@ verb	verb
 देवासुरमनुष्याश्चों	devasuramanyashcho	50
 स्केलों	scaleon	50
 स्केलों	scaleo	50
+उठताएँ	uthtaen	50
+उठताएँ	uthtaein	50
+उठताओं	uthtaon	50
+उठताओं	uthtao	50
 गरमों	garamon	50
 गरमों	garamo	50
 बेटियाँ	betiyan	50
@@ -88642,6 +89013,11 @@ verb	verb
 सत्रहों	satraho	50
 वाटरों	wateron	50
 वाटरों	watero	50
+पीले	peele	50
+पीलों	peelon	50
+पीलों	peelo	50
+रविवारों	ravivaron	50
+रविवारों	ravivaro	50
 आठों	aathon	50
 आठों	aatho	50
 पूरों	puron	50
@@ -88658,6 +89034,7 @@ verb	verb
 कौनों	kauno	50
 क्लाइमेटों	climateon	50
 क्लाइमेटों	climateo	50
+उठे	uthe	50
 स्तुतस्तदे	stutastade	50
 स्तुतस्तदों	stutastadon	50
 स्तुतस्तदों	stutastado	50
@@ -88682,6 +89059,9 @@ verb	verb
 सुनताएँ	suntaein	50
 सुनताओं	suntaon	50
 सुनताओं	suntao	50
+पकौड़े	pakore	50
+पकौड़ों	pakoron	50
+पकौड़ों	pakoro	50
 गों	gon	50
 गों	go	50
 रेनों	rainon	50
@@ -88704,6 +89084,8 @@ verb	verb
 चाहताएँ	chahtaein	50
 चाहताओं	chahtaon	50
 चाहताओं	chahtao	50
+सफ़ेदों	safedon	50
+सफ़ेदों	safedo	50
 नों	non	50
 नों	no	50
 कुर्सियाँ	kursiyan	50
@@ -88719,6 +89101,10 @@ verb	verb
 एकों	eko	50
 कों	kon	50
 कों	ko	50
+लौकियाँ	laukiyan	50
+लौकियाँ	laukiyaan	50
+लौकियों	laukiyon	50
+लौकियों	laukiyo	50
 पते	patte	50
 पतों	patton	50
 पतों	patto	50
@@ -88734,8 +89120,10 @@ verb	verb
 देहायों	dehayo	50
 सुंदरों	sundaron	50
 सुंदरों	sundaro	50
-सुन्दरों	sundaron	50
-सुन्दरों	sundaro	50
+रुकताएँ	ruktaen	50
+रुकताएँ	ruktaein	50
+रुकताओं	ruktaon	50
+रुकताओं	ruktao	50
 बोलताएँ	boltaen	50
 बोलताएँ	boltaein	50
 बोलताओं	boltaon	50
@@ -88746,10 +89134,14 @@ verb	verb
 सोचताएँ	sochtaein	50
 सोचताओं	sochtaon	50
 सोचताओं	sochtao	50
+बागों	bagon	50
+बागों	bago	50
 मतों	maton	50
 मतों	mato	50
 छहों	chehon	50
 छहों	cheho	50
+बुधवारों	budhvaron	50
+बुधवारों	budhvaro	50
 नदियाँ	naadiyaan	50
 नदियों	naadiyon	50
 नदियों	naadiyo	50
@@ -88771,6 +89163,8 @@ verb	verb
 लगताएँ	lagtaein	50
 लगताओं	lagtaon	50
 लगताओं	lagtao	50
+बागों	baghon	50
+बागों	bagho	50
 समझताएँ	samajhtaen	50
 समझताएँ	samajhtaein	50
 समझताओं	samajhtaon	50
@@ -88785,6 +89179,10 @@ verb	verb
 बीवियों	biwiyo	50
 जीभों	jeebhon	50
 जीभों	jeebho	50
+सिखाताएँ	sikhataen	50
+सिखाताएँ	sikhataein	50
+सिखाताओं	sikhataon	50
+सिखाताओं	sikhatao	50
 तीनों	tinon	50
 तीनों	tino	50
 सच्चियाँ	sachiyan	50
@@ -88793,6 +89191,13 @@ verb	verb
 सच्चियों	sachiyo	50
 देवासुरमनुष्याश्चों	devasuramanushyashchon	50
 देवासुरमनुष्याश्चों	devasuramanushyashcho	50
+मोटे	mote	50
+मोटों	moton	50
+मोटों	moto	50
+बनताएँ	bantaen	50
+बनताएँ	bantaein	50
+बनताओं	bantaon	50
+बनताओं	bantao	50
 चलों	chalon	50
 चलों	chalo	50
 दीवारें	deewaren	50
@@ -88805,12 +89210,16 @@ verb	verb
 दिल्लियों	dilliyo	50
 हाथों	hathon	50
 हाथों	hatho	50
+टमाटरों	tamataron	50
+टमाटरों	tamataro	50
 मिर्चियाँ	mirchiyan	50
 मिर्चियाँ	mirchiyaan	50
 मिर्चियों	mirchiyon	50
 मिर्चियों	mirchiyo	50
 अक्सरों	aksaron	50
 अक्सरों	aksaro	50
+साथों	saathon	50
+साथों	saatho	50
 हमों	humon	50
 हमों	humo	50
 छतों	chaton	50
@@ -88824,13 +89233,22 @@ verb	verb
 शिक्षों	shiksho	50
 घोरायों	ghorayon	50
 घोरायों	ghorayo	50
+भिंडियाँ	bhindiyan	50
+भिंडियाँ	bhindiyaan	50
+भिंडियों	bhindiyon	50
+भिंडियों	bhindiyo	50
 आये	aaye	50
 आयों	aayon	50
 आयों	aayo	50
+भेजताएँ	bhejtaen	50
+भेजताएँ	bhejtaein	50
+भेजताओं	bhejtaon	50
+भेजताओं	bhejtao	50
 पहलियाँ	pehliyan	50
 पहलियाँ	pehliyaan	50
 पहलियों	pehliyon	50
 पहलियों	pehliyo	50
+रुके	ruke	50
 दूरों	dooron	50
 दूरों	dooro	50
 खूबसूरतों	khubsuraton	50
@@ -88842,6 +89260,10 @@ verb	verb
 आधे	aadhe	50
 आधों	aadhon	50
 आधों	aadho	50
+खेलताएँ	kheltaen	50
+खेलताएँ	kheltaein	50
+खेलताओं	kheltaon	50
+खेलताओं	kheltao	50
 आपलोगों	aaplogon	50
 आपलोगों	aaplogo	50
 कोशिशों	kosishon	50
@@ -88856,6 +89278,9 @@ verb	verb
 मीठियाँ	meethiyaan	50
 मीठियों	meethiyon	50
 मीठियों	meethiyo	50
+खाये	khaye	50
+खायों	khayon	50
+खायों	khayo	50
 कमरों	kamaron	50
 कमरों	kamaro	50
 बारहों	barahon	50
@@ -88872,14 +89297,20 @@ verb	verb
 माताएँ	mataein	50
 माताओं	mataon	50
 माताओं	matao	50
-आतों	aaton	50
-आतों	aato	50
+आटे	aate	50
+आटों	aaton	50
+आटों	aato	50
 नाकों	naakon	50
 नाकों	naako	50
+खेले	khele	50
+खेलों	khelon	50
+खेलों	khelo	50
 बहुतों	bahoton	50
 बहुतों	bahoto	50
 रिश्तेदारों	rishtedaaron	50
 रिश्तेदारों	rishtedaaro	50
+सांभरों	sambaron	50
+सांभरों	sambaro	50
 तपसे	tapase	50
 तपसों	tapason	50
 तपसों	tapaso	50
@@ -88888,14 +89319,14 @@ verb	verb
 दादों	dado	50
 बाहरों	baharon	50
 बाहरों	baharo	50
+लालों	lalon	50
+लालों	lalo	50
+बैंकों	bankon	50
+बैंकों	banko	50
 सुंदरियाँ	sundariyan	50
 सुंदरियाँ	sundariyaan	50
 सुंदरियों	sundariyon	50
 सुंदरियों	sundariyo	50
-सुन्दरियाँ	sundariyan	50
-सुन्दरियाँ	sundariyaan	50
-सुन्दरियों	sundariyon	50
-सुन्दरियों	sundariyo	50
 देशों	deshon	50
 देशों	desho	50
 छोटियाँ	chhotiyan	50
@@ -88929,22 +89360,43 @@ verb	verb
 मिस्टेकों	mistakeo	50
 बुरों	buron	50
 बुरों	buro	50
+बैठे	baithe	50
 जगहें	jaghen	50
 जगहें	jaghein	50
 जगहों	jaghon	50
 जगहों	jagho	50
+गुरुद्वारे	gurudware	50
+गुरुद्वारों	gurudwaron	50
+गुरुद्वारों	gurudwaro	50
+मौतें	mouten	50
+मौतें	moutein	50
+मौतों	mouton	50
+मौतों	mouto	50
 ठीकों	thikon	50
 ठीकों	thiko	50
 भारतों	bharaton	50
 भारतों	bharato	50
+हलवे	halwe	50
+हलवों	halwon	50
+हलवों	halwo	50
+मौसे	mause	50
+मौसों	mauson	50
+मौसों	mauso	50
 रास्ताएँ	raastaen	50
 रास्ताएँ	raastaein	50
 रास्ताओं	raastaon	50
 रास्ताओं	raastao	50
+रोताएँ	rotaen	50
+रोताएँ	rotaein	50
+रोताओं	rotaon	50
+रोताओं	rotao	50
 हफ़्ताएँ	haftaen	50
 हफ़्ताएँ	haftaein	50
 हफ़्ताओं	haftaon	50
 हफ़्ताओं	haftao	50
+गिरजे	girje	50
+गिरजों	girjon	50
+गिरजों	girjo	50
 चौथियाँ	chauthiyan	50
 चौथियाँ	chauthiyaan	50
 चौथियों	chauthiyon	50
@@ -88968,6 +89420,8 @@ verb	verb
 गाड़ियों	gaadiyo	50
 दोपहरों	dopaharon	50
 दोपहरों	dopaharo	50
+कपड़ों	kapdon	50
+कपड़ों	kapdo	50
 रातें	raatein	50
 नफ़रतों	nafraton	50
 नफ़रतों	nafrato	50
@@ -88980,6 +89434,8 @@ verb	verb
 सखों	sakho	50
 तकों	thakon	50
 तकों	thako	50
+खेतों	kheton	50
+खेतों	kheto	50
 शौहरों	shauharon	50
 शौहरों	shauharo	50
 आटे	atte	50
@@ -88987,6 +89443,9 @@ verb	verb
 आटों	atto	50
 इश्कों	ishqon	50
 इश्कों	ishqo	50
+सिखाये	sikhaye	50
+सिखायों	sikhayon	50
+सिखायों	sikhayo	50
 यारों	yaron	50
 यारों	yaro	50
 होताएँ	hotaen	50
@@ -89019,6 +89478,10 @@ verb	verb
 लाखों	lakho	50
 ग़मों	gumon	50
 ग़मों	gumo	50
+भारियाँ	bhariyan	50
+भारियाँ	bhariyaan	50
+भारियों	bhariyon	50
+भारियों	bhariyo	50
 सब्ज़ियाँ	sabziyan	50
 सब्ज़ियाँ	sabziyaan	50
 सब्ज़ियों	sabziyon	50
@@ -89036,11 +89499,17 @@ verb	verb
 त्वये	tvaye	50
 त्वयों	tvayon	50
 त्वयों	tvayo	50
+सुनों	sunon	50
+सुनों	suno	50
 कृपये	kripye	50
 कृपयों	kripyon	50
 कृपयों	kripyo	50
 पाँचों	panchon	50
 पाँचों	pancho	50
+पियाँ	piyan	50
+पियाँ	piiyan	50
+पियों	piyon	50
+पियों	piiyo	50
 छोटों	choton	50
 छोटों	choto	50
 खूबसूरतों	khoobsuraton	50
@@ -89056,6 +89525,8 @@ verb	verb
 ताले	taale	50
 तालों	taalon	50
 तालों	taalo	50
+जन्मों	janmon	50
+जन्मों	janmo	50
 ठंडियाँ	thandiyan	50
 ठंडियाँ	thandiyaan	50
 ठंडियों	thandiyon	50
@@ -89068,6 +89539,10 @@ verb	verb
 मंदिरों	mandiron	50
 मंदिरों	mandiro	50
 गाड़ियाँ	gadiyaan	50
+रखताएँ	rakhtaen	50
+रखताएँ	rakhtaein	50
+रखताओं	rakhtaon	50
+रखताओं	rakhtao	50
 नीलायों	neelayon	50
 नीलायों	neelayo	50
 बहनें	bahanen	50
@@ -89080,8 +89555,6 @@ verb	verb
 गुड़ियों	gudiiyo	50
 दूरों	duron	50
 दूरों	duro	50
-देखों	dekhon	50
-देखों	dekho	50
 समझियाँ	samjhiyan	50
 समझियाँ	samjhiyaan	50
 समझियों	samjhiyon	50
@@ -89102,6 +89575,8 @@ verb	verb
 ज्ञानों	gyano	50
 समयों	samayon	50
 समयों	samayo	50
+खीरों	kheeron	50
+खीरों	kheero	50
 तेरहों	terahon	50
 तेरहों	teraho	50
 शहरों	shaharon	50
@@ -89123,6 +89598,9 @@ verb	verb
 गले	gale	50
 गलों	galon	50
 गलों	galo	50
+डोसे	dose	50
+डोसों	doson	50
+डोसों	doso	50
 चलताएँ	chaltaen	50
 चलताएँ	chaltaein	50
 चलताओं	chaltaon	50
@@ -89141,6 +89619,9 @@ verb	verb
 कामों	kamo	50
 पासों	passon	50
 पासों	passo	50
+महँगे	mehnge	50
+महँगों	mehngon	50
+महँगों	mehngo	50
 दुश्मनों	dushmanon	50
 दुश्मनों	dushmano	50
 अदरकों	adrakon	50
@@ -90491,9 +90972,6 @@ verb	verb
 रोनहों	ronaho	50
 लम्बों	lambon	50
 लम्बों	lambo	50
-लंबे	lambe	50
-लंबों	lambon	50
-लंबों	lambo	50
 लम्बे	lambe	50
 आपाधापियाँ	apadhapiyan	50
 आपाधापियाँ	apadhapiyaan	50
@@ -90696,8 +91174,6 @@ verb	verb
 दक्षिणपंथियाँ	daxinapamthiyaan	50
 दक्षिणपंथियों	daxinapamthiyon	50
 दक्षिणपंथियों	daxinapamthiyo	50
-बीचों	bichon	50
-बीचों	bicho	50
 बिछों	bichon	50
 बिछों	bicho	50
 बिछे	biche	50
@@ -92047,8 +92523,6 @@ verb	verb
 शक्तिवर्धकों	shaktivardhako	50
 शक्तिवर्धकों	saktivardhakon	50
 शक्तिवर्धकों	saktivardhako	50
-रविवारों	ravivaron	50
-रविवारों	ravivaro	50
 आभूषितों	abhushiton	50
 आभूषितों	abhushito	50
 आभूषितों	abhusiton	50
@@ -93307,9 +93781,6 @@ verb	verb
 दुःखदाताएँ	duhkhadataein	50
 दुःखदाताओं	duhkhadataon	50
 दुःखदाताओं	duhkhadatao	50
-समोसे	samose	50
-समोसों	samoson	50
-समोसों	samoso	50
 दिवसमुखों	divasamukhon	50
 दिवसमुखों	divasamukho	50
 अभिशापों	abhishapon	50
@@ -94883,8 +95354,6 @@ verb	verb
 वापिकाएँ	vapikaein	50
 वापिकाओं	vapikaon	50
 वापिकाओं	vapikao	50
-परिवारों	parivaron	50
-परिवारों	parivaro	50
 पेलेटियरों	peletiyaron	50
 पेलेटियरों	peletiyaro	50
 उल्लासों	ullason	50
@@ -100444,8 +100913,6 @@ verb	verb
 झिड़कियाँ	jhidakiyaan	50
 झिड़कियों	jhidakiyon	50
 झिड़कियों	jhidakiyo	50
-खेतों	kheton	50
-खेतों	kheto	50
 लटकनों	latakanon	50
 लटकनों	latakano	50
 पयोधरों	payodharon	50
@@ -102934,9 +103401,6 @@ verb	verb
 बैक्टीरियों	baiktiriiyo	50
 म्र्‍गदावों	mrgadavon	50
 म्र्‍गदावों	mrgadavo	50
-डोसे	dose	50
-डोसों	doson	50
-डोसों	doso	50
 मायामोहों	mayamohon	50
 मायामोहों	mayamoho	50
 हर्षदानों	harshadanon	50
@@ -104902,10 +105366,6 @@ verb	verb
 ख़ताओं	khatao	50
 खाटों	khaton	50
 खाटों	khato	50
-खाताएँ	khataen	50
-खाताएँ	khataein	50
-खाताओं	khataon	50
-खाताओं	khatao	50
 खतों	khaton	50
 खतों	khato	50
 ख़ते	khate	50
@@ -105347,7 +105807,6 @@ verb	verb
 सीरमों	siramo	50
 छोलों	cholon	50
 छोलों	cholo	50
-छोले	chole	50
 चोले	chole	50
 चोलों	cholon	50
 चोलों	cholo	50
@@ -106391,8 +106850,6 @@ verb	verb
 पवनास्त्रों	pavanastro	50
 प्रत्यगक्षों	pratyagaxon	50
 प्रत्यगक्षों	pratyagaxo	50
-सुनों	sunon	50
-सुनों	suno	50
 सूने	sune	50
 सूनों	sunon	50
 सूनों	suno	50
@@ -108270,8 +108727,6 @@ verb	verb
 सार्वकालिकों	sarvakaliko	50
 ख़ूनों	khunon	50
 ख़ूनों	khuno	50
-खूनों	khunon	50
-खूनों	khuno	50
 ख़ूनों	khunon	50
 ख़ूनों	khuno	50
 चौकडियाँ	chaukadiyan	50
@@ -112841,8 +113296,6 @@ verb	verb
 जीवाश्मों	jivashmo	50
 जीवाश्मों	jivasmon	50
 जीवाश्मों	jivasmo	50
-पीलों	pilon	50
-पीलों	pilo	50
 पिलों	pilon	50
 पिलों	pilo	50
 एतबारों	etabaron	50
@@ -114296,9 +114749,6 @@ verb	verb
 रुख़ों	ruko	50
 रूकों	rukon	50
 रूकों	ruko	50
-रुके	ruke	50
-रुकों	rukon	50
-रुकों	ruko	50
 मज़ारों	mazaron	50
 मज़ारों	mazaro	50
 वित्तीयों	vittiyon	50
@@ -115922,10 +116372,6 @@ verb	verb
 रियलों	riyalo	50
 रियालों	riyalon	50
 रियालों	riyalo	50
-सस्ताएँ	sastaen	50
-सस्ताएँ	sastaein	50
-सस्ताओं	sastaon	50
-सस्ताओं	sastao	50
 विक्टरियाँ	viktariyan	50
 विक्टरियाँ	viktariyaan	50
 विक्टरियों	viktariyon	50
@@ -117263,9 +117709,6 @@ verb	verb
 क्लिपों	klipo	50
 दुग्धयुक्तों	dugdhayukton	50
 दुग्धयुक्तों	dugdhayukto	50
-जे	je	50
-जों	jon	50
-जों	jo	50
 पेंशनों	pemshanon	50
 पेंशनों	pemshano	50
 पेंशनों	pemsanon	50
@@ -117515,8 +117958,6 @@ verb	verb
 कचरियाँ	kachariyaan	50
 कचरियों	kachariyon	50
 कचरियों	kachariyo	50
-रोयों	royon	50
-रोयों	royo	50
 छिछोरे	chichore	50
 छिछोरों	chichoron	50
 छिछोरों	chichoro	50
@@ -117633,9 +118074,6 @@ verb	verb
 उकसावे	ukasave	50
 उकसावों	ukasavon	50
 उकसावों	ukasavo	50
-सोये	soye	50
-सोयों	soyon	50
-सोयों	soyo	50
 शूटिंगों	shutimgon	50
 शूटिंगों	shutimgo	50
 शूटिंगों	sutimgon	50
@@ -118102,10 +118540,6 @@ verb	verb
 काफ़ियाँ	kafiyaan	50
 काफ़ियों	kafiyon	50
 काफ़ियों	kafiyo	50
-काफ़ियाँ	kafiyan	50
-काफ़ियाँ	kafiyaan	50
-काफ़ियों	kafiyon	50
-काफ़ियों	kafiyo	50
 हथियाये	hathiyaye	50
 हथियायों	hathiyayon	50
 हथियायों	hathiyayo	50
@@ -122934,8 +123368,6 @@ verb	verb
 सिखे	sikhe	50
 सिखों	sikhon	50
 सिखों	sikho	50
-सीखों	sikhon	50
-सीखों	sikho	50
 राक्षसीयों	raxasiyon	50
 राक्षसीयों	raxasiyo	50
 देलहियाँ	delahiyan	50
@@ -123476,8 +123908,6 @@ verb	verb
 पतंगबाज़ियों	patamgabaziyo	50
 पठितों	pathiton	50
 पठितों	pathito	50
-लालों	lalon	50
-लालों	lalo	50
 ऑफिसों	phison	50
 ऑफिसों	phiso	50
 फीसों	phison	50
@@ -125395,8 +125825,6 @@ verb	verb
 जगदीश्वरों	jagadishvaro	50
 जगदीश्वरों	jagadisvaron	50
 जगदीश्वरों	jagadisvaro	50
-शनिवारों	shanivaron	50
-शनिवारों	shanivaro	50
 शनिवारों	sanivaron	50
 शनिवारों	sanivaro	50
 परिस्रावों	parisravon	50
@@ -125947,9 +126375,6 @@ verb	verb
 प्रधानांगों	pradhanamgo	50
 ओढ़ावनों	oavanon	50
 ओढ़ावनों	oavano	50
-फूफे	phuphe	50
-फूफों	phuphon	50
-फूफों	phupho	50
 सौंदर्यबोधों	saumdaryabodhon	50
 सौंदर्यबोधों	saumdaryabodho	50
 हवाें	havaen	50
@@ -126111,10 +126536,6 @@ verb	verb
 पुराविद्ये	puravidye	50
 पुराविद्यों	puravidyon	50
 पुराविद्यों	puravidyo	50
-सभियाँ	sabhiyan	50
-सभियाँ	sabhiyaan	50
-सभियों	sabhiyon	50
-सभियों	sabhiyo	50
 लघुत्वों	laghutvon	50
 लघुत्वों	laghutvo	50
 किरकिरे	kirakire	50
@@ -127904,8 +128325,6 @@ verb	verb
 जड़ताएँ	jadataein	50
 जड़ताओं	jadataon	50
 जड़ताओं	jadatao	50
-मटरों	mataron	50
-मटरों	mataro	50
 मतारे	matare	50
 मतारों	mataron	50
 मतारों	mataro	50
@@ -131027,8 +131446,6 @@ verb	verb
 कलाओं	kalao	50
 कॉलों	kalon	50
 कॉलों	kalo	50
-कालों	kalon	50
-कालों	kalo	50
 ख़ाले	kale	50
 ख़ालों	kalon	50
 ख़ालों	kalo	50
@@ -133881,8 +134298,6 @@ verb	verb
 डकैतों	dakaito	50
 चकचालों	chakachalon	50
 चकचालों	chakachalo	50
-बागों	bagon	50
-बागों	bago	50
 बगों	bagon	50
 बगों	bago	50
 निष्कामों	nishkamon	50
@@ -135608,10 +136023,6 @@ verb	verb
 गरममसालों	garamamasalo	50
 पार्लियामेंटों	parliyamemton	50
 पार्लियामेंटों	parliyamemto	50
-टोपियाँ	topiyan	50
-टोपियाँ	topiyaan	50
-टोपियों	topiyon	50
-टोपियों	topiyo	50
 लगातारों	lagataron	50
 लगातारों	lagataro	50
 उत्थानों	utthanon	50
@@ -139011,8 +139422,6 @@ verb	verb
 कड़ापनों	kadapanon	50
 कड़ापनों	kadapano	50
 सफ़ेदे	safede	50
-सफ़ेदों	safedon	50
-सफ़ेदों	safedo	50
 सफ़ेदे	safede	50
 सफ़ेदों	safedon	50
 सफ़ेदों	safedo	50
@@ -139284,9 +139693,6 @@ verb	verb
 अशोकपूर्णिमों	asokapurnimo	50
 अनुनयों	anunayon	50
 अनुनयों	anunayo	50
-हरों	haron	50
-हरों	haro	50
-हरे	hare	50
 हारों	haron	50
 हारों	haro	50
 ब्रह्मलीनों	brahmalinon	50
@@ -139866,9 +140272,6 @@ verb	verb
 दुर्भावने	durbhavane	50
 दुर्भावनों	durbhavanon	50
 दुर्भावनों	durbhavano	50
-उठों	uthon	50
-उठों	utho	50
-उठे	uthe	50
 बरज़ोरियाँ	barazoriyan	50
 बरज़ोरियाँ	barazoriyaan	50
 बरज़ोरियों	barazoriyon	50
@@ -145295,9 +145698,6 @@ verb	verb
 टियों	tiyo	50
 नलमीनों	nalaminon	50
 नलमीनों	nalamino	50
-करेले	karele	50
-करेलों	karelon	50
-करेलों	karelo	50
 पपैये	papaiye	50
 पपैयों	papaiyon	50
 पपैयों	papaiyo	50
@@ -148436,10 +148836,6 @@ verb	verb
 झाँसे	jhanse	50
 अनादरणों	anadaranon	50
 अनादरणों	anadarano	50
-भारियाँ	bhariyan	50
-भारियाँ	bhariyaan	50
-भारियों	bhariyon	50
-भारियों	bhariyo	50
 स्मर्णार्थों	smarnarthon	50
 स्मर्णार्थों	smarnartho	50
 जरबाफियाँ	jarabaphiyan	50
@@ -148479,8 +148875,6 @@ verb	verb
 निशानों	nisano	50
 निशाने	nishane	50
 निशाने	nisane	50
-चप्पलों	chappalon	50
-चप्पलों	chappalo	50
 क्षतिग्रस्तों	kshatigraston	50
 क्षतिग्रस्तों	kshatigrasto	50
 क्षतिग्रस्तों	ksatigraston	50
@@ -148703,8 +149097,6 @@ verb	verb
 अवांछनीयों	avamchaniyo	50
 रूमालों	rumalon	50
 रूमालों	rumalo	50
-रुमालों	rumalon	50
-रुमालों	rumalo	50
 केशपाशों	keshapashon	50
 केशपाशों	keshapasho	50
 केशपाशों	kesapason	50
@@ -150167,8 +150559,6 @@ verb	verb
 सिरजनहारों	sirajanaharo	50
 ऑखों	khon	50
 ऑखों	kho	50
-खों	khon	50
-खों	kho	50
 निस्तेजताएँ	nistejataen	50
 निस्तेजताएँ	nistejataein	50
 निस्तेजताओं	nistejataon	50
@@ -150611,10 +151001,6 @@ verb	verb
 असूयकों	asuyako	50
 तत्कालों	tatkalon	50
 तत्कालों	tatkalo	50
-गोभियाँ	gobhiyan	50
-गोभियाँ	gobhiyaan	50
-गोभियों	gobhiyon	50
-गोभियों	gobhiyo	50
 हांके	hamke	50
 हांकों	hamkon	50
 हांकों	hamko	50
@@ -152626,8 +153012,6 @@ verb	verb
 नचे	nache	50
 नचों	nachon	50
 नचों	nacho	50
-नाचों	nachon	50
-नाचों	nacho	50
 चटाखेदारों	chatakhedaron	50
 चटाखेदारों	chatakhedaro	50
 कातिलाने	katilane	50
@@ -153640,10 +154024,6 @@ verb	verb
 ददोरों	dadoro	50
 उलों	ulon	50
 उलों	ulo	50
-लौकियाँ	laukiyan	50
-लौकियाँ	laukiyaan	50
-लौकियों	laukiyon	50
-लौकियों	laukiyo	50
 नटराजों	natarajon	50
 नटराजों	natarajo	50
 रबाबियाँ	rababiyan	50
@@ -157240,9 +157620,6 @@ verb	verb
 औषधालयों	aushadhalayo	50
 औषधालयों	ausadhalayon	50
 औषधालयों	ausadhalayo	50
-नीलों	nilon	50
-नीलों	nilo	50
-नीले	nile	50
 फुक्सिनों	phuksinon	50
 फुक्सिनों	phuksino	50
 ऊसरों	usaron	50
@@ -160806,8 +161183,6 @@ verb	verb
 गृहमोचिकाएँ	grrihamochikaein	50
 गृहमोचिकाओं	grrihamochikaon	50
 गृहमोचिकाओं	grrihamochikao	50
-खेलों	khelon	50
-खेलों	khelo	50
 जलशोधनों	jalashodhanon	50
 जलशोधनों	jalashodhano	50
 जलशोधनों	jalasodhanon	50
@@ -161549,10 +161924,6 @@ verb	verb
 क्षीरों	kshiro	50
 क्षीरों	ksiron	50
 क्षीरों	ksiro	50
-पियाँ	piyan	50
-पियाँ	piiyan	50
-पियों	piyon	50
-पियों	piiyo	50
 छबीले	chabile	50
 छबीलों	chabilon	50
 छबीलों	chabilo	50
@@ -166632,8 +167003,6 @@ verb	verb
 मिथ्याजल्पितों	mithyajalpito	50
 गोलीकांडों	golikamdon	50
 गोलीकांडों	golikamdo	50
-पार्कों	parkon	50
-पार्कों	parko	50
 कमाच्हों	kamachhon	50
 कमाच्हों	kamachho	50
 निर्वाहों	nirvahon	50
@@ -166886,9 +167255,6 @@ verb	verb
 परगने	paragane	50
 परगनों	paraganon	50
 परगनों	paragano	50
-मोटे	mote	50
-मोटों	moton	50
-मोटों	moto	50
 युगमों	yugamon	50
 युगमों	yugamo	50
 वाग्वीरों	vagviron	50
@@ -170478,8 +170844,6 @@ verb	verb
 मंगवों	mamgavo	50
 अजैवों	ajaivon	50
 अजैवों	ajaivo	50
-हल्कों	halkon	50
-हल्कों	halko	50
 ऑपरेटरों	paretaron	50
 ऑपरेटरों	paretaro	50
 जोकरों	jokaron	50
@@ -171038,6 +171402,8 @@ verb	verb
 धरित्रियाँ	dharitriyaan	50
 धरित्रियों	dharitriyon	50
 धरित्रियों	dharitriyo	50
+सुन्दरों	sundaron	50
+सुन्दरों	sundaro	50
 यादें	yaden	50
 यादें	yadein	50
 यादों	yadon	50
@@ -171380,9 +171746,6 @@ verb	verb
 ईयादों	iyado	50
 प्रयोजकों	prayojakon	50
 प्रयोजकों	prayojako	50
-पराठे	parathe	50
-पराठों	parathon	50
-पराठों	paratho	50
 परठे	parathe	50
 परठों	parathon	50
 परठों	paratho	50
@@ -172686,8 +173049,6 @@ verb	verb
 यूहों	yuho	50
 बयाबानों	bayabanon	50
 बयाबानों	bayabano	50
-अचारों	acharon	50
-अचारों	acharo	50
 आचारों	acharon	50
 आचारों	acharo	50
 चपरासों	chaparason	50
@@ -178842,8 +179203,6 @@ verb	verb
 बसरों	basaro	50
 बसरे	basare	50
 समझे	samajhe	50
-समझों	samajhon	50
-समझों	samajho	50
 क्रीमों	krimon	50
 क्रीमों	krimo	50
 विक्षिप्तताएँ	vikshiptataen	50
@@ -181029,9 +181388,6 @@ verb	verb
 पिरामिडों	piramido	50
 अस्वीकरणीयों	asvikaraniyon	50
 अस्वीकरणीयों	asvikaraniyo	50
-मौसे	mause	50
-मौसों	mauson	50
-मौसों	mauso	50
 ख़ातमियाँ	khatamiyan	50
 ख़ातमियाँ	khatamiyaan	50
 ख़ातमियों	khatamiyon	50
@@ -185688,10 +186044,6 @@ verb	verb
 नामधारियाँ	namadhariyaan	50
 नामधारियों	namadhariyon	50
 नामधारियों	namadhariyo	50
-पूरियाँ	puriyan	50
-पूरियाँ	puriyaan	50
-पूरियों	puriyon	50
-पूरियों	puriyo	50
 पुरियाँ	puriyan	50
 पुरियाँ	puriyaan	50
 पुरियों	puriyon	50
@@ -185822,8 +186174,6 @@ verb	verb
 लशकरों	lasakaron	50
 लशकरों	lasakaro	50
 जन्मे	janme	50
-जन्मों	janmon	50
-जन्मों	janmo	50
 समाचारों	samacharon	50
 समाचारों	samacharo	50
 विचारों	vicharon	50
@@ -188816,8 +189166,6 @@ verb	verb
 कूॅचियाँ	kueachiyaan	50
 कूॅचियों	kueachiyon	50
 कूॅचियों	kueachiyo	50
-शुक्रवारों	shukravaron	50
-शुक्रवारों	shukravaro	50
 शुक्रवारों	sukravaron	50
 शुक्रवारों	sukravaro	50
 बर्फ़ों	barfon	50
@@ -189359,10 +189707,6 @@ verb	verb
 यूनसों	yunaso	50
 युनसों	yunason	50
 युनसों	yunaso	50
-सोताएँ	sotaen	50
-सोताएँ	sotaein	50
-सोताओं	sotaon	50
-सोताओं	sotao	50
 बीजेपियाँ	bijepiyan	50
 बीजेपियाँ	bijepiyaan	50
 बीजेपियों	bijepiyon	50
@@ -190081,10 +190425,6 @@ verb	verb
 अब्भक्षणों	abbhaxano	50
 बद्धों	baddhon	50
 बद्धों	baddho	50
-मौतें	mauten	50
-मौतें	mautein	50
-मौतों	mauton	50
-मौतों	mauto	50
 उजाड़करों	ujadakaron	50
 उजाड़करों	ujadakaro	50
 सूखापनों	sukhapanon	50
@@ -190345,8 +190685,6 @@ verb	verb
 निदाघकालों	nidaghakalo	50
 नागफलों	nagaphalon	50
 नागफलों	nagaphalo	50
-गुरुवारों	guruvaron	50
-गुरुवारों	guruvaro	50
 गुरूवारों	guruvaron	50
 गुरूवारों	guruvaro	50
 वंशीयों	vamshiyon	50
@@ -192128,10 +192466,6 @@ verb	verb
 शीर्षकों	sirsako	50
 अघनों	aghanon	50
 अघनों	aghano	50
-लंबियाँ	lambiyan	50
-लंबियाँ	lambiyaan	50
-लंबियों	lambiyon	50
-लंबियों	lambiyo	50
 लम्बियाँ	lambiyan	50
 लम्बियाँ	lambiyaan	50
 लम्बियों	lambiyon	50
@@ -192612,9 +192946,6 @@ verb	verb
 वाराहों	varaho	50
 वराहों	varahon	50
 वराहों	varaho	50
-चौड़े	chaude	50
-चौड़ों	chaudon	50
-चौड़ों	chaudo	50
 चौदे	chaude	50
 चौदों	chaudon	50
 चौदों	chaudo	50
@@ -193403,8 +193734,6 @@ verb	verb
 समालोचने	samalochane	50
 समालोचनों	samalochanon	50
 समालोचनों	samalochano	50
-साबुनों	sabunon	50
-साबुनों	sabuno	50
 प्राणावरोधों	pranavarodhon	50
 प्राणावरोधों	pranavarodho	50
 जब्तों	jabton	50
@@ -194244,9 +194573,6 @@ verb	verb
 मास्टरियाँ	mastariyaan	50
 मास्टरियों	mastariyon	50
 मास्टरियों	mastariyo	50
-बैठे	baithe	50
-बैठों	baithon	50
-बैठों	baitho	50
 अख़्तियारों	aktiyaron	50
 अख़्तियारों	aktiyaro	50
 एलवियाँ	elaviyan	50
@@ -195448,8 +195774,6 @@ verb	verb
 टैक्सियों	taiksiyo	50
 सलामतों	salamaton	50
 सलामतों	salamato	50
-टमाटरों	tamataron	50
-टमाटरों	tamataro	50
 ग्र्‍हकलहों	grhakalahon	50
 ग्र्‍हकलहों	grhakalaho	50
 धवलग्र्‍हों	dhavalagrhon	50
