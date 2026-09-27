@@ -344,13 +344,13 @@ office	office
 सवाल	sawaal
 अड़सठवीं	adsathvi
 बात	bat
-छह	chah
+इक्यावनवाँ	ikyaavan
 चौबीसवाँ	chaubisva
 साथी	saathi
 बीसवाँ	beesva
 पति	pati
-इक्यावनवाँ	ikyaavan
 सत्तावनवाँ	sattavanwa
+चाह	chah
 बाईसवाँ	baeeswan
 अठहत्तरवाँ	athhattarva
 छत्तीसवाँ	chhattisva
@@ -566,6 +566,7 @@ school	school
 मज़बूत	mazboot
 ऊपर	upr
 वारदो	varado
+लगते	lagte
 कपालिने	kapaline
 कुछ	kuch
 समस्याओं	samasyaon
@@ -861,6 +862,7 @@ noida	noida
 इसके	iske
 कान	kaan
 में	mein
+छह	chhah
 पचासीवाँ	pachaasi
 हिम्मत	himmat
 छब्बीसवाँ	chhabbiswa
@@ -1031,6 +1033,7 @@ day	day
 बोलती	bolti
 अट्ठाईसवीं	atthaisvi
 कैसी	kaisi
+चाहता	chahta
 अपनी	apni
 pune	pune
 ना	na
@@ -1096,6 +1099,7 @@ chennai	chennai
 छियानवेवाँ	chhiyaanvewan
 छियालीसवाँ	chhiyalisva
 अच्छी	achhi
+लगता	lagta
 जहाँ	jaha
 चौदहवाँ	chaudahva
 करोड़	crore
@@ -1131,6 +1135,7 @@ ahmedabad	ahmedabad
 हाथ	hath
 नब्बेवाँ	nabbe
 year	year
+चाहा	chaha
 राज्यं	rajyam
 मिर्ची	mirchi
 पंद्रहवीं	pandrahvi
@@ -1318,6 +1323,7 @@ kanpur	kanpur
 दोपहर	dopahar
 ते	te
 रात	raat
+चाहिए	chahiya
 चौंतीसवाँ	chauntisva
 नफ़रत	nafrat
 सतहत्तरवाँ	satahattarwa
@@ -1365,6 +1371,7 @@ kanpur	kanpur
 ताऊ	tau
 इक्यानवेवाँ	ikyaanvewa
 पहला	pahla
+लागत	lagat
 बहुत	bahut
 साल	saal
 पाँच	paanch
@@ -1399,6 +1406,7 @@ photo	photo
 पाँच	panch
 के	ke
 इकहत्तरवाँ	ikhattar
+चाहते	chahte
 चौवनवाँ	chauvanwan
 महाबल:	mahabala
 अस्सीवीं	assivi
@@ -1520,6 +1528,7 @@ time	time
 कृतान्ताय	kritantaya
 उनासीवीं	unasi_vi
 दीर्घाय	dirghay
+लगती	lagti
 बयासीवाँ	bayaasiwa
 दसवीं	dasvi
 file	file
@@ -1547,6 +1556,7 @@ hour	hour
 अच्छे	achhe
 टीचर	teacher
 कहे	kahe
+चाहती	chahti
 कभी	kabhi
 फ़्रेंडली	fremdali
 अधिकतम	adhikatama
@@ -16621,8 +16631,8 @@ www	www
 चाह	chaha
 चहा	chaha
 छह	chaha
-चाह	chah
 चहा	chah
+छह	chah
 गुनुंगित्सोली	gunumgitsoli
 रक्षक	rakshaka
 रक्षक	raksaka
@@ -24362,7 +24372,6 @@ www	www
 निवाड़	nivad
 निवाड़	nivad
 लागत	lagata
-लागत	lagat
 अवाच्य	avachya
 चित्तशुद्धि	chittashuddhi
 चित्तशुद्धि	chittasuddhi
@@ -88067,12 +88076,12 @@ verb	verb
 बातें	batein	50
 बातों	baton	50
 बातों	bato	50
-छहों	chahon	50
-छहों	chaho	50
 साथियाँ	saathiyan	50
 साथियाँ	saathiyaan	50
 साथियों	saathiyon	50
 साथियों	saathiyo	50
+चाहों	chahon	50
+चाहों	chaho	50
 सूर्यपुत्रों	suryaputron	50
 सूर्यपुत्रों	suryaputro	50
 सच्चों	sachon	50
@@ -88533,6 +88542,8 @@ verb	verb
 हिंदुस्तानों	hindustano	50
 कानों	kaanon	50
 कानों	kaano	50
+छहों	chhahon	50
+छहों	chhaho	50
 हिम्मतों	himmaton	50
 हिम्मतों	himmato	50
 सिलेबसों	syllabuson	50
@@ -88684,6 +88695,10 @@ verb	verb
 कैसियाँ	kaisiyaan	50
 कैसियों	kaisiyon	50
 कैसियों	kaisiyo	50
+चाहताएँ	chahtaen	50
+चाहताएँ	chahtaein	50
+चाहताओं	chahtaon	50
+चाहताओं	chahtao	50
 नों	non	50
 नों	no	50
 कुर्सियाँ	kursiyan	50
@@ -88747,6 +88762,10 @@ verb	verb
 अच्छियाँ	achhiyaan	50
 अच्छियों	achhiyon	50
 अच्छियों	achhiyo	50
+लगताएँ	lagtaen	50
+लगताएँ	lagtaein	50
+लगताओं	lagtaon	50
+लगताओं	lagtao	50
 समझताएँ	samajhtaen	50
 समझताएँ	samajhtaein	50
 समझताओं	samajhtaon	50
@@ -88983,6 +89002,8 @@ verb	verb
 दशरथकृतों	dasharathkrito	50
 बलीमुखों	balimukhon	50
 बलीमुखों	balimukho	50
+लागतों	lagaton	50
+लागतों	lagato	50
 बहुतों	bahuton	50
 बहुतों	bahuto	50
 सालों	saalon	50
@@ -107819,11 +107840,11 @@ verb	verb
 चौकसियों	chaukasiyo	50
 आतुरों	aturon	50
 आतुरों	aturo	50
-चाहों	chahon	50
-चाहों	chaho	50
 चहे	chahe	50
 चहों	chahon	50
 चहों	chaho	50
+छहों	chahon	50
+छहों	chaho	50
 गुनुंगित्सोलियाँ	gunumgitsoliyan	50
 गुनुंगित्सोलियाँ	gunumgitsoliyaan	50
 गुनुंगित्सोलियों	gunumgitsoliyon	50
@@ -117375,8 +117396,6 @@ verb	verb
 लक्ष्यों	laxyo	50
 निवाड़ों	nivadon	50
 निवाड़ों	nivado	50
-लागतों	lagaton	50
-लागतों	lagato	50
 अवाच्यों	avachyon	50
 अवाच्यों	avachyo	50
 सगर्भे	sagarbhe	50
