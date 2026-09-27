@@ -676,7 +676,7 @@ proc getCommonDict*(): Table[string, seq[string]] =
   result["paanch"] = @["पाँच"]
   result["panch"] = @["पाँच"]
   result["cheh"] = @["छह"]
-  result["chah"] = @["छह"]
+  result["chhah"] = @["छह"]
   result["saat"] = @["सात"]
   result["aath"] = @["आठ"]
   result["ath"] = @["आठ"]
@@ -1723,3 +1723,22 @@ proc getCommonDict*(): Table[string, seq[string]] =
   result["nadiyo"] = @["नदियों"]
   result["gadiyon"] = @["गाड़ियों"]
   result["gadiyo"] = @["गाड़ियों"]
+
+  # ============ CHAH- (WANT) ============
+  result["chahta"] = @["चाहता"]
+  result["chahti"] = @["चाहती"]
+  result["chahte"] = @["चाहते"]
+  result["chaha"] = @["चाहा"]
+  result["chah"] = @["चाह"]
+  result["chahiye"] = @["चाहिए"]
+  result["chahiya"] = @["चाहिए"]
+
+  # ============ LAG- (APPEAR/COST) ============
+  result["lagat"] = @["लागत"]
+  result["lagta"] = @["लगता"]
+  result["lagti"] = @["लगती"]
+  result["lagte"] = @["लगते"]
+
+  # ============ VERIFY HAI ============
+  result["hai"] = @["है"]
+  result["hain"] = @["हैं"]
