@@ -432,6 +432,25 @@ proc transliterateSingleWord*(word: string): string =
 
 var gBinDict: Table[string, seq[string]]
 var gCommonDict: Table[string, seq[string]]
+var gRimeDict: Table[string, seq[string]]
+
+proc loadRimeDict*(path: string) =
+  if not fileExists(path): return
+  var f: File
+  if not open(f, path): return
+  var line: string
+  while f.readLine(line):
+    if line.len == 0 or line[0] == '#' or line[0] == '-': continue
+    let parts = line.split('\t')
+    if parts.len >= 2:
+      let hw = parts[0].strip()
+      let pk = parts[1].strip().toLowerAscii()
+      if pk.len > 0 and hw.len > 0:
+        if not gRimeDict.hasKey(pk):
+          gRimeDict[pk] = @[]
+        if not gRimeDict[pk].contains(hw):
+          gRimeDict[pk].add(hw)
+  f.close()
 
 proc getFuzzyDictMatches(text: string): seq[string] =
   result = @[]
@@ -454,6 +473,10 @@ proc getPhoneticCandidates*(text: string): seq[string] =
 
   if gCommonDict.hasKey(wLower):
     for item in gCommonDict[wLower]:
+      if not result.contains(item): result.add(item)
+
+  if gRimeDict.hasKey(wLower):
+    for item in gRimeDict[wLower]:
       if not result.contains(item): result.add(item)
 
   if gBinDict.hasKey(wLower):
@@ -492,6 +515,11 @@ when isMainModule:
     binPath = getAppDir() / "wordnet_hindi_dict.bin"
   gBinDict = loadWordNetBinaryDict(binPath)
   gCommonDict = getCommonDict()
+
+  var rimePath = getAppDir().parentDir / "rime" / "hindi_ai.dict.yaml"
+  if not fileExists(rimePath):
+    rimePath = getEnv("HOME") / ".local/share/fcitx5/rime/hindi_ai.dict.yaml"
+  loadRimeDict(rimePath)
   let params = commandLineParams()
   if params.len > 0:
     let inputStr = params.join(" ")

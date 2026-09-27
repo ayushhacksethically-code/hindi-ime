@@ -1,4 +1,5 @@
 import std/[tables, strutils, json, streams, os, math, unicode]
+import inflect_hindi
 
 # Combined Phonetic Mappings: ISO 15919 + User Custom Keybindings + ITRANS / IAST / Harvard-Kyoto
 const
@@ -1910,6 +1911,40 @@ proc getCommonDict(): Table[string, seq[string]] =
   result["soche"] = @["सोचे"]
   result["dekhe"] = @["देखे"]
 
+  # ============ EXPLICIT PRIORITY ENTRIES (FIX 2) ============
+  result["chaturbhuj"] = @["चतुर्भुज"]
+  result["chakravyuh"] = @["चक्रव्यूह"]
+  result["dwarka"] = @["द्वारका"]
+  result["dwapar"] = @["द्वापर"]
+  result["saptah"] = @["सप्ताह"]
+  result["navratna"] = @["नवरत्न"]
+  result["dashanan"] = @["दशानन"]
+  result["panchvati"] = @["पंचवटी"]
+  result["panchtatva"] = @["पंचतत्व"]
+  result["ashtadhatu"] = @["अष्टधातु"]
+  result["chaturvedi"] = @["चतुर्वेदी"]
+  result["triloknath"] = @["त्रिलोकीनाथ", "त्रिलोकनाथ"]
+
+  # ============ PLURAL VARIANTS (FIX 3) ============
+  result["samasyaen"] = @["समस्याएँ"]
+  result["samasyaon"] = @["समस्याओं"]
+  result["samasyao"] = @["समस्याओं"]
+  result["ladkiyan"] = @["लड़कियाँ"]
+  result["ladkiyon"] = @["लड़कियों"]
+  result["ladkiyo"] = @["लड़कियों"]
+  result["gharon"] = @["घरों"]
+  result["gharo"] = @["घरों"]
+  result["baaton"] = @["बातों"]
+  result["baato"] = @["बातों"]
+  result["raaton"] = @["रातों"]
+  result["raato"] = @["रातों"]
+  result["aankhon"] = @["आँखों"]
+  result["aankho"] = @["आँखों"]
+  result["nadiyon"] = @["नदियों"]
+  result["nadiyo"] = @["नदियों"]
+  result["gadiyon"] = @["गाड़ियों"]
+  result["gadiyo"] = @["गाड़ियों"]
+
 proc normalizeToHinglish*(word: string): seq[string] =
   let raw = word.strip()
   if raw.len == 0: return @[]
@@ -2002,6 +2037,7 @@ proc generateFullRimeHindiDict() =
 
   var seen = initTable[string, bool]()
   var count = 0
+  var baseEntries: seq[tuple[hword: string, pkey: string]] = @[]
 
   # 1. Google Transliterate Cached Words (Highest Priority)
   for pkey, cands in googleCache:
@@ -2011,6 +2047,7 @@ proc generateFullRimeHindiDict() =
       if not seen.hasKey(hashKey):
         f.writeLine(hword & "\t" & pkey)
         seen[hashKey] = true
+        baseEntries.add((hword, pkey))
         inc count
 
   # 2. Curated High-Frequency Common Dictionary
@@ -2021,6 +2058,7 @@ proc generateFullRimeHindiDict() =
       if not seen.hasKey(hashKey):
         f.writeLine(hword & "\t" & pkey)
         seen[hashKey] = true
+        baseEntries.add((hword, pkey))
         inc count
 
   # 3. WordNet Hindi Dictionary (Normalized to Hinglish)
@@ -2033,10 +2071,25 @@ proc generateFullRimeHindiDict() =
         if not seen.hasKey(hashKey):
           f.writeLine(hw & "\t" & pkey)
           seen[hashKey] = true
+          baseEntries.add((hw, pkey))
           inc count
 
+  # 4. Inflected Variants (Plural, Oblique, Feminine, Verbal forms) with weight 50
+  var inflectedCount = 0
+  for (hw, pk) in baseEntries:
+    let inflections = generateInflections(hw, pk, weight = 50)
+    for inf in inflections:
+      let hashKey = inf.pkey & ":" & inf.hword
+      if not seen.hasKey(hashKey):
+        f.writeLine(inf.hword & "\t" & inf.pkey & "\t" & $inf.weight)
+        seen[hashKey] = true
+        inc count
+        inc inflectedCount
+        if count >= 450000: break
+    if count >= 450000: break
+
   f.close()
-  echo "🚀 Pure Nim Rime Builder compiled ", count, " entries into ", rimeDictPath
+  echo "🚀 Pure Nim Rime Builder compiled ", count, " entries (including ", inflectedCount, " inflections) into ", rimeDictPath
 
   let repoDictPath = projDir.parentDir / "rime" / "hindi_ai.dict.yaml"
   if fileExists(rimeDictPath) and dirExists(projDir.parentDir / "rime"):
