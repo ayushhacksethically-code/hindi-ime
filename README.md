@@ -92,6 +92,27 @@ Type Hinglish, get Devanagari:
 
 Spacebar commits the candidate + inserts a space in one go.
 
+## Bhai, test karo!
+
+Ye IME ready hai, lekin akela test karna mushkil hai.
+
+Tu test kar, galti bata.
+
+Kaise:
+1. Install kar
+2. Roz ke messages type kar
+3. Jo galat aaye, GitHub issue kholo
+
+Galti format:
+```text
+Input: jaan
+Output: जाआँच
+Expected: जान
+Type: Informal
+```
+
+Chalo, duniya ko Hindi typing better banate hain! 🇮🇳
+
 ## Architecture
 
 ```
