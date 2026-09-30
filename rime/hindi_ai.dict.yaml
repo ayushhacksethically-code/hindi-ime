@@ -29,6 +29,7 @@ use_preset_vocabulary: false
 तेईसवीं	teisvi
 इनका	inka
 आठ	ath
+जन	jan
 पोर्शन	portion
 छोटी	choti
 चवालीसवीं	chavalisvi
@@ -498,6 +499,7 @@ email	email
 नब्बेवीं	nabbevi
 रोया	roya
 सैंतालीसवाँ	sainntaliswan
+यहाँ	yahaan
 भाई	bhai
 तैंतीसवाँ	taintiswa
 पत्नी	patni
@@ -521,6 +523,7 @@ email	email
 सोया	soya
 अपना	apna
 हूँ	hoon
+कसमें	kasme
 कर्म	karm
 च	cha
 अट्ठानवेवीं	atthaanve_vi
@@ -918,6 +921,7 @@ hyderabad	hyderabad
 दीदी	didi
 नया	naya
 सिखाती	sikhati
+कसम	kasam
 बना	bana
 रहा	raha
 पचपनवाँ	pachpanva
@@ -1020,6 +1024,7 @@ noida	noida
 शक्ति	shakti
 सिलेबस	syllabus
 यह	yeh
+जान	jaan
 तिरासीवीं	tiraasi_vi
 जैसे	jaise
 हँसता	hasta
@@ -1618,6 +1623,7 @@ kanpur	kanpur
 समूलत:	samoolatah
 हैलो	hlo
 भारी	bhari
+जान	jaaan
 चवालीसवाँ	chavalisva
 movie	movie
 चौथे	chauthe
@@ -15052,7 +15058,6 @@ www	www
 ख़सम	kasama
 कसम	kasama
 ख़सम	kasam
-कसम	kasam
 गोरक्षा	goraksha
 गोरक्षा	goraksa
 गोरक्षा	goraksh
@@ -34323,7 +34328,6 @@ www	www
 जान	jana
 जना	jan
 जॉन	jan
-जन	jan
 जान	jan
 उपखंड	upakhamda
 उपखंड	upakhamd
@@ -87994,6 +87998,8 @@ verb	verb
 चाचों	chacho	50
 आठों	athon	50
 आठों	atho	50
+जनों	janon	50
+जनों	jano	50
 पोर्शनों	portionon	50
 पोर्शनों	portiono	50
 छोटियाँ	chotiyan	50
@@ -88899,6 +88905,8 @@ verb	verb
 नये	naye	50
 नयों	nayon	50
 नयों	nayo	50
+कसमों	kasamon	50
+कसमों	kasamo	50
 रहों	rahon	50
 रहों	raho	50
 चावलों	chawalon	50
@@ -88990,6 +88998,8 @@ verb	verb
 सिलेबसों	syllabuso	50
 यहों	yehon	50
 यहों	yeho	50
+जानों	jaanon	50
+जानों	jaano	50
 हँसताएँ	hastaen	50
 हँसताएँ	hastaein	50
 हँसताओं	hastaon	50
@@ -89574,6 +89584,8 @@ verb	verb
 भारियाँ	bhariyaan	50
 भारियों	bhariyon	50
 भारियों	bhariyo	50
+जानों	jaaanon	50
+जानों	jaaano	50
 सब्ज़ियाँ	sabziyan	50
 सब्ज़ियाँ	sabziyaan	50
 सब्ज़ियों	sabziyon	50
@@ -106244,8 +106256,6 @@ verb	verb
 भाईबिरादरियों	bhaibiradariyo	50
 ख़समों	kasamon	50
 ख़समों	kasamo	50
-कसमों	kasamon	50
-कसमों	kasamo	50
 गोरक्षे	gorakshe	50
 गोरक्षों	gorakshon	50
 गोरक्षों	goraksho	50
@@ -129990,8 +130000,6 @@ verb	verb
 लीरॉयों	lirayo	50
 जॉनों	janon	50
 जॉनों	jano	50
-जनों	janon	50
-जनों	jano	50
 जानों	janon	50
 जानों	jano	50
 जने	jane	50
