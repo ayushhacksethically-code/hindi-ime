@@ -4,11 +4,8 @@ A fast, offline-first Hinglish → Devanagari transliteration system for Linux, 
 
 ## Why This Exists
 
-- **Google Input Tools for Windows is dead** (discontinued 2018)
-- Existing Linux IMEs don't understand **real Hinglish** (`samasya`, `nhi`, `aaplog`, `vaishe`) — they expect formal transliteration (`samasyA`, `nahI`)
-- Linux IME ecosystem is fragmented and complex
-
-This project fills that gap.
+Linux mein koi badhiya sa version nahi mil raha tha. Har cheez mein 
+strict rules the jo ki Hinglish type karne walo ke liye problem tha.
 
 ## Features
 
@@ -16,11 +13,34 @@ This project fills that gap.
 - ✅ **Offline-first** — works without internet
 - ✅ **Zero-latency** — rule engine, no background daemon
 - ✅ **Hybrid intelligence** — rules → dict → fuzzy → API
-- ✅ **730+ curated words** + Hindi WordNet (40k+ entries)
+- ✅ **195,913 entries** (88,000+ unique words)
+- ✅ **91% accuracy** (daily test)
+- ✅ **730+ curated Hinglish words**
+- ✅ **Hindi WordNet** (40k+ entries)
 - ✅ **Multi-language ready** — architecture supports Tamil, Telugu, Bengali
 - ✅ **Rime + Fcitx5 integration**
 - ✅ **Optional Google API fallback** (runtime config, OFF by default)
 
+## Recent Updates
+
+- 195,913 entries (88,000+ unique words)
+- 91% accuracy (daily test)
+- WhatsApp conversation words (200+)
+- Ordinal numbers 1-100
+- Question words (koun, kaha, kaise)
+- Matra handling fix (pyari, karti, gadiyan)
+- Smart English passthrough (office, whatsapp)
+- User choice respected (no forced defaults)
+
+## Project Stats
+
+- **Total entries**: 195,913
+- **Unique words**: 88,144
+- **Unique Hinglish keys**: 177,472
+- **Accuracy**: 91% (daily test)
+- **Dictionary size**: 6.8 MB
+- **Commits**: 17
+- **Built in**: 5 days
 
 ## Quick Start
 
@@ -51,7 +71,7 @@ Then select **hindi_ai** in Fcitx5.
 
 ### Dictionary Coverage
 
-The repository includes a pre-generated Rime dictionary (`rime/hindi_ai.dict.yaml`, ~2.6 MB) covering 40,000+ words derived from Hindi WordNet (IIT Bombay, GPL) plus curated Hinglish vocabulary.
+The repository includes a pre-generated Rime dictionary (`rime/hindi_ai.dict.yaml`, ~6.8 MB) covering 195,913 entries (88,000+ unique words) derived from Hindi WordNet (IIT Bombay, GPL) plus curated Hinglish vocabulary.
 
 For **regenerating** from source, place `wordnet_hindi_dict.bin` (6 MB) in `~/.local/share/hindi-ime/` and run:
 
@@ -89,6 +109,12 @@ Type Hinglish, get Devanagari:
 | `aaplog` | आपलोग |
 | `karta` | करता |
 | `vaishe` | वैसे |
+| `koun` | कौन |
+| `pyari` | प्यारी |
+| `office` | office |
+| `hlo` | हैलो |
+| `chaturbhuj` | चतुर्भुज |
+| `samasyaen` | समस्याएँ |
 
 Spacebar commits the candidate + inserts a space in one go.
 
@@ -118,26 +144,17 @@ Chalo, duniya ko Hindi typing better banate hain! 🇮🇳
 ```
 Input (Hinglish)
     ↓
-┌─────────────────────────┐
-│  Rule Engine            │  ← phonetic rules
-│  transliterateSingleWord│
-└─────────────────────────┘
-    ↓ (no match)
-┌─────────────────────────┐
-│  Common Dict (730+)     │  ← curated Hinglish
-└─────────────────────────┘
-    ↓ (no match)
-┌─────────────────────────┐
-│  WordNet Hindi (40k+)   │  ← HWNB binary
-└─────────────────────────┘
-    ↓ (no match)
-┌─────────────────────────┐
-│  Fuzzy Match            │  ← edit distance
-└─────────────────────────┘
-    ↓ (no match)
-┌─────────────────────────┐
-│  Google API (optional)  │  ← runtime config
-└─────────────────────────┘
+Rule Engine
+    ↓
+Common Dict (730+)
+    ↓
+WordNet Hindi (40k+)
+    ↓
+Inflections (145k+)
+    ↓
+Fuzzy Match
+    ↓
+Google API (optional)
     ↓
 Output (Devanagari)
 ```
@@ -171,6 +188,7 @@ Environment variable > Config file > Default (off)
 - Hindi WordNet (IIT Bombay, GPL license)
 - Conversational corpus (anonymized, aggregated)
 - Academic & technical terms
+- WhatsApp conversation corpus (anonymized)
 
 ## Project Structure
 
