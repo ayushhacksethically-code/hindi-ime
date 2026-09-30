@@ -61,6 +61,22 @@ For **regenerating** from source, place `wordnet_hindi_dict.bin` (6 MB) in `~/.l
 
 Run `./scripts/fetch_wordnet.sh` for setup instructions.
 
+## Installation Notes
+
+This installer does NOT change your system's default keyboard 
+or input method. Your existing setup remains untouched.
+
+To use Hindi IME:
+1. Ensure Fcitx5 has Rime added as an input method
+2. Switch to Rime via Ctrl+Space
+3. Select 'hindi_ai' schema
+
+To make Hindi your default:
+- Manually configure in Fcitx5 settings
+- Or set in ~/.config/fcitx5/profile
+
+We believe in user choice — no forced defaults.
+
 ## Usage
 
 Type Hinglish, get Devanagari:
