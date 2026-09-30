@@ -2843,6 +2843,268 @@ proc getCommonDict(): Table[string, seq[string]] =
   result["janm"] = @["जन्म"]
   result["janam"] = @["जन्म"]
 
+  # ============ WHATSAPP CHAT WORDS (Anshu Sharma) ============
+  # Source: 6 July 2026 - 21 July 2026
+
+  # --- Greetings / informal ---
+  result["hlo"] = @["हैलो"]
+  result["hlw"] = @["हैलो"]
+  result["hello"] = @["हैलो"]
+
+  # --- Common chat words ---
+  result["abhi"] = @["अभी"]
+  result["baad"] = @["बाद"]
+  result["mein"] = @["में"]
+  result["hun"] = @["हूँ"]
+  result["hoon"] = @["हूँ"]
+  result["baat"] = @["बात"]
+  result["karte"] = @["करते"]
+  result["hain"] = @["हैं"]
+  result["h"] = @["है"]
+  result["okay"] = @["ओके"]
+  result["ok"] = @["ओके"]
+  result["okayyy"] = @["ओके"]
+  result["okayyyy"] = @["ओके"]
+
+  # --- "ab bolo" ---
+  result["ab"] = @["अब"]
+  result["bolo"] = @["बोलो"]
+
+  # --- "kaisa h bhaii" ---
+  result["kaisa"] = @["कैसा"]
+  result["bhaii"] = @["भाई"]
+  result["bhai"] = @["भाई"]
+
+  # --- "abto mere cllg ke chutti hogi" ---
+  result["abto"] = @["अबतो"]
+  result["mere"] = @["मेरे"]
+  result["cllg"] = @["कॉलेज"]
+  result["chutti"] = @["छुट्टी"]
+  result["hogii"] = @["होगी"]
+  result["hogi"] = @["होगी"]
+
+  # --- "badhiyaa bro" ---
+  result["badhiyaa"] = @["बढ़िया"]
+  result["badhiya"] = @["बढ़िया"]
+  result["bro"] = @["ब्रो"]
+
+  # --- "happy birthday to me" ---
+  result["happy"] = @["हैप्पी"]
+  result["birthday"] = @["बर्थडे"]
+  result["to"] = @["टू"]
+  result["me"] = @["मी"]
+
+  # --- "chuppp kar tu" ---
+  result["chuppp"] = @["चुप"]
+  result["chup"] = @["चुप"]
+  result["chupp"] = @["चुप"]
+  result["kar"] = @["कर"]
+  result["tu"] = @["तू"]
+
+  # --- "leh batao toh sahi laadli" ---
+  result["leh"] = @["ले"]
+  result["batao"] = @["बताओ"]
+  result["toh"] = @["तो"]
+  result["sahi"] = @["सही"]
+  result["laadli"] = @["लाडली"]
+  result["ladli"] = @["लाडली"]
+
+  # --- "tameezz mistake" ---
+  result["tameezz"] = @["तमीज़"]
+  result["tameez"] = @["तमीज़"]
+  result["mistake"] = @["मिस्टेक"]
+
+  # --- "chuppp karo aap" ---
+  result["karo"] = @["करो"]
+  result["aap"] = @["आप"]
+
+  # --- Extra WhatsApp/common chat words ---
+  result["hn"] = @["हाँ"]
+  result["haan"] = @["हाँ"]
+  result["hmm"] = @["हम्म"]
+  result["hmmm"] = @["हम्म"]
+  result["thik"] = @["ठीक"]
+  result["theek"] = @["ठीक"]
+  result["achha"] = @["अच्छा"]
+  result["accha"] = @["अच्छा"]
+  result["kya"] = @["क्या"]
+  result["kyun"] = @["क्यों"]
+  result["kaise"] = @["कैसे"]
+  result["kahan"] = @["कहाँ"]
+  result["kab"] = @["कब"]
+  result["kaun"] = @["कौन"]
+  result["kitna"] = @["कितना"]
+  result["nahi"] = @["नहीं"]
+  result["nhi"] = @["नहीं"]
+  result["mat"] = @["मत"]
+  result["bhi"] = @["भी"]
+  result["sab"] = @["सब"]
+  result["kuch"] = @["कुछ"]
+  result["koi"] = @["कोई"]
+  result["bahut"] = @["बहुत"]
+  result["thoda"] = @["थोड़ा"]
+  result["zyada"] = @["ज़्यादा"]
+  result["phir"] = @["फिर"]
+  result["abhi"] = @["अभी"]
+  result["kal"] = @["कल"]
+  result["aaj"] = @["आज"]
+  result["ab"] = @["अब"]
+  result["baad"] = @["बाद"]
+  result["pehle"] = @["पहले"]
+
+  # --- Chat abbreviations ---
+  result["msg"] = @["मैसेज"]
+  result["message"] = @["मैसेज"]
+  result["plz"] = @["प्लीज़"]
+  result["pls"] = @["प्लीज़"]
+  result["plzz"] = @["प्लीज़"]
+  result["plzzz"] = @["प्लीज़"]
+  result["thanx"] = @["थैंक्स"]
+  result["thanks"] = @["थैंक्स"]
+  result["sry"] = @["सॉरी"]
+  result["sorry"] = @["सॉरी"]
+  result["welcome"] = @["वेलकम"]
+  result["wlc"] = @["वेलकम"]
+
+  # --- Emojis / expressions ---
+  result["haha"] = @["हाहा"]
+  result["hahaha"] = @["हाहाहा"]
+  result["lol"] = @["लोल"]
+  result["rofl"] = @["रोफ़्ल"]
+
+  # --- Family / relations ---
+  result["bhaiya"] = @["भैया"]
+  result["didi"] = @["दीदी"]
+  result["behen"] = @["बहन"]
+  result["maa"] = @["माँ"]
+  result["papa"] = @["पापा"]
+
+  # --- Common verbs (chat) ---
+  result["karta"] = @["करता"]
+  result["karti"] = @["करती"]
+  result["karte"] = @["करते"]
+  result["karo"] = @["करो"]
+  result["kar"] = @["कर"]
+  result["karna"] = @["करना"]
+  result["karni"] = @["करनी"]
+  result["karne"] = @["करने"]
+  result["kiya"] = @["किया"]
+  result["kiye"] = @["किये"]
+  result["karke"] = @["करके"]
+
+  result["jata"] = @["जाता"]
+  result["jati"] = @["जाती"]
+  result["jate"] = @["जाते"]
+  result["jana"] = @["जाना"]
+  result["jani"] = @["जानी"]
+  result["jane"] = @["जाने"]
+  result["gaya"] = @["गया"]
+  result["gayi"] = @["गई"]
+  result["gaye"] = @["गए"]
+
+  result["aata"] = @["आता"]
+  result["aati"] = @["आती"]
+  result["aate"] = @["आते"]
+  result["aana"] = @["आना"]
+  result["aani"] = @["आनी"]
+  result["aane"] = @["आने"]
+  result["aaya"] = @["आया"]
+  result["aayi"] = @["आई"]
+  result["aaye"] = @["आए"]
+
+  result["deta"] = @["देता"]
+  result["deti"] = @["देती"]
+  result["dete"] = @["देते"]
+  result["dena"] = @["देना"]
+  result["deni"] = @["देनी"]
+  result["dene"] = @["देने"]
+  result["diya"] = @["दिया"]
+  result["diye"] = @["दिये"]
+  result["dijiye"] = @["दीजिए"]
+
+  result["leta"] = @["लेता"]
+  result["leti"] = @["लेती"]
+  result["lete"] = @["लेते"]
+  result["lena"] = @["लेना"]
+  result["leni"] = @["लेनी"]
+  result["lene"] = @["लेने"]
+  result["liya"] = @["लिया"]
+  result["liye"] = @["लिये"]
+  result["leke"] = @["लेके"]
+
+  result["dekha"] = @["देखा"]
+  result["dekhi"] = @["देखी"]
+  result["dekhe"] = @["देखे"]
+  result["dekhna"] = @["देखना"]
+  result["dekhta"] = @["देखता"]
+  result["dekhti"] = @["देखती"]
+  result["dekhte"] = @["देखते"]
+
+  result["bola"] = @["बोला"]
+  result["boli"] = @["बोली"]
+  result["bole"] = @["बोले"]
+  result["bolna"] = @["बोलना"]
+  result["bolta"] = @["बोलता"]
+  result["bolti"] = @["बोलती"]
+  result["bolte"] = @["बोलते"]
+
+  result["kaha"] = @["कहा"]
+  result["kahi"] = @["कही"]
+  result["kahe"] = @["कहे"]
+  result["kahna"] = @["कहना"]
+  result["kahta"] = @["कहता"]
+  result["kahti"] = @["कहती"]
+  result["kahte"] = @["कहते"]
+
+  result["suna"] = @["सुना"]
+  result["suni"] = @["सुनी"]
+  result["sune"] = @["सुने"]
+  result["sunna"] = @["सुनना"]
+  result["sunta"] = @["सुनता"]
+  result["sunti"] = @["सुनती"]
+  result["sunte"] = @["सुनते"]
+
+  result["padha"] = @["पढ़ा"]
+  result["padhi"] = @["पढ़ी"]
+  result["padhe"] = @["पढ़े"]
+  result["padhna"] = @["पढ़ना"]
+  result["padhta"] = @["पढ़ता"]
+  result["padhti"] = @["पढ़ती"]
+  result["padhte"] = @["पढ़ते"]
+
+  result["likha"] = @["लिखा"]
+  result["likhi"] = @["लिखी"]
+  result["likhe"] = @["लिखे"]
+  result["likhna"] = @["लिखना"]
+  result["likhta"] = @["लिखता"]
+  result["likhti"] = @["लिखती"]
+  result["likhte"] = @["लिखते"]
+
+  result["socha"] = @["सोचा"]
+  result["sochi"] = @["सोची"]
+  result["soche"] = @["सोचे"]
+  result["sochna"] = @["सोचना"]
+  result["sochta"] = @["सोचता"]
+  result["sochti"] = @["सोचती"]
+  result["sochte"] = @["सोचते"]
+
+  result["samjha"] = @["समझा"]
+  result["samjhi"] = @["समझी"]
+  result["samjhe"] = @["समझे"]
+  result["samajhna"] = @["समझना"]
+  result["samajhta"] = @["समझता"]
+  result["samajhti"] = @["समझती"]
+  result["samajhte"] = @["समझते"]
+
+  result["chala"] = @["चला"]
+  result["chali"] = @["चली"]
+  result["chale"] = @["चले"]
+  result["chalna"] = @["चलना"]
+  result["chalta"] = @["चलता"]
+  result["chalti"] = @["चलती"]
+  result["chalte"] = @["चलते"]
+
+
 
 proc normalizeToHinglish*(word: string): seq[string] =
   let raw = word.strip()
