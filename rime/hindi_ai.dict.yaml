@@ -28,6 +28,7 @@ use_preset_vocabulary: false
 चाचा	chacha
 तेईसवीं	teisvi
 इनका	inka
+अथ	ath
 आठ	ath
 जन	jan
 पोर्शन	portion
@@ -223,7 +224,7 @@ indore	indore
 अड़तालीसवाँ	adhtaliswa
 छियानवेवाँ	chhiyaanve
 सत्रहवीं	satrahvi
-मिनट	minute
+minute	minute
 ज़रूर	jarur
 नमः	namaha
 नदी	nadi
@@ -568,7 +569,7 @@ computer	computer
 छियानवेवाँ	chhiyaanvewa
 छियासठवाँ	chhiyasath
 भालू	bhalu
-सेकंड	second
+second	second
 छप्पनवीं	chhappanvi
 नित्यं	nityam
 लेके	leke
@@ -727,7 +728,7 @@ vadodara	vadodara
 शुष्कोदर	shushkodara
 सत्तासीवाँ	sattaasiwan
 करेंगे	karenge
-रोटी	roti
+रोती	roti
 सैंतीसवाँ	saintisva
 कुरु	kuru
 जहाँ	jahan
@@ -933,6 +934,7 @@ hyderabad	hyderabad
 पंचवटी	panchvati
 चावल	chawal
 महाबल:	mahabalah
+कहाँ	kaha
 कहा	kaha
 फिर	fir
 घरवाले	gharwale
@@ -1134,7 +1136,7 @@ folder	folder
 कहते	kahte
 करता	karta
 मुझे	muje
-लिये	liye
+लिए	liye
 लड़की	ladki
 तुम्हें	tumhein
 लेने	lene
@@ -1244,6 +1246,7 @@ pune	pune
 दसवाँ	daswan
 घरों	gharo
 सुंदर	sundar
+सुन्दर	sundar
 चौरासीवाँ	chauraasiva
 आँखें	aankhen
 तुम्हारी	tumhari
@@ -1339,7 +1342,7 @@ year	year
 सो	so
 अक्सर	aksar
 यान्ति	yanti
-साथ	saath
+साठवाँ	saath
 हम	hum
 पूछती	puchti
 बयासीवीं	bayaasi_vi
@@ -1444,7 +1447,7 @@ nagpur	nagpur
 रसोई	rasoi
 अच्छी	acchi
 माता	mata
-आता	aata
+आटा	aata
 नाक	naak
 नाचती	nachti
 खेला	khela
@@ -1542,7 +1545,7 @@ kanpur	kanpur
 मानी	maani
 अट्ठाईसवाँ	atthaiswa
 इक्यासीवाँ	ikyaasi
-पिता	pita
+पीता	pita
 तिरानवेवीं	tiranvevi
 आते	aate
 गाड़ी	gaadi
@@ -10832,6 +10835,7 @@ www	www
 किरपाल	kirapal
 तुलाधार	tuladhara
 तुलाधार	tuladhar
+लिये	liye
 पचड़ा	pachada
 पछाड़	pachada
 पछड़	pachada
@@ -41450,6 +41454,7 @@ www	www
 बेतुका	betuk
 आसत्ति	asatti
 युद्धभूमि	yuddhabhumi
+रोटी	roti
 बदतमीज़	badatamiza
 बदतमीज़	badatamiz
 क्लांति	klamti
@@ -68042,7 +68047,6 @@ vatican	vatican
 लोढ़ा	lodh
 धरित्री	dharitri
 सुन्दर	sundara
-सुन्दर	sundar
 याद	yada
 याद	yad
 क़हवा	qahava
@@ -81902,6 +81906,7 @@ vatican	vatican
 पीत	pita
 पिट	pita
 पीट	pita
+पिता	pita
 पीत	pit
 पिट	pit
 पीट	pit
@@ -88004,6 +88009,8 @@ verb	verb
 चाचे	chache	50
 चाचों	chachon	50
 चाचों	chacho	50
+अथों	athon	50
+अथों	atho	50
 आठों	athon	50
 आठों	atho	50
 जनों	janon	50
@@ -88195,8 +88202,6 @@ verb	verb
 चौथियाँ	chothiyaan	50
 चौथियों	chothiyon	50
 चौथियों	chothiyo	50
-मिनटों	minuteon	50
-मिनटों	minuteo	50
 ज़रूरों	jaruron	50
 ज़रूरों	jaruro	50
 नदियाँ	nadiyaan	50
@@ -88521,8 +88526,6 @@ verb	verb
 दुकानें	dukaanein	50
 दुकानों	dukaanon	50
 दुकानों	dukaano	50
-अथों	athon	50
-अथों	atho	50
 दग्ध-देहायों	dagdhadehayon	50
 दग्ध-देहायों	dagdhadehayo	50
 दग्धदेहायों	dagdhadehayon	50
@@ -88545,8 +88548,6 @@ verb	verb
 जीभों	jibho	50
 मुश्किलों	mushkilon	50
 मुश्किलों	mushkilo	50
-सेकंडों	secondon	50
-सेकंडों	secondo	50
 सलामों	salamon	50
 सलामों	salamo	50
 स्तोत्रों	stotron	50
@@ -88692,10 +88693,6 @@ verb	verb
 ज़्यादों	jyado	50
 शुष्कोदरों	shushkodaron	50
 शुष्कोदरों	shushkodaro	50
-रोटियाँ	rotiyan	50
-रोटियाँ	rotiyaan	50
-रोटियों	rotiyon	50
-रोटियों	rotiyo	50
 सर्वभक्षायों	sarvabhakshayon	50
 सर्वभक्षायों	sarvabhakshayo	50
 लहसुनों	lehsunon	50
@@ -89219,6 +89216,8 @@ verb	verb
 देहायों	dehayo	50
 सुंदरों	sundaron	50
 सुंदरों	sundaro	50
+सुन्दरों	sundaron	50
+सुन्दरों	sundaro	50
 रुकताएँ	ruktaen	50
 रुकताएँ	ruktaein	50
 रुकताओं	ruktaon	50
@@ -89321,8 +89320,6 @@ verb	verb
 मिर्चियों	mirchiyo	50
 अक्सरों	aksaron	50
 अक्सरों	aksaro	50
-साथों	saathon	50
-साथों	saatho	50
 हमों	humon	50
 हमों	humo	50
 छतों	chaton	50
@@ -89404,8 +89401,9 @@ verb	verb
 माताएँ	mataein	50
 माताओं	mataon	50
 माताओं	matao	50
-आतों	aaton	50
-आतों	aato	50
+आटे	aate	50
+आटों	aaton	50
+आटों	aato	50
 नाकों	naakon	50
 नाकों	naako	50
 खेले	khele	50
@@ -89521,10 +89519,10 @@ verb	verb
 लोगों	logo	50
 बच्चों	bachchon	50
 बच्चों	bachcho	50
-पिताएँ	pitaen	50
-पिताएँ	pitaein	50
-पिताओं	pitaon	50
-पिताओं	pitao	50
+पीताएँ	pitaen	50
+पीताएँ	pitaein	50
+पीताओं	pitaon	50
+पीताओं	pitao	50
 गाड़ियाँ	gaadiyaan	50
 गाड़ियों	gaadiyon	50
 गाड़ियों	gaadiyo	50
@@ -138707,6 +138705,10 @@ verb	verb
 यज्ञसदनों	yagyasadano	50
 बेतुकों	betukon	50
 बेतुकों	betuko	50
+रोटियाँ	rotiyan	50
+रोटियाँ	rotiyaan	50
+रोटियों	rotiyon	50
+रोटियों	rotiyo	50
 मुफ़लिसों	mufalison	50
 मुफ़लिसों	mufaliso	50
 हठधर्मों	hathadharmon	50
@@ -171517,8 +171519,6 @@ verb	verb
 धरित्रियाँ	dharitriyaan	50
 धरित्रियों	dharitriyon	50
 धरित्रियों	dharitriyo	50
-सुन्दरों	sundaron	50
-सुन्दरों	sundaro	50
 यादें	yaden	50
 यादें	yadein	50
 यादों	yadon	50
@@ -188546,6 +188546,10 @@ verb	verb
 पिटों	pito	50
 पीटों	piton	50
 पीटों	pito	50
+पिताएँ	pitaen	50
+पिताएँ	pitaein	50
+पिताओं	pitaon	50
+पिताओं	pitao	50
 पत्रकारवार्ताएँ	patrakaravartaen	50
 पत्रकारवार्ताएँ	patrakaravartaein	50
 पत्रकारवार्ताओं	patrakaravartaon	50
