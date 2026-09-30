@@ -191,7 +191,7 @@ hindi-ime/
 ## Credits
 
 - **Concept, direction, testing**: Ayush Singh
-- **AI assistance**: Claude
+- **AI assistance**: Gemini (Google) + DeepSeek
 - **Built with**: Nim, Rime, Fcitx5
 - **Dictionary**: Hindi WordNet (IIT Bombay, GPL)
 - **Inspiration**: Google Input Tools (2009-2018)
