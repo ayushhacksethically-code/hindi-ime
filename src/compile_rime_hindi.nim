@@ -3113,6 +3113,19 @@ proc getCommonDict(): Table[string, seq[string]] =
   result["yahaan"] = @["यहाँ"]
   result["yahan"] = @["यहाँ"]
 
+  # --- Maan family words ---
+  result["maan"] = @["मान"]
+  result["maana"] = @["माना"]
+  result["maani"] = @["मानी"]
+  result["maanna"] = @["मानना"]
+  result["maanta"] = @["मानता"]
+  result["maanti"] = @["मानती"]
+  result["maante"] = @["मानते"]
+  result["maano"] = @["मानो"]
+  result["maa"] = @["माँ"]
+  result["ma"] = @["माँ"]
+
+
 
 
 
