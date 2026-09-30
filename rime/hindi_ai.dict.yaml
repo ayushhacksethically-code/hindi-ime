@@ -1352,6 +1352,7 @@ rajkot	rajkot
 तराज़ू	taraju
 तराजू	taraju
 किया	kiya
+मानते	maante
 शिक्षा	shiksha
 सामने	saamne
 अड़तीसवाँ	adhtiswan
@@ -1379,6 +1380,7 @@ internet	internet
 धर्म	dharma
 चली	chali
 भेजता	bhejta
+मानता	maanta
 छत्तीसवाँ	chhattiswan
 पहली	pehli
 रुका	ruka
@@ -1537,6 +1539,7 @@ kanpur	kanpur
 बच्चा	bachcha
 साठवाँ	saathwa
 तीसरा	teesra
+मानी	maani
 अट्ठाईसवाँ	atthaiswa
 इक्यासीवाँ	ikyaasi
 पिता	pita
@@ -1550,6 +1553,7 @@ kanpur	kanpur
 मैसेज	msg
 दोपहर	dopahar
 जाएगी	jaegi
+मानना	maanna
 कपड़ा	kapda
 ते	te
 रात	raat
@@ -1567,6 +1571,7 @@ kanpur	kanpur
 सखा	sakha
 राम	ram
 उठना	uthna
+मानो	maano
 सत्तरवाँ	sattarwan
 अधोदृष्टे:	adhodrishte
 तक	thak
@@ -1721,6 +1726,7 @@ jaipur	jaipur
 छत्तीसवीं	chhattisvi
 दूर	dur
 देखा	dekha
+मानती	maanti
 सौरे	saure
 सोचते	sochte
 समझी	samjhi
@@ -1785,6 +1791,7 @@ time	time
 किसका	kiska
 डोसा	dosa
 इकहत्तरवाँ	ikhattarva
+माना	maana
 चलता	chalta
 तेज़	tez
 चौबीसवाँ	chaubiswan
@@ -1803,6 +1810,7 @@ file	file
 उनासीवाँ	unasi
 बयालीसवाँ	bayaliswa
 दिन	din
+मान	maan
 आज	aaj
 वैसे	vaishe
 ज़रूर	zarur
@@ -89339,6 +89347,10 @@ verb	verb
 भेजताएँ	bhejtaein	50
 भेजताओं	bhejtaon	50
 भेजताओं	bhejtao	50
+मानताएँ	maantaen	50
+मानताएँ	maantaein	50
+मानताओं	maantaon	50
+मानताओं	maantao	50
 पहलियाँ	pehliyan	50
 पहलियाँ	pehliyaan	50
 पहलियों	pehliyon	50
@@ -89726,6 +89738,8 @@ verb	verb
 रेनफॉलों	rainfallo	50
 दिनों	dinon	50
 दिनों	dino	50
+मानों	maanon	50
+मानों	maano	50
 आजों	aajon	50
 आजों	aajo	50
 ज़रूरों	zaruron	50
