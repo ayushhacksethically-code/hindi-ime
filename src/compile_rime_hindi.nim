@@ -3104,6 +3104,16 @@ proc getCommonDict(): Table[string, seq[string]] =
   result["chalti"] = @["चलती"]
   result["chalte"] = @["चलते"]
 
+  # --- Common words (jaan, kasam, yahaan, etc.) ---
+  result["jaan"] = @["जान"]
+  result["jaaan"] = @["जान"]
+  result["jan"] = @["जन"]
+  result["kasam"] = @["कसम"]
+  result["kasme"] = @["कसमें"]
+  result["yahaan"] = @["यहाँ"]
+  result["yahan"] = @["यहाँ"]
+
+
 
 
 proc normalizeToHinglish*(word: string): seq[string] =
