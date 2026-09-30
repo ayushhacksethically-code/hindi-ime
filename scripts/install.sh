@@ -18,11 +18,13 @@ TARGET_DICT="$RIME_DIR/hindi_ai.dict.yaml"
 
 # Install schema configuration
 cp rime/hindi_ai.schema.yaml "$RIME_DIR/" 2>/dev/null || true
-cp rime/hindi_ai.custom.yaml "$RIME_DIR/" 2>/dev/null || true
 
 if [ -f "$TARGET_DICT" ]; then
   echo "📖 Existing dictionary found. Skipping generation to prevent overwrite."
   echo "   To regenerate, run: ./scripts/build_dict.sh"
+elif [ -f "rime/hindi_ai.dict.yaml" ]; then
+  echo "📖 Installing pre-generated dictionary..."
+  cp rime/hindi_ai.dict.yaml "$RIME_DIR/" 2>/dev/null || true
 else
   # Check for WordNet binary
   echo "📚 Checking for WordNet Hindi binary..."
@@ -53,4 +55,12 @@ fi
 echo "🔄 Restarting Fcitx5..."
 fcitx5 -r -d 2>/dev/null || true
 
-echo "✅ Done! Select 'hindi_ai' in Fcitx5."
+echo "✅ Hindi IME installed!"
+echo ""
+echo "To enable:"
+echo "  1. Open Fcitx5 configuration: fcitx5-configtool"
+echo "  2. Add 'Rime' to Input Methods if not already there"
+echo "  3. Switch to Rime via Ctrl+Space"
+echo "  4. Select 'hindi_ai' schema in Rime"
+echo ""
+echo "Your default keyboard remains unchanged."
