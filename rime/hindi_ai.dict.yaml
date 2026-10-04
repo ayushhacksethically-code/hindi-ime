@@ -135,6 +135,7 @@ surat	surat
 जाना	jana
 तिरपनवाँ	tirpanwa
 कश्यपात्मज-सूनवे	kashyapatmaj-soonave
+जय	jai
 हमारे	hamare
 सिखाना	sikhana
 शितिकण्ठ	shitikanth
@@ -200,10 +201,11 @@ address	address
 बताया	bataya
 बड़ी	badi
 इक्यानवेवाँ	ikyaanveva
+श्री	shri
 नमोऽस्तुते	namostute
-पतला	patla
 निन्यानवेवीं	ninyaanvevi
 हमें	hume
+पतला	patla
 बंदरों	bandaron
 रुक	ruk
 चिड़िया	chidiya
@@ -781,6 +783,7 @@ school	school
 सैंतालीसवाँ	saintaliswan
 दग्ध-देहाय	dagdhadehay
 दग्धदेहाय	dagdhadehay
+जय	jay
 भी	bhee
 चतुर्वेदी	chaturvedi
 गली	gali
@@ -917,6 +920,7 @@ vadodara	vadodara
 पचासीवीं	pachaasi_vi
 समझना	samajhna
 खेलती	khelti
+श्री	shree
 धर्म	dharm
 धमाल	dhamaal
 महीने	mahine
@@ -40065,7 +40069,6 @@ www	www
 एलाउन्स	elauns
 कार्यांतराल	karyamtarala
 कार्यांतराल	karyamtaral
-श्री	shri
 श्री	sri
 कालिख	kalikha
 कालिख	kalikh
@@ -88312,6 +88315,8 @@ verb	verb
 रस्सियाँ	rassiyaan	50
 रस्सियों	rassiyon	50
 रस्सियों	rassiyo	50
+जयों	jaion	50
+जयों	jaio	50
 शितिकण्ठों	shitikanthon	50
 शितिकण्ठों	shitikantho	50
 हॉस्पिटलों	hospitalon	50
@@ -88398,6 +88403,10 @@ verb	verb
 बड़ियाँ	badiyaan	50
 बड़ियों	badiyon	50
 बड़ियों	badiyo	50
+श्रियाँ	shriyan	50
+श्रियाँ	shriyaan	50
+श्रियों	shriyon	50
+श्रियों	shriyo	50
 पतले	patle	50
 पतलों	patlon	50
 पतलों	patlo	50
@@ -89010,6 +89019,8 @@ verb	verb
 लड़कों	ladko	50
 प्रोजेक्टों	projecton	50
 प्रोजेक्टों	projecto	50
+जयों	jayon	50
+जयों	jayo	50
 भियाँ	bhiyan	50
 भियाँ	bhiyaan	50
 भियों	bhiyon	50
@@ -137350,10 +137361,6 @@ verb	verb
 एलाउन्सों	elaunso	50
 कार्यांतरालों	karyamtaralon	50
 कार्यांतरालों	karyamtaralo	50
-श्रियाँ	shriyan	50
-श्रियाँ	shriyaan	50
-श्रियों	shriyon	50
-श्रियों	shriyo	50
 श्रियाँ	sriyan	50
 श्रियाँ	sriyaan	50
 श्रियों	sriyon	50
@@ -174460,8 +174467,6 @@ verb	verb
 जॉयों	jayon	50
 जॉयों	jayo	50
 जये	jaye	50
-जयों	jayon	50
-जयों	jayo	50
 अनुस्वारों	anusvaron	50
 अनुस्वारों	anusvaro	50
 आत्मवंचने	atmavamchane	50
