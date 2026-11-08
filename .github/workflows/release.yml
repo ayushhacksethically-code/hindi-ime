@@ -1,0 +1,31 @@
+name: Release Pre-compiled Binaries
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build & Release Binary
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Nim
+        uses: jiro4989/setup-nim-action@v2
+
+      - name: Build binary
+        run: |
+          nim c -d:release -o:compile_rime_hindi src/compile_rime_hindi.nim
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: compile_rime_hindi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
