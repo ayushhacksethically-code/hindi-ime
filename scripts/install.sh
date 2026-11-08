@@ -67,28 +67,38 @@ DOWNLOAD_SUCCESS=false
 echo "🔍 Attempting to fetch pre-compiled dictionary generator..."
 if curl -fsSL "$RELEASE_BINARY_URL" -o "$TMP_BIN" 2>/dev/null && [ -s "$TMP_BIN" ]; then
   chmod +x "$TMP_BIN"
-  DOWNLOAD_SUCCESS=true
   echo "🚀 Running dictionary compiler..."
-  "$TMP_BIN"
-  rm -f "$TMP_BIN"
+  if "$TMP_BIN"; then
+    DOWNLOAD_SUCCESS=true
+    rm -f "$TMP_BIN"
+  else
+    echo "⚠️  Pre-compiled binary not compatible with this CPU. Falling back..."
+    DOWNLOAD_SUCCESS=false
+    rm -f "$TMP_BIN"
+  fi
 fi
 
 # Fallback mechanism if release binary isn't published yet or download fails
 if [ "$DOWNLOAD_SUCCESS" = false ]; then
-  echo "ℹ️  Release binary not available yet. Falling back to local/cached assets..."
-
-  # Check if in local repo with Nim compiler
-  if [ -f "src/compile_rime_hindi.nim" ] && command -v nim >/dev/null 2>&1; then
-    echo "🔨 Compiling from local source using Nim..."
-    nim c -d:release -o:"$TMP_BIN" src/compile_rime_hindi.nim
-    "$TMP_BIN"
-    rm -f "$TMP_BIN"
-  elif [ -f "rime/hindi_ai.dict.yaml" ]; then
-    echo "📋 Copying pre-generated local dictionary..."
-    cp "rime/hindi_ai.dict.yaml" "$TARGET_DICT"
+  echo "ℹ️  Downloading pre-generated dictionary from repository (fastest fallback)..."
+  if curl -fsSL "${RAW_BASE}/rime/hindi_ai.dict.yaml" -o "$TARGET_DICT" 2>/dev/null && [ -s "$TARGET_DICT" ]; then
+    DOWNLOAD_SUCCESS=true
+    echo "✅ Pre-generated dictionary downloaded successfully."
   else
-    echo "🌐 Downloading pre-generated dictionary from repository..."
-    curl -fsSL "${RAW_BASE}/rime/hindi_ai.dict.yaml" -o "$TARGET_DICT"
+    echo "⚠️  Dictionary download failed. Trying local sources..."
+    # Local Nim compile (last resort)
+    if [ -f "src/compile_rime_hindi.nim" ] && command -v nim >/dev/null 2>&1; then
+      echo "🔨 Compiling from local source using Nim..."
+      nim c -d:release -o:"$TMP_BIN" src/compile_rime_hindi.nim
+      "$TMP_BIN" || true
+      rm -f "$TMP_BIN"
+    elif [ -f "rime/hindi_ai.dict.yaml" ]; then
+      echo "📋 Copying pre-generated local dictionary..."
+      cp "rime/hindi_ai.dict.yaml" "$TARGET_DICT"
+    else
+      echo "❌ All fallbacks failed. Please report this issue on GitHub."
+      exit 1
+    fi
   fi
 fi
 
