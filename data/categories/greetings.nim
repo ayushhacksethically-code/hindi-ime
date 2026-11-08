@@ -1,0 +1,13 @@
+# ============ GREETINGS ============
+result["namaste"] = @["नमस्ते"]
+result["namaskar"] = @["नमस्कार"]
+result["salaam"] = @["सलाम"]
+result["salam"] = @["सलाम"]
+result["dhanyawad"] = @["धन्यवाद"]
+result["dhanyavad"] = @["धन्यवाद"]
+result["shukriya"] = @["शुक्रिया"]
+result["alvida"] = @["अलविदा"]
+result["swagat"] = @["स्वागत"]
+result["hello"] = @["हैलो"]
+result["ok"] = @["ओके"]
+result["okay"] = @["ओके"]

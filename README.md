@@ -13,9 +13,9 @@ strict rules the jo ki Hinglish type karne walo ke liye problem tha.
 - ✅ **Offline-first** — works without internet
 - ✅ **Zero-latency** — rule engine, no background daemon
 - ✅ **Hybrid intelligence** — rules → dict → fuzzy → API
-- ✅ **195,913 entries** (88,000+ unique words)
+- ✅ **196,560 entries** (88,000+ unique words)
 - ✅ **91% accuracy** (daily test)
-- ✅ **730+ curated Hinglish words**
+- ✅ **2,100+ curated Hinglish words**
 - ✅ **Hindi WordNet** (40k+ entries)
 - ✅ **Multi-language ready** — architecture supports Tamil, Telugu, Bengali
 - ✅ **Rime + Fcitx5 integration**
@@ -23,7 +23,7 @@ strict rules the jo ki Hinglish type karne walo ke liye problem tha.
 
 ## Recent Updates
 
-- 195,913 entries (88,000+ unique words)
+- 196,560 entries (88,000+ unique words)
 - 91% accuracy (daily test)
 - WhatsApp conversation words (200+)
 - Ordinal numbers 1-100
@@ -34,12 +34,12 @@ strict rules the jo ki Hinglish type karne walo ke liye problem tha.
 
 ## Project Stats
 
-- **Total entries**: 195,913
-- **Unique words**: 88,144
-- **Unique Hinglish keys**: 177,472
+- **Total entries**: 196,560
+- **Unique words**: 88,328
+- **Unique Hinglish keys**: 178,105
 - **Accuracy**: 91% (daily test)
 - **Dictionary size**: 6.8 MB
-- **Commits**: 17
+- **Commits**: 23+
 - **Built in**: 5 days
 
 ## Quick Install (Recommended)
@@ -98,7 +98,7 @@ Both methods will update the dictionary and schema while preserving your Rime us
 
 ### Dictionary Coverage
 
-The repository includes a pre-generated Rime dictionary (`rime/hindi_ai.dict.yaml`, ~6.8 MB) covering 195,913 entries (88,000+ unique words) derived from Hindi WordNet (IIT Bombay, GPL) plus curated Hinglish vocabulary.
+The repository includes a pre-generated Rime dictionary (`rime/hindi_ai.dict.yaml`, ~6.8 MB) covering 196,560 entries (88,000+ unique words) derived from Hindi WordNet (IIT Bombay, GPL) plus curated Hinglish vocabulary.
 
 For **regenerating** from source, place `wordnet_hindi_dict.bin` (6 MB) in `~/.local/share/hindi-ime/` and run:
 
@@ -173,7 +173,7 @@ Input (Hinglish)
     ↓
 Rule Engine
     ↓
-Common Dict (730+)
+Common Dict (2,100+)
     ↓
 WordNet Hindi (40k+)
     ↓
