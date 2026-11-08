@@ -42,13 +42,25 @@ strict rules the jo ki Hinglish type karne walo ke liye problem tha.
 - **Commits**: 17
 - **Built in**: 5 days
 
-## Quick Start
+## Quick Install (Recommended)
+
+No need to install Nim or compile anything. Just run:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ayushhacksethically-code/hindi-ime/main/scripts/install.sh | bash
+```
+
+> **Note**: If you prefer to inspect the script before running, you can view it here: [scripts/install.sh](scripts/install.sh).
+
+Then, select **Rime** in Fcitx5 and press F4 to select the **hindi_ai** schema.
+
+## Quick Start (Manual / Developer)
 
 ### Prerequisites
 
-- Nim 2.0+
 - Fcitx5 with Rime
 - Linux (X11 or Wayland)
+- Nim 2.0+ (optional, only needed for compiling from source)
 
 ### Install
 
@@ -68,6 +80,21 @@ fcitx5 -r -d
 ```
 
 Then select **hindi_ai** in Fcitx5.
+
+## How to Update
+
+If you installed via the one-line script, just run the same command again:
+```bash
+curl -fsSL https://raw.githubusercontent.com/ayushhacksethically-code/hindi-ime/main/scripts/install.sh | bash
+```
+
+If you cloned the repository, just run:
+```bash
+cd hindi-ime
+./scripts/update.sh
+```
+
+Both methods will update the dictionary and schema while preserving your Rime user learning data (`hindi_ai.userdb`).
 
 ### Dictionary Coverage
 
