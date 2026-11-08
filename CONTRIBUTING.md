@@ -64,3 +64,34 @@ README better kar, examples add kar.
 ---
 
 Bhai, chalo milkar Hindi typing better banate hain! 🇮🇳
+
+---
+
+## Content Policy
+
+This IME includes common Hindi/Hinglish expletives as part of the 
+language. These are included for legitimate use cases:
+
+- Songwriting, poetry, rap
+- Creative writing
+- Realistic dialogue in scripts
+
+We treat these as vocabulary, not as offensive content. They have 
+the same status as any other word in the dictionary.
+
+**However, we do NOT include:**
+
+- Casteist slurs
+- Communal/religious slurs
+- Hate speech targeting any group
+
+If you're unsure whether a word qualifies, open an issue before 
+submitting a PR.
+
+If you find that a word you need is missing, please open an issue 
+with:
+- The Hinglish spelling(s) you type
+- The Devanagari form you expect
+- The context in which you use it
+
+---
