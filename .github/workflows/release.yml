@@ -21,7 +21,7 @@ jobs:
 
       - name: Build binary
         run: |
-          nim c -d:release -o:compile_rime_hindi src/compile_rime_hindi.nim
+          nim c -d:release --passC:"-march=x86-64 -mtune=generic" -o:compile_rime_hindi src/compile_rime_hindi.nim
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v3
