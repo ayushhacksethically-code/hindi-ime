@@ -202,6 +202,10 @@ proc transliterateSingleWord*(word: string): string =
     res.add($c)
     i += 1
 
+  # Remove trailing halant if word ends in a consonant
+  if res.endsWith("्"):
+    res = res[0 ..< res.len - "्".len]
+
   return res
 
 proc loadGoogleCache(cachePath: string): Table[string, seq[string]] =

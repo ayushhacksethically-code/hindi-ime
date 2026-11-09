@@ -29,7 +29,7 @@ result["badhiya"] = @["बढ़िया"]
 result["happy"] = @["हैप्पी"]
 result["birthday"] = @["बर्थडे"]
 result["to"] = @["टू"]
-result["me"] = @["मी"]
+result["me"] = @["में", "मे", "मी"]
 
 # --- "chuppp kar tu" ---
 result["chuppp"] = @["चुप"]

@@ -31,3 +31,4 @@ proc getCommonDict*(): Table[string, seq[string]] =
   include categories/whatsapp_chat
   include categories/daily_use_264
   include categories/expletives
+  include categories/prefix_words

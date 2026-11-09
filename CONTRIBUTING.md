@@ -23,7 +23,7 @@ result["jaan"] = @["जान"]
 result["kasam"] = @["कसम"]
 ```
 
-`data/common_dict.nim` mein daal, phir:
+`data/categories/` ke relevant file (jaise `misc.nim` ya `prefix_words.nim`) mein daal, phir:
 ```bash
 ./scripts/build_dict.sh
 fcitx5 -r -d
