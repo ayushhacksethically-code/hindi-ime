@@ -13,8 +13,8 @@ strict rules the jo ki Hinglish type karne walo ke liye problem tha.
 - ✅ **Offline-first** — works without internet
 - ✅ **Zero-latency** — rule engine, no background daemon
 - ✅ **Hybrid intelligence** — rules → dict → fuzzy → API
-- ✅ **196,560 entries** (88,000+ unique words)
-- ✅ **91% accuracy** (daily test)
+- ✅ **197,031 entries** (88,000+ unique words)
+- ✅ **100/100 benchmark words passed** (daily Hinglish)
 - ✅ **2,100+ curated Hinglish words**
 - ✅ **Hindi WordNet** (40k+ entries)
 - ✅ **Multi-language ready** — architecture supports Tamil, Telugu, Bengali
@@ -23,8 +23,10 @@ strict rules the jo ki Hinglish type karne walo ke liye problem tha.
 
 ## Recent Updates
 
-- 196,560 entries (88,000+ unique words)
-- 91% accuracy (daily test)
+- **Curated Prefix Words**: 180+ words with prefixes (`be-`, `sam-`, `vi-`, `nir-`, `pra-`, `su-`, `up-`, `bad-`, `na-`, `khush-`)
+- **Trailing Halant Cleanup**: Rule engine automatically trims dangling halant (`्`) for consonant-ending words
+- **197,031 entries** (88,000+ unique words)
+- **100/100 benchmark words passed**
 - WhatsApp conversation words (200+)
 - Ordinal numbers 1-100
 - Question words (koun, kaha, kaise)
@@ -34,13 +36,17 @@ strict rules the jo ki Hinglish type karne walo ke liye problem tha.
 
 ## Project Stats
 
-- **Total entries**: 196,560
-- **Unique words**: 88,328
-- **Unique Hinglish keys**: 178,105
-- **Accuracy**: 91% (daily test)
-- **Dictionary size**: 6.8 MB
-- **Commits**: 23+
-- **Built in**: 5 days
+![Started](https://img.shields.io/github/created-at/ayushhacksethically-code/hindi-ime?style=flat-square&label=Project%20Started&color=blue)
+![Latest Release](https://img.shields.io/github/v/release/ayushhacksethically-code/hindi-ime?style=flat-square&label=Latest%20Release&color=green)
+![Commits](https://img.shields.io/github/commit-activity/t/ayushhacksethically-code/hindi-ime?style=flat-square&label=Commits)
+![Stars](https://img.shields.io/github/stars/ayushhacksethically-code/hindi-ime?style=flat-square&label=Stars)
+
+- **Dictionary entries**: 197,031
+- **Unique words**: 88,387
+- **Benchmark**: 100/100 daily Hinglish words passed
+- **Dictionary file**: 6.9 MB
+- **Source code**: ~10 MB
+- **Full clone (with history)**: ~33 MB
 
 ## Quick Install (Recommended)
 
@@ -98,7 +104,7 @@ Both methods will update the dictionary and schema while preserving your Rime us
 
 ### Dictionary Coverage
 
-The repository includes a pre-generated Rime dictionary (`rime/hindi_ai.dict.yaml`, ~6.8 MB) covering 196,560 entries (88,000+ unique words) derived from Hindi WordNet (IIT Bombay, GPL) plus curated Hinglish vocabulary.
+The repository includes a pre-generated Rime dictionary (`rime/hindi_ai.dict.yaml`, 6.9 MB) covering 197,031 entries (88,000+ unique words) derived from Hindi WordNet (IIT Bombay, GPL) plus curated Hinglish vocabulary.
 
 For **regenerating** from source, place `wordnet_hindi_dict.bin` (6 MB) in `~/.local/share/hindi-ime/` and run:
 
@@ -135,11 +141,13 @@ Type Hinglish, get Devanagari:
 | `nhi` | नहीं |
 | `aaplog` | आपलोग |
 | `karta` | करता |
-| `vaishe` | वैसे |
 | `koun` | कौन |
 | `pyari` | प्यारी |
 | `office` | office |
 | `hlo` | हैलो |
+| `bekhabar` | बेख़बर |
+| `samvaad` | संवाद |
+| `nirmaan` | निर्माण |
 | `chaturbhuj` | चतुर्भुज |
 | `samasyaen` | समस्याएँ |
 
@@ -228,6 +236,8 @@ hindi-ime/
 │   ├── build_rime_dict.nim
 │   └── google_transliterate_nim.nim
 ├── data/               Common dict + mappings
+│   ├── categories/     Modular dictionaries (pronouns, verbs, prefix_words, etc.)
+│   └── common_dict.nim Unified dictionary loader
 ├── rime/               Rime schema files
 ├── scripts/            Install/build scripts
 └── docs/               Additional docs

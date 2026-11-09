@@ -425,6 +425,10 @@ proc transliterateSingleWord*(word: string): string =
     res.add($c)
     i += 1
 
+  # Remove trailing halant if word ends in a consonant
+  if res.endsWith("्"):
+    res = res[0 ..< res.len - "्".len]
+
   if isSuspiciousOutput(word, res):
     return word # return original English
 
@@ -470,6 +474,9 @@ proc getPhoneticCandidates*(text: string): seq[string] =
   let w = text.strip()
   if w.len == 0: return @[]
   let wLower = w.toLowerAscii()
+
+  if gCommonDict.len == 0:
+    gCommonDict = getCommonDict()
 
   if gCommonDict.hasKey(wLower):
     for item in gCommonDict[wLower]:

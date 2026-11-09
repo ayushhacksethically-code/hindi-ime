@@ -14,6 +14,10 @@ Type phonetic Hinglish words as you naturally spell them:
 - `kya haal hai` → **क्या हाल है**
 - `samasya` → **समस्या**
 - `zindagi` → **ज़िंदगी**
+- `bekhabar` → **बेख़बर**
+- `samvaad` → **संवाद**
+- `upahar` → **उपहार**
+- `nirmaan` → **निर्माण**
 
 ## Single-Space Commit
 
