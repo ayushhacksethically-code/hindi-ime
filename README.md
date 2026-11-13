@@ -11,13 +11,13 @@ strict rules the jo ki Hinglish type karne walo ke liye problem tha.
 
 - ✅ **Natural Hinglish input** — not formal transliteration
 - ✅ **Offline-first** — works without internet
-- ✅ **Zero-latency** — rule engine, no background daemon
+- ✅ **No background daemon** — rule engine runs inline. Dictionary lookup is near-instant.
 - ✅ **Hybrid intelligence** — rules → dict → fuzzy → API
 - ✅ **197,031 entries** (88,000+ unique words)
-- ✅ **100/100 benchmark words passed** (daily Hinglish)
+- ✅ **100/100 on our internal daily-use test set** (see accuracy_test_general.txt)
 - ✅ **2,100+ curated Hinglish words**
 - ✅ **Hindi WordNet** (40k+ entries)
-- ✅ **Multi-language ready** — architecture supports Tamil, Telugu, Bengali
+- ✅ **Architecture is language-agnostic** — Currently ships Hindi only.
 - ✅ **Rime + Fcitx5 integration**
 - ✅ **Optional Google API fallback** (runtime config, OFF by default)
 
@@ -26,7 +26,7 @@ strict rules the jo ki Hinglish type karne walo ke liye problem tha.
 - **Curated Prefix Words**: 180+ words with prefixes (`be-`, `sam-`, `vi-`, `nir-`, `pra-`, `su-`, `up-`, `bad-`, `na-`, `khush-`)
 - **Trailing Halant Cleanup**: Rule engine automatically trims dangling halant (`्`) for consonant-ending words
 - **197,031 entries** (88,000+ unique words)
-- **100/100 benchmark words passed**
+- **100/100 on our internal daily-use test set** (see accuracy_test_general.txt)
 - WhatsApp conversation words (200+)
 - Ordinal numbers 1-100
 - Question words (koun, kaha, kaise)
@@ -43,20 +43,38 @@ strict rules the jo ki Hinglish type karne walo ke liye problem tha.
 
 - **Dictionary entries**: 197,031
 - **Unique words**: 88,387
-- **Benchmark**: 100/100 daily Hinglish words passed
+- **Accuracy:** 100/100 on our general daily-use benchmark (`accuracy_test_general.txt`). Specialized vocabulary — slang, expletives, technical terms — is tested separately in `accuracy_test_specialized.txt` (coverage: 103/115).
 - **Dictionary file**: 6.9 MB
 - **Source code**: ~10 MB
 - **Full clone (with history)**: ~33 MB
 
-## Quick Install (Recommended)
+## Install
 
-No need to install Nim or compile anything. Just run:
+No need to install Nim or compile anything.
+
+### Recommended: Inspect before running
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ayushhacksethically-code/hindi-ime/main/scripts/install.sh | bash
+# Step 1: Download the installer
+curl -fsSL https://raw.githubusercontent.com/ayushhacksethically-code/hindi-ime/main/install.sh -o install.sh
+
+# Step 2: Inspect it (recommended)
+less install.sh
+
+# Step 3: Run it
+bash install.sh
 ```
 
-> **Note**: If you prefer to inspect the script before running, you can view it here: [scripts/install.sh](scripts/install.sh).
+> ⚠️ **Security note:** Always inspect install scripts before running them. Never pipe `curl` directly to `bash`.
+
+<details>
+<summary>Quick install (not recommended)</summary>
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ayushhacksethically-code/hindi-ime/main/install.sh | bash
+```
+
+</details>
 
 Then, select **Rime** in Fcitx5 and press F4 to select the **hindi_ai** schema.
 
