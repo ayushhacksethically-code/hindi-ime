@@ -98,13 +98,14 @@ proc generateAsciiVariants*(input: string, maxVariants: int = 25): seq[string] =
   # ============================================================
   # STAGE 4: Vowel simplifications
   # ============================================================
+  # NOTE: "ai" -> "ei" was removed because it produced wrong variants like
+  # "bhei" for "bhai". Re-add only with a proper phoneme check.
   let vowelTransforms: seq[Transform] = @[
     ("aa", "a"),   # samasyaa → samasya
     ("ii", "i"),   # kariib  → karib
     ("uu", "u"),   # duur    → dur
     ("ee", "i"),   # kareeb  → karib
     ("oo", "u"),   # doodh   → dudh
-    ("ai", "ei"),  # bhai    → bhei (rare)
     ("au", "ou"),  # aur     → our
   ]
   
@@ -528,8 +529,75 @@ when isMainModule:
     rimePath = getEnv("HOME") / ".local/share/fcitx5/rime/hindi_ai.dict.yaml"
   loadRimeDict(rimePath)
   let params = commandLineParams()
-  if params.len > 0:
-    let inputStr = params.join(" ")
+  if params.len == 0:
+    echo "Usage: hindi_live_ime [--test <word> | --benchmark <file> | <word>]"
+    quit(0)
+
+  if params[0] == "--benchmark" or params[0] == "-b":
+    if params.len < 2:
+      echo "Error: --benchmark requires a test file path"
+      quit(1)
+    var testPath = params[1]
+    if not fileExists(testPath):
+      if fileExists("tests" / testPath):
+        testPath = "tests" / testPath
+      elif fileExists(getAppDir().parentDir / "tests" / testPath):
+        testPath = getAppDir().parentDir / "tests" / testPath
+      elif fileExists(getAppDir() / testPath):
+        testPath = getAppDir() / testPath
+      else:
+        echo "Error: Test file not found: ", params[1]
+        quit(1)
+
+    echo "=========================================================="
+    echo "          HINDI IME ACCURACY BENCHMARK TEST               "
+    echo "=========================================================="
+    echo "Dataset: ", testPath
+    echo "----------------------------------------------------------"
+    var total = 0
+    var passed = 0
+    var failed = 0
+    for line in lines(testPath):
+      let trimmed = line.strip()
+      if trimmed.len == 0 or trimmed.startsWith("#"):
+        continue
+      let parts = trimmed.split('|')
+      if parts.len < 2:
+        continue
+      let inputWord = parts[0].strip()
+      let expected = parts[1].strip()
+      if inputWord.len == 0 or expected.len == 0:
+        continue
+
+      inc total
+      let cands = getPhoneticCandidates(inputWord)
+      let cleaned = if cands.len > 0: cands[0] else: inputWord
+      if cleaned == expected:
+        inc passed
+        echo "[PASS] " & alignLeft(inputWord, 15) & " -> " & cleaned
+      else:
+        inc failed
+        echo "[FAIL] " & alignLeft(inputWord, 15) & " -> Got: '" & cleaned & "' | Expected: '" & expected & "'"
+
+    echo "----------------------------------------------------------"
+    echo "Summary:"
+    echo "Total Tests: ", total
+    echo "Passed:      ", passed
+    echo "Failed:      ", failed
+    if total > 0:
+      let acc = (passed.float / total.float) * 100.0
+      echo "Accuracy:    ", formatFloat(acc, ffDecimal, 2), "%"
+    echo "=========================================================="
+    quit(if failed == 0: 0 else: 1)
+
+  var inputWords: seq[string] = @[]
+  if params[0] == "--test" or params[0] == "-t":
+    inputWords = params[1 .. ^1]
+  else:
+    inputWords = params
+
+  if inputWords.len > 0:
+    let inputStr = inputWords.join(" ")
     let candidates = getPhoneticCandidates(inputStr)
     if candidates.len > 0:
       var formatted: seq[string] = @[]
@@ -539,4 +607,4 @@ when isMainModule:
     else:
       echo inputStr
   else:
-    echo "Usage: hindi_live_ime <phonetic_word>"
+    echo "Usage: hindi_live_ime [--test <word> | --benchmark <file> | <word>]"

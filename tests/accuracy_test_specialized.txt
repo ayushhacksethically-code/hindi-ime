@@ -129,3 +129,8 @@ refactor|refactor
 deploy|deploy
 merge|merge
 commit|commit
+
+# ============ Regression: ai -> ei fix ============
+bhai|भाई
+bhej|भेज
+bhel|भेल
