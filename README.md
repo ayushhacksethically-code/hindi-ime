@@ -48,15 +48,33 @@ strict rules the jo ki Hinglish type karne walo ke liye problem tha.
 - **Source code**: ~10 MB
 - **Full clone (with history)**: ~33 MB
 
-## Quick Install (Recommended)
+## Install
 
-No need to install Nim or compile anything. Just run:
+No need to install Nim or compile anything.
+
+### Recommended: Inspect before running
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ayushhacksethically-code/hindi-ime/main/scripts/install.sh | bash
+# Step 1: Download the installer
+curl -fsSL https://raw.githubusercontent.com/ayushhacksethically-code/hindi-ime/main/install.sh -o install.sh
+
+# Step 2: Inspect it (recommended)
+less install.sh
+
+# Step 3: Run it
+bash install.sh
 ```
 
-> **Note**: If you prefer to inspect the script before running, you can view it here: [scripts/install.sh](scripts/install.sh).
+> ⚠️ **Security note:** Always inspect install scripts before running them. Never pipe `curl` directly to `bash`.
+
+<details>
+<summary>Quick install (not recommended)</summary>
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ayushhacksethically-code/hindi-ime/main/install.sh | bash
+```
+
+</details>
 
 Then, select **Rime** in Fcitx5 and press F4 to select the **hindi_ai** schema.
 
