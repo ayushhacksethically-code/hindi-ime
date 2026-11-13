@@ -43,7 +43,7 @@ strict rules the jo ki Hinglish type karne walo ke liye problem tha.
 
 - **Dictionary entries**: 197,031
 - **Unique words**: 88,387
-- **Benchmark**: 100/100 daily Hinglish words passed
+- **Accuracy:** 100/100 on our general daily-use benchmark (`accuracy_test_general.txt`). Specialized vocabulary — slang, expletives, technical terms — is tested separately in `accuracy_test_specialized.txt` (coverage: 100/112).
 - **Dictionary file**: 6.9 MB
 - **Source code**: ~10 MB
 - **Full clone (with history)**: ~33 MB
