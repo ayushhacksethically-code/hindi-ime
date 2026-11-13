@@ -4,7 +4,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJ_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-TEST_FILE="${1:-$PROJ_DIR/tests/accuracy_test.txt}"
+TEST_FILE="${1:-$PROJ_DIR/tests/accuracy_test_general.txt}"
 BIN="$PROJ_DIR/src/hindi_live_ime"
 
 if [ ! -f "$BIN" ]; then

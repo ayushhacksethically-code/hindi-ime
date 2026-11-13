@@ -111,3 +111,26 @@ kutta|कुत्ता
 laund|लंड
 madarchod|मादरचोद
 behenchod|बहनचोद
+
+# ============ Internet Slang ============
+pov|pov
+tbh|tbh
+nvm|nvm
+brb|brb
+lol|lol
+
+# ============ Regional Variants ============
+bhaiyya|भैया
+kyaa|क्या
+haanji|हाँजी
+
+# ============ Technical Terms ============
+refactor|refactor
+deploy|deploy
+merge|merge
+commit|commit
+
+# ============ Regression: ai -> ei fix ============
+bhai|भाई
+bhej|भेज
+bhel|भेल
