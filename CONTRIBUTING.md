@@ -1,5 +1,40 @@
 # Bhai, contribute kar — Hindi IME better banate hain!
 
+## How to test your changes safely
+
+You do NOT need to install the IME system-wide to test. Use the sandbox
+mode:
+
+1. **Transliteration logic only (no system changes):**
+   ```bash
+   nim c -r src/hindi_live_ime.nim --test "bhai"
+   ```
+   This runs the rule engine in isolation and prints candidate outputs.
+
+2. **Rime schema test (no fcitx5 install):**
+   ```bash
+   rime_dict_manager -s rime/ --test
+   ```
+
+3. **Full IME test (reversible):**
+   ```bash
+   bash install.sh --dry-run   # shows what will be touched
+   bash install.sh             # installs; uninstall.sh reverts
+   ```
+   Always keep `uninstall.sh` handy. If anything breaks, run:
+   ```bash
+   bash uninstall.sh && rm -rf ~/.config/fcitx5/rime/
+   ```
+
+4. **Benchmark before submitting a PR:**
+   Run both benchmarks before submitting a PR:
+   ```bash
+   nim c -r src/hindi_live_ime.nim --benchmark accuracy_test_general.txt
+   nim c -r src/hindi_live_ime.nim --benchmark accuracy_test_specialized.txt
+   ```
+   General benchmark must stay at 100/100. Specialized benchmark coverage
+   should not regress. Paste the output in your PR description.
+
 ## Kya kar sakta hai?
 
 ### 1. Galti bata

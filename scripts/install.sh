@@ -41,9 +41,19 @@ if [ "${#MISSING_DEPS[@]}" -gt 0 ] || [ "$RIME_AVAILABLE" = false ]; then
 fi
 
 RIME_DIR="${HINDI_IME_RIME_DIR:-$HOME/.local/share/fcitx5/rime}"
-mkdir -p "$RIME_DIR"
 TARGET_DICT="$RIME_DIR/hindi_ai.dict.yaml"
 TARGET_SCHEMA="$RIME_DIR/hindi_ai.schema.yaml"
+
+if [ "$1" = "--dry-run" ]; then
+  echo "🔍 Dry run mode: showing what would be touched"
+  echo "Target directory: $RIME_DIR"
+  echo "Files that will be installed or updated:"
+  echo "  - $TARGET_SCHEMA"
+  echo "  - $TARGET_DICT"
+  exit 0
+fi
+
+mkdir -p "$RIME_DIR"
 
 if [ -e "$RIME_DIR/hindi_ai.userdb" ]; then
   echo "📦 Preserving existing Rime user dictionary (hindi_ai.userdb)."
