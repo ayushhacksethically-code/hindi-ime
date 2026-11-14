@@ -3,6 +3,8 @@ nimcache/
 *.exe
 *.o
 *.out
+src/compile_rime_hindi
+src/hindi_live_ime
 
 # Personal data (CRITICAL)
 whatsapp_chats/

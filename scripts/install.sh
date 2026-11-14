@@ -67,6 +67,23 @@ else
   curl -fsSL "${RAW_BASE}/rime/hindi_ai.schema.yaml" -o "$TARGET_SCHEMA"
 fi
 
+# Install custom patches and Lua processors if present
+if [ -f "rime/hindi_ai.custom.yaml" ]; then
+  echo "📥 Installing custom configuration patch..."
+  cp "rime/hindi_ai.custom.yaml" "$RIME_DIR/hindi_ai.custom.yaml"
+fi
+
+if [ -f "rime/rime.lua" ]; then
+  echo "📥 Installing rime.lua..."
+  cp "rime/rime.lua" "$RIME_DIR/rime.lua"
+fi
+
+if [ -d "rime/lua" ]; then
+  echo "📥 Installing Lua extensions..."
+  mkdir -p "$RIME_DIR/lua"
+  cp -r rime/lua/* "$RIME_DIR/lua/"
+fi
+
 # 3. Generate or install dictionary
 echo "📖 Setting up dictionary..."
 TMP_BIN=$(mktemp /tmp/compile_rime_hindi.XXXXXX)
