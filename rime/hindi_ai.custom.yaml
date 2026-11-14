@@ -2,5 +2,5 @@
 # Any personal customizations should go here.
 
 patch:
-  # Register Smart Undo Lua processor before key_binder
-  "engine/processors/@before 2": lua_processor@smart_undo
+  # Example: customize page size (number of candidates)
+  # "menu/page_size": 5

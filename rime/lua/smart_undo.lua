@@ -12,6 +12,17 @@ local kReject = 0
 local kAccepted = 1
 local kNoop = 2
 
+local function log_debug(msg)
+    local f = io.open("/tmp/rime_smart_undo.log", "a")
+    if f then
+        f:write(os.date("%Y-%m-%d %H:%M:%S") .. " [smart_undo] " .. tostring(msg) .. "\n")
+        f:close()
+    end
+end
+
+-- Log when script is initially loaded
+log_debug("Script loaded successfully")
+
 local function smart_undo_impl(key_event, env)
     local engine = env.engine
     local context = engine.context
@@ -20,6 +31,8 @@ local function smart_undo_impl(key_event, env)
     if key_event:release() then
         return kNoop
     end
+
+    local key_name = key_event:repr()
 
     -- Ignore if modifier keys (Ctrl, Alt, Super) are active
     if key_event:ctrl() or key_event:alt() or key_event:super() then
@@ -31,7 +44,13 @@ local function smart_undo_impl(key_event, env)
         return kNoop
     end
 
-    local key_name = key_event:repr()
+    log_debug(string.format("Key: %s | has_menu: %s | composing: %s | can_undo: %s | input: %s",
+        tostring(key_name),
+        tostring(context:has_menu()),
+        tostring(context:is_composing()),
+        tostring(env.can_undo),
+        tostring(context.input)
+    ))
 
     -- 1. Space press on active candidate menu:
     -- Commit candidate + trailing space atomically, and remember the original Roman input.
@@ -42,6 +61,7 @@ local function smart_undo_impl(key_event, env)
             env.last_cand = cand.text
             env.can_undo = true
 
+            log_debug(string.format("Space intercepted on '%s' -> '%s'. Committing with trailing space.", env.last_raw, env.last_cand))
             -- Commit Hindi candidate + space
             engine:commit_text(cand.text .. " ")
             context:clear()
@@ -56,23 +76,18 @@ local function smart_undo_impl(key_event, env)
         env.last_raw = nil
         env.last_cand = nil
 
-        if raw and #raw > 0 then
-            -- Attempt to reopen previous selection to retract committed text if engine supports it
-            local reopened = false
-            if context.reopen_previous_selection then
-                reopened = pcall(function() return context:reopen_previous_selection() end)
-            end
+        log_debug(string.format("BackSpace intercepted! Trying to restore raw input: '%s'", tostring(raw)))
 
-            -- Fallback / Preedit restoration: put the raw English spelling back into input
-            if not reopened or context.input == "" then
-                context.input = raw
-            end
+        if raw and #raw > 0 then
+            context:push_input(raw)
+            log_debug(string.format("After push_input: context.input = '%s'", tostring(context.input)))
             return kAccepted
         end
     end
 
     -- 3. Any other key resets the undo window
     if env.can_undo and key_name ~= "space" then
+        log_debug(string.format("Disarming undo due to key: %s", tostring(key_name)))
         env.can_undo = false
         env.last_raw = nil
         env.last_cand = nil
@@ -86,6 +101,7 @@ local function smart_undo(key_event, env)
     if ok then
         return res
     else
+        log_debug("ERROR in smart_undo: " .. tostring(res))
         return kNoop
     end
 end
