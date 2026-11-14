@@ -173,24 +173,20 @@ Spacebar commits the candidate + inserts a space in one go.
 
 ## Bhai, test karo!
 
-Ye IME ready hai, lekin akela test karna mushkil hai.
+यह IME ready हैं परन्तु अकेले से पता नही चलेगा मुझे इसलिए आप टेस्ट कीजिये जो गलती दिखे issue कीजिये|
 
-Tu test kar, galti bata.
+कैसे:
+1. Install कीजिये|
+2. रोज के मैसेज को type कीजिये|
+3. जो गलत आये Github issue खोल के भेजीये|
 
-Kaise:
-1. Install kar
-2. Roz ke messages type kar
-3. Jo galat aaye, GitHub issue kholo
-
-Galti format:
+गलती format:
 ```text
 Input: jaan
 Output: जाआँच
 Expected: जान
 Type: Informal
 ```
-
-Chalo, duniya ko Hindi typing better banate hain! 🇮🇳
 
 ## Architecture
 
@@ -199,11 +195,11 @@ Input (Hinglish)
     ↓
 Rule Engine
     ↓
-Common Dict (2,100+)
+Common Dict 
     ↓
 WordNet Hindi (40k+)
     ↓
-Inflections (145k+)
+Inflections 
     ↓
 Fuzzy Match
     ↓
