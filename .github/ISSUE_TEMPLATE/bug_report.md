@@ -1,44 +1,40 @@
 ---
-name: Galti Report
-about: Bhai, IME mein kuch galat ho raha hai? Batao!
+name: गलत Report
+about: भाई, IME में कुछ गलत हो रहा? तो बताइये!
 title: '[BUG] '
 labels: bug
 ---
-
-## Kya type kiya?
+## क्या type किया?
 
 ```text
 jaan
 ```
 
-## Kya output aaya?
+## क्या output आया?
 
 ```text
 जाआँच
 ```
 
-## Kya hona chahiye tha?
+## क्या होना चाहिए था?
 
 ```text
 जान
 ```
 
-## Ye word kaisa hai?
+## ये शब्द कैसा हैं?
 - [ ] Formal (सरकारी, साहित्यिक, news)
 - [ ] Informal (WhatsApp, Instagram, chat)
 - [ ] English word (office, whatsapp)
 - [ ] Rare word (chaturbhuj, dwarka)
 - [ ] Pata nahi
 
-## Screenshot (agar ho toh)
+## Screenshot (अगर हो तो)
 
 ## System info
 - OS: 
 - Fcitx5 version: 
 - Rime version: 
-
-## Kuch aur batana hai?
-
 ---
 
-**Bhai, thank you! Tu test kar raha hai, isliye IME better ho raha hai.** 🙏
+**भाई आप टेस्ट करते रहीये बिना कि परेशानी के** 🙏
