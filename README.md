@@ -12,9 +12,9 @@ Linux में वो चीज़ नहीं मिल रही थी ज�
 - ✅ **Offline-first** — works without internet
 - ✅ **No background daemon** — rule engine runs inline. Dictionary lookup is near-instant.
 - ✅ **Hybrid intelligence** — rules → dict → fuzzy → API
-- ✅ **197,503 entries** (88,000+ unique words)
+- ✅ **197,662 entries** (88,600+ unique words)
 - ✅ **100/100 on our internal daily-use test set** (see accuracy_test_general.txt)
-- ✅ **2,500+ curated Hinglish words**
+- ✅ **2,700+ curated Hinglish words**
 - ✅ **Hindi WordNet** (40k+ entries)
 - ✅ **Architecture is language-agnostic** — Currently ships Hindi only.
 - ✅ **Rime + Fcitx5 integration**
@@ -22,10 +22,11 @@ Linux में वो चीज़ नहीं मिल रही थी ज�
 
 ## Recent Updates
 
+- **Additional Vocabulary**: 40+ curated words across conversational phrases and terms (`assignment`, `pyq`, `datesheet`, `submit`, `aagya`, `chaiye`, `dedo`, `krege`, `skta`)
 - **Conversational Chat Corpus**: 420+ curated chat words across slang (`gc`, `dm`, `kalesh`), verbs (`kr`, `rha`, `gya`, `bta`), pronouns, reactions, and loanwords
 - **Curated Prefix Words**: 180+ words with prefixes (`be-`, `sam-`, `vi-`, `nir-`, `pra-`, `su-`, `up-`, `bad-`, `na-`, `khush-`)
 - **Trailing Halant Cleanup**: Rule engine automatically trims dangling halant (`्`) for consonant-ending words
-- **197,503 entries** (88,000+ unique words)
+- **197,662 entries** (88,600+ unique words)
 - **100/100 on our internal daily-use test set** (see accuracy_test_general.txt)
 - WhatsApp conversation words (200+)
 - Ordinal numbers 1-100
@@ -41,12 +42,12 @@ Linux में वो चीज़ नहीं मिल रही थी ज�
 ![Commits](https://img.shields.io/github/commit-activity/t/ayushhacksethically-code/hindi-ime?style=flat-square&label=Commits)
 ![Stars](https://img.shields.io/github/stars/ayushhacksethically-code/hindi-ime?style=flat-square&label=Stars)
 
-- **Dictionary entries**: 197,503
-- **Unique words**: 88,387
+- **Dictionary entries**: 197,662
+- **Unique words**: 88,643
 - **Accuracy:** 100/100 on our general daily-use benchmark (`accuracy_test_general.txt`). Specialized vocabulary — slang, expletives, technical terms — is tested separately in `accuracy_test_specialized.txt` (coverage: 103/115).
-- **Dictionary file**: 6.9 MB
-- **Source code**: ~10 MB
-- **Full clone (with history)**: ~33 MB
+- **Dictionary file**: 6.8 MB
+- **Source code**: ~9.5 MB
+- **Full clone (with history)**: ~40 MB
 
 ## Install
 
@@ -122,7 +123,7 @@ Both methods will update the dictionary and schema while preserving your Rime us
 
 ### Dictionary Coverage
 
-The repository includes a pre-generated Rime dictionary (`rime/hindi_ai.dict.yaml`, 6.9 MB) covering 197,031 entries (88,000+ unique words) derived from Hindi WordNet (IIT Bombay, GPL) plus curated Hinglish vocabulary.
+The repository includes a pre-generated Rime dictionary (`rime/hindi_ai.dict.yaml`, 6.8 MB) covering 197,662 entries (88,600+ unique words) derived from Hindi WordNet (IIT Bombay, GPL) plus curated Hinglish vocabulary.
 
 For **regenerating** from source, place `wordnet_hindi_dict.bin` (6 MB) in `~/.local/share/hindi-ime/` and run:
 
