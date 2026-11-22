@@ -517,7 +517,7 @@ proc getCacheDir*(): string =
   createDir(dir)
   return dir
 
-when isMainModule:
+proc initHindiEngine*() =
   var binPath = getDataDir() / "wordnet_hindi_dict.bin"
   if not fileExists(binPath):
     binPath = getAppDir() / "wordnet_hindi_dict.bin"
@@ -528,6 +528,9 @@ when isMainModule:
   if not fileExists(rimePath):
     rimePath = getEnv("HOME") / ".local/share/fcitx5/rime/hindi_ai.dict.yaml"
   loadRimeDict(rimePath)
+
+when isMainModule:
+  initHindiEngine()
   let params = commandLineParams()
   if params.len == 0:
     echo "Usage: hindi_live_ime [--test <word> | --benchmark <file> | <word>]"

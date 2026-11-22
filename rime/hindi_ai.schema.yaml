@@ -2,7 +2,6 @@ schema:
   schema_id: hindi_ai
   name: "Hindi AI Phonetic Engine"
   version: "6.0"
-  author: "Antigravity AI"
   description: "Rime Engine with Single Space Commit + Space Insert Feature"
 
 switches:
@@ -40,6 +39,20 @@ speller:
   alphabet: zabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_.~;^,'
   delimiter: " '"
   auto_select: false
+  algebra:
+    - derive/^([a-z]+)$/\L$1/
+    # QWERTY double-vowel IAST transliteration support
+    - derive/aa/a/
+    - derive/ee/i/
+    - derive/oo/u/
+    - derive/([a-z]+)ee$/$1i/
+    - derive/([a-z]+)oo$/$1u/
+    # Retroflex / Sibilant / Nasal QWERTY shortcuts
+    - derive/sh/s/
+    - derive/s/sh/
+    - derive/gy/jn/
+    - derive/ksh/x/
+    - derive/x/ksh/
 
 punctuator:
   full_shape:

@@ -47,3 +47,9 @@ result["samosa"] = @["समोसा"]
 result["pakora"] = @["पकौड़ा"]
 result["papad"] = @["पापड़"]
 result["achar"] = @["अचार"]
+
+# --- Online Chat Additions ---
+result["chocolate"] = @["चॉकलेट"]
+result["tea"] = @["चाय"]
+result["momo"] = @["मोमो"]
+result["thekua"] = @["ठेकुआ"]

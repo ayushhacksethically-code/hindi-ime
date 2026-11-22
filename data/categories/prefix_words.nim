@@ -1,5 +1,16 @@
 # ============ PREFIX WORDS (UPSARG) ============
 
+# ============ HINGLISH PREFIXES (UNIQUE ROMAN BEGINNINGS) ============
+result["ankh"] = @["अँख", "आँख"]
+result["angh"] = @["अँघ"]
+result["anch"] = @["अँच", "आँच"]
+result["ank"] = @["अँक", "अंक"]
+result["ang"] = @["अँग", "अंग"]
+result["ain"] = @["अँइ"]
+result["au"] = @["अँउ", "औ"]
+result["an"] = @["अँ", "अन", "अं"]
+result["a"] = @["अ"]
+
 # ============ Existing Core Prefix Words & Variants ============
 result["sammaan"] = @["सम्मान"]
 result["samman"] = @["सम्मान"]

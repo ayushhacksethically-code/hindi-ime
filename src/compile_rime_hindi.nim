@@ -251,6 +251,21 @@ proc normalizeToHinglish*(word: string): seq[string] =
 
   var variants = @[r]
 
+  # QWERTY-friendly IAST mappings:
+  # ā -> aa (e.g., rāma -> raam)
+  if "ā" in raw:
+    variants.add(raw.replace("ā", "aa").replace("ī", "i").replace("ū", "u").replace("ś", "sh").replace("ṣ", "sh").replace("ñ", "n").replace("ṅ", "ng").replace("ṇ", "n").replace("ṃ", "n").replace("ṁ", "n").replace("ṭ", "t").replace("ḍ", "d").replace("ḥ", "h").replace("ṛ", "ri").toLowerAscii())
+  # ī -> ee (e.g., dīrgha -> deergha, nadī -> nadee)
+  if "ī" in raw:
+    variants.add(raw.replace("ī", "ee").replace("ā", "a").replace("ū", "u").replace("ś", "sh").replace("ṣ", "sh").replace("ñ", "n").replace("ṅ", "ng").replace("ṇ", "n").replace("ṃ", "n").replace("ṁ", "n").replace("ṭ", "t").replace("ḍ", "d").replace("ḥ", "h").replace("ṛ", "ri").toLowerAscii())
+  # ū -> oo (e.g., pūjā -> pooja)
+  if "ū" in raw:
+    variants.add(raw.replace("ū", "oo").replace("ā", "a").replace("ī", "i").replace("ś", "sh").replace("ṣ", "sh").replace("ñ", "n").replace("ṅ", "ng").replace("ṇ", "n").replace("ṃ", "n").replace("ṁ", "n").replace("ṭ", "t").replace("ḍ", "d").replace("ḥ", "h").replace("ṛ", "ri").toLowerAscii())
+  # ṛ -> r / ru (e.g., kṛṣṇa -> krshna / krushna / krishna)
+  if "ṛ" in raw:
+    variants.add(r.replace("ri", "r"))
+    variants.add(r.replace("ri", "ru"))
+
   # Cluster transforms
   if "jñ" in raw or "jn" in r:
     variants.add(r.replace("jn", "gy"))

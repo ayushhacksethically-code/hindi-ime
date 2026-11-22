@@ -64,3 +64,12 @@ result["chodu"] = @["चोदू"]
 result["chod"] = @["चोद"]
 result["chudai"] = @["चुदाई"]
 result["chudwa"] = @["चुदवा"]
+# Conversational additions from group chat resource (5)
+result["gaali"] = @["गाली"]
+result["pitti"] = @["पिटाई"]
+result["shit"] = @["shit"]
+result["bak"] = @["बक"]
+result["lala"] = @["लाला"]
+
+# --- Online Chat Additions ---
+result["ghalicho"] = @["गलीच"]

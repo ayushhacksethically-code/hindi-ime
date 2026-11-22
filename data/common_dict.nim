@@ -13,6 +13,7 @@ proc getCommonDict*(): Table[string, seq[string]] =
   # ============================================================
 
   include categories/pronouns
+  include categories/varnamala
   include categories/verbs
   include categories/family
   include categories/body
@@ -32,3 +33,8 @@ proc getCommonDict*(): Table[string, seq[string]] =
   include categories/daily_use_264
   include categories/expletives
   include categories/prefix_words
+  include categories/aksharantar_places
+  include categories/aksharantar_formal
+  include categories/aksharantar_frequent
+  include categories/aksharantar_english
+  include categories/abbreviations_passthrough

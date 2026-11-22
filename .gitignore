@@ -5,6 +5,10 @@ nimcache/
 *.out
 src/compile_rime_hindi
 src/hindi_live_ime
+src/benchmark_aksharantar
+legacy_prototypes/
+data/raw_wordnet/
+nim-screen-extender/
 
 # Personal data (CRITICAL)
 whatsapp_chats/

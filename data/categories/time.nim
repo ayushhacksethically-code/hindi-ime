@@ -36,3 +36,7 @@ result["shukravar"] = @["शुक्रवार"]
 result["shanivar"] = @["शनिवार"]
 result["ravivar"] = @["रविवार"]
 result["itvar"] = @["इतवार"]
+
+# --- Online Chat Additions ---
+result["dino"] = @["दिनों"]
+result["baje"] = @["बजे"]

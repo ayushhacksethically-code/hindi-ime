@@ -17,3 +17,14 @@ result["kaisa"] = @["कैसा"]
 result["kaisi"] = @["कैसी"]
 
 # ============ QUESTION WORDS (15) ============
+# Conversational additions from group chat resource (10)
+result["konsi"] = @["कौनसी"]
+result["konse"] = @["कौनसे"]
+result["kyaa"] = @["क्या"]
+result["kidher"] = @["किधर"]
+result["kidhar"] = @["किधर"]
+result["kisko"] = @["किसको"]
+result["kisne"] = @["किसने"]
+result["kse"] = @["कैसे"]
+result["ky"] = @["क्या"]
+result["kis"] = @["किस"]
